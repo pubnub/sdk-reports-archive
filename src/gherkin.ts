@@ -44,7 +44,9 @@ function makeBackgroundMetadata(background: Messages.Background, relativeFilePat
         type: 'background',
         id: background.id,
         name: background.name,
+        description: background.description,
         location: normalizeLocation(background.location, relativeFilePath),
+        steps: [],
     }
 }
 
@@ -69,13 +71,13 @@ function makeScenarioMetadata(
 
 function makeStepMetadata(
     step: Messages.Step,
-    scenarioMetadata: ScenarioMetadata,
+    parentMetadata: ScenarioMetadata | BackgroundMetadata,
     relativeFilePath: string,
 ): StepMetadata {
     return {
         type: 'step',
         id: step.id,
-        scenarioId: scenarioMetadata.id,
+        scenarioId: parentMetadata.id,
         location: normalizeLocation(step.location, relativeFilePath),
         text: step.text,
         keyword: step.keyword.trim(),
@@ -106,6 +108,14 @@ async function* generateMetadataEntries(path: string): AsyncGenerator<EntryMetad
         for (const child of feature.children) {
             if (child.background) {
                 backgroundMetadata = makeBackgroundMetadata(child.background, relativeFilePath)
+
+                for (const step of child.background.steps) {
+                    const stepMetadata = makeStepMetadata(step, backgroundMetadata, relativeFilePath)
+
+                    backgroundMetadata.steps.push(stepMetadata.id)
+
+                    yield stepMetadata
+                }
 
                 yield backgroundMetadata
             }

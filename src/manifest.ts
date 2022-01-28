@@ -29,7 +29,9 @@ export type BackgroundMetadata = {
     type: 'background'
     id: string
     name: string
+    description: string
     location: Location
+    steps: Array<string>
 }
 
 export type ScenarioMetadata = {

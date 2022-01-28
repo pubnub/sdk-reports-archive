@@ -1,4 +1,3 @@
-
 import git from 'simple-git'
 
 export function makeRepository(path: string) {
@@ -11,11 +10,15 @@ export function makeRepository(path: string) {
             return result.latest?.date
         },
         async latestCommitDateForFile(filePath: string) {
-            const result = await repo.raw(['rev-list', '-1', 'HEAD', filePath])
+            try {
+                const result = await repo.raw(['rev-list', '-1', 'HEAD', filePath])
 
-            const date = await repo.show(['--no-patch', '--no-notes', "--pretty='%cI'", result.trim()])
+                const date = await repo.show(['--no-patch', '--no-notes', "--pretty='%cI'", result.trim()])
 
-            return date.substring(1, date.length - 2)
-        }
+                return date.substring(1, date.length - 2)
+            } catch (e) {
+                return undefined
+            }
+        },
     }
 }
