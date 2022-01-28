@@ -63,7 +63,7 @@ function makeScenarioMetadata(
         featureId: featureMetadata.id,
         name: scenario.name,
         description: normalizeDescription(scenario.description),
-        tags: normalizeTags(scenario.tags),
+        tags: [...featureMetadata.tags, ...normalizeTags(scenario.tags)],
         location: normalizeLocation(scenario.location, relativeFilePath),
         steps: [],
     }
