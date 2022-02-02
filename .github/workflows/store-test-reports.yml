@@ -1,0 +1,45 @@
+name: Store test reports
+concurrency: reports_store
+
+on:
+  workflow_dispatch:
+    inputs:
+      store-reason:
+        description: Reason for which test reports should be stored.
+        required: true
+      repository:
+        description: Name of repository from which test reports should be fetched.
+        required: true
+      version:
+        description: Version of product which produced test reports.
+        required: true
+      workflow-run-id:
+        description: Workflow run identifier which contains test report artifacts.
+        required: true
+
+jobs:
+  store-test-reports:
+    name: Download and store test reports.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          # This should be the same as the one specified for on.pull_request.branches
+          ref: master
+      - name: Checkout actions
+        uses: actions/checkout@v2
+        with:
+          repository: pubnub/client-engineering-deployment-tools
+          ref: v1
+          token: ${{ secrets.GH_TOKEN }}
+          path: .github/.release/actions
+      - name: Process reports store request
+        uses: ./.github/.release/actions/actions/test-reports/store
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          store-branch: actions-test
+          store-reason: ${{ github.event.inputs['store-reason'] }}
+          repository: ${{ github.event.inputs.repository }}
+          version: ${{ github.event.inputs.version }}
+          workflow-run-id: ${{ github.event.inputs['workflow-run-id'] }}
