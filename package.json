@@ -4,8 +4,8 @@
     "version": "0.0.1",
     "private": "true",
     "scripts": {
-        "build": "npm run fetch:specifications && npm run build:manifest",
-        "fetch:specifications": "rm -rf ./specifications && git clone --depth 1 https://github.com/pubnub/sdk-specifications.git ./specifications",
+        "build": "npm run build:manifest",
+        "fetch:specifications": "rm -rf ./specifications && git clone --depth 1 git@github.com:pubnub/sdk-specifications.git ./specifications",
         "build:manifest": "ts-node src/index.ts"
     },
     "dependencies": {

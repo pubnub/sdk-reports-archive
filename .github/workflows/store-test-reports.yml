@@ -34,6 +34,12 @@ jobs:
           ref: v1
           token: ${{ secrets.GH_TOKEN }}
           path: .github/.release/actions
+      - name: Checkout specifications
+        uses: actions/checkout@v2
+        with:
+          repository: pubnub/sdk-specifications
+          token: ${{ secrets.GH_TOKEN }}
+          path: specifications
       - name: Process reports store request
         uses: ./.github/.release/actions/actions/test-reports/store
         with:
