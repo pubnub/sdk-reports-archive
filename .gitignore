@@ -1,4 +1,5 @@
 node_modules
 specifications
+.github/.release
 
 .DS_Store
