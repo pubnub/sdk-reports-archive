@@ -44,7 +44,6 @@ jobs:
         uses: ./.github/.release/actions/actions/test-reports/store
         with:
           token: ${{ secrets.GH_TOKEN }}
-          store-branch: actions-test
           store-reason: ${{ github.event.inputs['store-reason'] }}
           repository: ${{ github.event.inputs.repository }}
           version: ${{ github.event.inputs.version }}
