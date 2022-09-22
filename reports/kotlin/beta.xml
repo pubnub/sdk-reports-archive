@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="49" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="58" time="4.625">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.957">
+<testsuite errors="0" failures="49" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="58" time="4.476">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="2.099">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -9,7 +9,7 @@ Then the result is successful...............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.091">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.067">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given an expired token with permissions to publish with channel 'channel-1'.passed
@@ -21,7 +21,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.06">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.061">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -33,7 +33,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.057">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.052">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -45,7 +45,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.074">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.067">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the TTL 43201.........................................................passed
@@ -62,7 +62,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.036">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.038">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -71,7 +71,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.058">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.043">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -87,7 +87,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.048">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.049">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -103,7 +103,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.04">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.025">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#'...........passed
@@ -112,7 +112,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.042">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.035">
         <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the crypto keyset.....................................................undefined
 When I subscribe............................................................skipped
@@ -127,7 +127,7 @@ java.lang.AssertionError: Scenario messageEncryption considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.012">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.035">
         <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the invalid-crypto keyset.............................................undefined
 When I subscribe............................................................skipped
@@ -157,7 +157,7 @@ java.lang.AssertionError: Scenario listingFiles considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.016">
+    <testcase classname="Files" name="Publishing file message" time="0.017">
         <failure message="Scenario publishingFileMessage considered failure: &#10;                            pending - Publish file message request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -172,7 +172,7 @@ java.lang.AssertionError: Scenario publishingFileMessage considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.022">
+    <testcase classname="Files" name="Publishing file message failure" time="0.019">
         <failure message="Scenario publishingFileMessageFailure considered failure: &#10;                            pending - Publish file message request failure,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -202,7 +202,7 @@ java.lang.AssertionError: Scenario deletingFile considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.013">
+    <testcase classname="Files" name="Downloading a file" time="0.025">
         <failure message="Scenario downloadingFile considered failure: &#10;                            pending - Download file request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I download file........................................................skipped
@@ -233,7 +233,7 @@ java.lang.AssertionError: Scenario fetchMessageHistory considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.016">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.013">
         <failure message="Scenario fetchMessageHistoryMulti considered failure: &#10;                            pending - Fetch message history with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for multiple channels..........................skipped
@@ -248,7 +248,7 @@ java.lang.AssertionError: Scenario fetchMessageHistoryMulti considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.013">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.016">
         <failure message="Scenario fetchMessageHistoryActions considered failure: &#10;                            pending - Fetch message history actions with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history with message actions...........................skipped
@@ -278,7 +278,7 @@ java.lang.AssertionError: Scenario successfulAddMessageAction considered failure
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.008">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.007">
         <failure message="Scenario failedAddMessageAction considered failure: &#10;                            pending - Add message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
@@ -293,7 +293,7 @@ java.lang.AssertionError: Scenario failedAddMessageAction considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.007">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.01">
         <failure message="Scenario fetchMessageActions considered failure: &#10;                            pending - Fetch message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message actions................................................skipped
@@ -309,7 +309,7 @@ java.lang.AssertionError: Scenario fetchMessageActions considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.01">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.015">
         <failure message="Scenario successfulDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -324,7 +324,7 @@ java.lang.AssertionError: Scenario successfulDeleteMessageAction considered fail
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.021">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.015">
         <failure message="Scenario failedDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -339,105 +339,85 @@ java.lang.AssertionError: Scenario failedDeleteMessageAction considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.02">
-        <failure message="src/test/resources/features/data/alice.json (No such file or directory)" type="java.io.FileNotFoundException">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.063">
+        <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
-Given the id for 'Alice' persona............................................failed
-When I get the UUID metadata................................................skipped
+Given the id for 'Alice' persona............................................passed
+When I get the UUID metadata................................................failed
 Then I receive a successful response........................................skipped
 And the UUID metadata for 'Alice' persona...................................skipped
 
 StackTrace:
-java.io.FileNotFoundException: src/test/resources/features/data/alice.json (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
-	at com.pubnub.contract.UtilsKt.readPersonaFile(Utils.kt:15)
-	at com.pubnub.contract.uuidmetadata.step.GivenSteps.the_uuid_for_persona(GivenSteps.kt:41)
-	at ✽.the id for 'Alice' persona(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:10)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@5fc23920)
+	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
+	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_get_uuid_metadata(WhenSteps.kt:14)
+	at ✽.I get the UUID metadata(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:11)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.028">
-        <failure message="src/test/resources/features/data/bob.json (No such file or directory)" type="java.io.FileNotFoundException">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.035">
+        <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
-Given current user is 'Bob' persona.........................................failed
-When I get the UUID metadata with custom for current user...................skipped
+Given current user is 'Bob' persona.........................................passed
+When I get the UUID metadata with custom for current user...................failed
 Then I receive a successful response........................................skipped
 And the UUID metadata for 'Bob' persona.....................................skipped
 
 StackTrace:
-java.io.FileNotFoundException: src/test/resources/features/data/bob.json (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
-	at com.pubnub.contract.UtilsKt.readPersonaFile(Utils.kt:15)
-	at com.pubnub.contract.uuidmetadata.step.GivenSteps.given_current_user_is_persona(GivenSteps.kt:42)
-	at ✽.current user is 'Bob' persona(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:17)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@39042385)
+	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
+	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_get_uuid_metadata_with_custom_for_current_user(WhenSteps.kt:19)
+	at ✽.I get the UUID metadata with custom for current user(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:18)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.022">
-        <failure message="src/test/resources/features/data/alice.json (No such file or directory)" type="java.io.FileNotFoundException">
+    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.048">
+        <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
-Given the data for 'Alice' persona..........................................failed
-When I set the UUID metadata................................................skipped
+Given the data for 'Alice' persona..........................................passed
+When I set the UUID metadata................................................failed
 Then I receive a successful response........................................skipped
 And the UUID metadata for 'Alice' persona contains updated..................skipped
 
 StackTrace:
-java.io.FileNotFoundException: src/test/resources/features/data/alice.json (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
-	at com.pubnub.contract.UtilsKt.readPersonaFile(Utils.kt:15)
-	at com.pubnub.contract.uuidmetadata.step.GivenSteps.the_data_for_persona(GivenSteps.kt:43)
-	at ✽.the data for 'Alice' persona(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:24)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@466d19ab)
+	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
+	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_set_the_uuid_metadata(WhenSteps.kt:35)
+	at ✽.I set the UUID metadata(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:25)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.029">
-        <failure message="src/test/resources/features/data/alice.json (No such file or directory)" type="java.io.FileNotFoundException">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.022">
+        <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
-Given the id for 'Alice' persona............................................failed
-When I remove the UUID metadata.............................................skipped
+Given the id for 'Alice' persona............................................passed
+When I remove the UUID metadata.............................................failed
 Then I receive a successful response........................................skipped
 
 StackTrace:
-java.io.FileNotFoundException: src/test/resources/features/data/alice.json (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
-	at com.pubnub.contract.UtilsKt.readPersonaFile(Utils.kt:15)
-	at com.pubnub.contract.uuidmetadata.step.GivenSteps.the_uuid_for_persona(GivenSteps.kt:41)
-	at ✽.the id for 'Alice' persona(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:31)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@526ff5ac)
+	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
+	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_remove_uuid_metadata_for_id(WhenSteps.kt:40)
+	at ✽.I remove the UUID metadata(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:32)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.023">
-        <failure message="src/test/resources/features/data/alice.json (No such file or directory)" type="java.io.FileNotFoundException">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.019">
+        <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
-Given current user is 'Alice' persona.......................................failed
-When I remove the UUID metadata for current user............................skipped
+Given current user is 'Alice' persona.......................................passed
+When I remove the UUID metadata for current user............................failed
 Then I receive a successful response........................................skipped
 
 StackTrace:
-java.io.FileNotFoundException: src/test/resources/features/data/alice.json (No such file or directory)
-	at java.base/java.io.FileInputStream.open0(Native Method)
-	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
-	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
-	at kotlin.io.FilesKt__FileReadWriteKt.readText(FileReadWrite.kt:125)
-	at com.pubnub.contract.UtilsKt.readPersonaFile(Utils.kt:15)
-	at com.pubnub.contract.uuidmetadata.step.GivenSteps.given_current_user_is_persona(GivenSteps.kt:42)
-	at ✽.current user is 'Alice' persona(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:37)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@221188c6)
+	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
+	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_remove_uuid_metadata_of_current_user(WhenSteps.kt:45)
+	at ✽.I remove the UUID metadata for current user(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:38)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.046">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.03">
         <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all UUID metadata................................................failed
@@ -445,14 +425,14 @@ Then I receive a successful response........................................skip
 And the UUID metadata for 'Alice' and 'James' persona.......................skipped
 
 StackTrace:
-PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@884b93e)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@1544e948)
 	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
 	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_get_all_uuid_metadata(WhenSteps.kt:50)
 	at ✽.I get all UUID metadata(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:43)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.035">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.027">
         <failure message="Unexpected request. Sequence Empty" type="com.pubnub.api.PubNubException">
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all UUID metadata with custom....................................failed
@@ -460,14 +440,14 @@ Then I receive a successful response........................................skip
 And the UUID metadata for 'Bob' and 'Lisa' persona..........................skipped
 
 StackTrace:
-PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@38f94a87)
+PubNubException(errorMessage=Unexpected request. Sequence Empty, pubnubError=PubNubError(name=HTTP_ERROR, code=103, message='HTTP Error. Please check network connectivity. Please contact support with error details if the issue persists.'), jso=null, statusCode=500, affectedCall=retrofit2.OkHttpCall@2dd69050)
 	at com.pubnub.api.Endpoint.sync(Endpoint.kt:81)
 	at com.pubnub.contract.uuidmetadata.step.WhenSteps.i_get_all_uuid_metadata_with_custom(WhenSteps.kt:55)
 	at ✽.I get all UUID metadata with custom(file:///home/runner/work/kotlin/kotlin/sdk-specifications/features/objectsV2/uuid-metadata.feature:49)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message" time="0.016">
+    <testcase classname="Publish a message" name="Publishing a message" time="0.006">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message....................................................skipped
@@ -482,7 +462,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.015">
+    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.007">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with JSON metadata.................................skipped
@@ -497,7 +477,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.021">
+    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.018">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with string metadata...............................skipped
@@ -512,7 +492,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Failing publish" time="0.021">
+    <testcase classname="Publish a message" name="Failing publish" time="0.012">
         <failure message="Scenario invalidPublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the invalid keyset....................................................undefined
 When I publish a message....................................................skipped
@@ -527,7 +507,7 @@ java.lang.AssertionError: Scenario invalidPublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal" name="Sending a signal" time="0.017">
+    <testcase classname="Signal" name="Sending a signal" time="0.014">
         <failure message="Scenario successfulSignal considered failure: &#10;                            pending - Signal request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal........................................................skipped
@@ -542,7 +522,7 @@ java.lang.AssertionError: Scenario successfulSignal considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.016">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.007">
         <failure message="Scenario listingPushChannels considered failure: &#10;                            pending - List push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list GCM push channels...............................................skipped
@@ -557,7 +537,7 @@ java.lang.AssertionError: Scenario listingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.005">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.002">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels.............................................skipped
@@ -565,7 +545,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.013">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.012">
         <failure message="Scenario listingPushChannels considered failure: &#10;                            pending - List push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels with topic..................................skipped
@@ -595,7 +575,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.012">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.007">
         <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add FCM push channels................................................skipped
@@ -610,7 +590,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.002">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels..............................................skipped
@@ -618,7 +598,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.017">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.007">
         <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels with topic...................................skipped
@@ -633,7 +613,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.016">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.007">
         <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM push channels.............................................skipped
@@ -648,7 +628,7 @@ java.lang.AssertionError: Scenario removingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.002">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels...........................................skipped
@@ -656,7 +636,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.018">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.019">
         <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels with topic................................skipped
@@ -686,7 +666,7 @@ java.lang.AssertionError: Scenario removingDevice considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.009">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device..................................................skipped
@@ -726,7 +706,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.019">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.014">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
@@ -743,7 +723,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.01">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.012">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
@@ -760,7 +740,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.014">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.005">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -777,7 +757,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.017">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.014">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
@@ -795,7 +775,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.015">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.012">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
@@ -813,7 +793,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.011">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.017">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -831,7 +811,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.028">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.021">
         <failure message="Scenario simpleSubscribe considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe............................................................skipped
@@ -847,7 +827,7 @@ java.lang.AssertionError: Scenario simpleSubscribe considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Time" name="Getting PubNub time" time="0.008">
+    <testcase classname="Time" name="Getting PubNub time" time="0.015">
         <failure message="Scenario successfulTime considered failure: &#10;                            pending - Time request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[When I request current time.................................................undefined
 Then I receive successful response..........................................skipped
