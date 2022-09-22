@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="42" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="51" time="4.244">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.652">
+<testsuite errors="0" failures="42" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="51" time="4.691">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="2.255">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -9,7 +9,7 @@ Then the result is successful...............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.082">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.055">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given an expired token with permissions to publish with channel 'channel-1'.passed
@@ -21,7 +21,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.037">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.056">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -33,7 +33,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.094">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.05">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -45,7 +45,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.154">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.1">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the TTL 43201.........................................................passed
@@ -62,7 +62,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.071">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.059">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -71,7 +71,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.038">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.063">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -87,7 +87,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.062">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.042">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -103,7 +103,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.046">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.041">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#'...........passed
@@ -112,7 +112,37 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Files" name="Listing files" time="0.059">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.039">
+        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+            <![CDATA[Given the crypto keyset.....................................................undefined
+When I subscribe............................................................skipped
+Then I receive the message in my subscribe response.........................skipped
+
+StackTrace:
+java.lang.AssertionError: Scenario messageEncryption considered failure: 
+                            pending - Subscribe request with timetoken zero,
+                            failed - 
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.pubnub.contract.Hooks.after(Hooks.kt:43)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.015">
+        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+            <![CDATA[Given the invalid-crypto keyset.............................................undefined
+When I subscribe............................................................skipped
+Then an error is thrown.....................................................skipped
+
+StackTrace:
+java.lang.AssertionError: Scenario messageEncryption considered failure: 
+                            pending - Subscribe request with timetoken zero,
+                            failed - 
+	at org.junit.Assert.fail(Assert.java:89)
+	at com.pubnub.contract.Hooks.after(Hooks.kt:43)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Files" name="Listing files" time="0.009">
         <failure message="Scenario listingFiles considered failure: &#10;                            pending - List files request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list files...........................................................skipped
@@ -127,7 +157,7 @@ java.lang.AssertionError: Scenario listingFiles considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.022">
+    <testcase classname="Files" name="Publishing file message" time="0.026">
         <failure message="Scenario publishingFileMessage considered failure: &#10;                            pending - Publish file message request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -142,7 +172,7 @@ java.lang.AssertionError: Scenario publishingFileMessage considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.021">
+    <testcase classname="Files" name="Publishing file message failure" time="0.019">
         <failure message="Scenario publishingFileMessageFailure considered failure: &#10;                            pending - Publish file message request failure,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -157,7 +187,7 @@ java.lang.AssertionError: Scenario publishingFileMessageFailure considered failu
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Deleting a file" time="0.015">
+    <testcase classname="Files" name="Deleting a file" time="0.021">
         <failure message="Scenario deletingFile considered failure: &#10;                            pending - Delete file request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete file..........................................................skipped
@@ -172,7 +202,7 @@ java.lang.AssertionError: Scenario deletingFile considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.013">
+    <testcase classname="Files" name="Downloading a file" time="0.017">
         <failure message="Scenario downloadingFile considered failure: &#10;                            pending - Download file request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I download file........................................................skipped
@@ -187,7 +217,7 @@ java.lang.AssertionError: Scenario downloadingFile considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history" time="0.016">
+    <testcase classname="History" name="Fetching message history" time="0.013">
         <failure message="Scenario fetchMessageHistory considered failure: &#10;                            pending - Fetch message history request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for single channel.............................skipped
@@ -203,7 +233,7 @@ java.lang.AssertionError: Scenario fetchMessageHistory considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.015">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.012">
         <failure message="Scenario fetchMessageHistoryMulti considered failure: &#10;                            pending - Fetch message history with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for multiple channels..........................skipped
@@ -218,7 +248,7 @@ java.lang.AssertionError: Scenario fetchMessageHistoryMulti considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.018">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.022">
         <failure message="Scenario fetchMessageHistoryActions considered failure: &#10;                            pending - Fetch message history actions with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history with message actions...........................skipped
@@ -233,7 +263,7 @@ java.lang.AssertionError: Scenario fetchMessageHistoryActions considered failure
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Adding a message action" time="0.015">
+    <testcase classname="Message Actions" name="Adding a message action" time="0.01">
         <failure message="Scenario successfulAddMessageAction considered failure: &#10;                            pending - Add message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
@@ -248,7 +278,7 @@ java.lang.AssertionError: Scenario successfulAddMessageAction considered failure
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.014">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.009">
         <failure message="Scenario failedAddMessageAction considered failure: &#10;                            pending - Add message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
@@ -263,7 +293,7 @@ java.lang.AssertionError: Scenario failedAddMessageAction considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.018">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.01">
         <failure message="Scenario fetchMessageActions considered failure: &#10;                            pending - Fetch message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message actions................................................skipped
@@ -279,7 +309,7 @@ java.lang.AssertionError: Scenario fetchMessageActions considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.021">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.028">
         <failure message="Scenario successfulDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -294,7 +324,7 @@ java.lang.AssertionError: Scenario successfulDeleteMessageAction considered fail
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.012">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.029">
         <failure message="Scenario failedDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -309,7 +339,7 @@ java.lang.AssertionError: Scenario failedDeleteMessageAction considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message" time="0.017">
+    <testcase classname="Publish a message" name="Publishing a message" time="0.021">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message....................................................skipped
@@ -324,7 +354,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.022">
+    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.014">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with JSON metadata.................................skipped
@@ -339,7 +369,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.02">
+    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.019">
         <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with string metadata...............................skipped
@@ -354,7 +384,7 @@ java.lang.AssertionError: Scenario simplePublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Failing publish" time="0.012">
+    <testcase classname="Publish a message" name="Failing publish" time="0.009">
         <failure message="Scenario invalidPublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the invalid keyset....................................................undefined
 When I publish a message....................................................skipped
@@ -369,7 +399,7 @@ java.lang.AssertionError: Scenario invalidPublish considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal" name="Sending a signal" time="0.013">
+    <testcase classname="Signal" name="Sending a signal" time="0.014">
         <failure message="Scenario successfulSignal considered failure: &#10;                            pending - Signal request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal........................................................skipped
@@ -384,7 +414,7 @@ java.lang.AssertionError: Scenario successfulSignal considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.012">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.018">
         <failure message="Scenario listingPushChannels considered failure: &#10;                            pending - List push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list GCM push channels...............................................skipped
@@ -399,7 +429,7 @@ java.lang.AssertionError: Scenario listingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.012">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.014">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels.............................................skipped
@@ -422,7 +452,7 @@ java.lang.AssertionError: Scenario listingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.015">
+    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.009">
         <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add GCM push channels................................................skipped
@@ -437,7 +467,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.012">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.011">
         <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add FCM push channels................................................skipped
@@ -452,7 +482,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.004">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels..............................................skipped
@@ -460,7 +490,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.021">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.026">
         <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels with topic...................................skipped
@@ -475,7 +505,7 @@ java.lang.AssertionError: Scenario addingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.028">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.016">
         <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM push channels.............................................skipped
@@ -490,7 +520,7 @@ java.lang.AssertionError: Scenario removingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.004">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels...........................................skipped
@@ -498,7 +528,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.024">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.009">
         <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels with topic................................skipped
@@ -513,7 +543,7 @@ java.lang.AssertionError: Scenario removingPushChannels considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.024">
+    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.009">
         <failure message="Scenario removingDevice considered failure: &#10;                            pending - Remove device request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM device....................................................skipped
@@ -528,7 +558,7 @@ java.lang.AssertionError: Scenario removingDevice considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device..................................................skipped
@@ -536,7 +566,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.024">
+    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.02">
         <failure message="Scenario removingDevice considered failure: &#10;                            pending - Remove device request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device with topic.......................................skipped
@@ -551,7 +581,7 @@ java.lang.AssertionError: Scenario removingDevice considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.021">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.035">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given no auth key...........................................................undefined
@@ -585,7 +615,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.014">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.02">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
@@ -602,7 +632,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.014">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.018">
         <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -619,7 +649,7 @@ java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.016">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.02">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
@@ -637,7 +667,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.028">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.026">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
@@ -655,7 +685,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.011">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.013">
         <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -673,37 +703,7 @@ java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered 
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.017">
-        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
-            <![CDATA[Given the crypto keyset.....................................................undefined
-When I subscribe............................................................skipped
-Then I receive the message in my subscribe response.........................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario messageEncryption considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:43)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.009">
-        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
-            <![CDATA[Given the invalid-crypto keyset.............................................undefined
-When I subscribe............................................................skipped
-Then an error is thrown.....................................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario messageEncryption considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:43)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.01">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.034">
         <failure message="Scenario simpleSubscribe considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe............................................................skipped
@@ -719,7 +719,7 @@ java.lang.AssertionError: Scenario simpleSubscribe considered failure:
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Time" name="Getting PubNub time" time="0.02">
+    <testcase classname="Time" name="Getting PubNub time" time="0.012">
         <failure message="Scenario successfulTime considered failure: &#10;                            pending - Time request,&#10;                            failed - " type="java.lang.AssertionError">
             <![CDATA[When I request current time.................................................undefined
 Then I receive successful response..........................................skipped
