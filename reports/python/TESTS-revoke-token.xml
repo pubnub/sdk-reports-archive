@@ -1,0 +1,71 @@
+<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.024885" timestamp="2022-11-24T14:18:54.301367" hostname="fv-az422-664"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.005685"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=revokeValidToken
+  Scenario: Revoke existing valid token
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given a token ... passed in 0.000s
+    When I revoke a token ... passed in 0.005s
+    Then I get confirmation that token has been revoked ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.006966"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=revokeInvalidToken
+  Scenario: Revoke invalid token
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given a token ... passed in 0.000s
+    When I revoke a token ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Invalid token' ... passed in 0.000s
+    * the error source is 'revoke' ... passed in 0.000s
+    * the error detail message is not empty ... passed in 0.000s
+    * the error detail location is 'token' ... passed in 0.000s
+    * the error detail location type is 'path' ... passed in 0.000s
+    * the error service is 'Access Manager' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.007059"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=revokeFeatureDisabled
+  Scenario: Revoke a token while it is disabled on a server
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given a token ... passed in 0.000s
+    When I revoke a token ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Feature disabled' ... passed in 0.000s
+    * the error source is 'revoke' ... passed in 0.000s
+    * the error detail message is 'Token revocation is disabled.' ... passed in 0.000s
+    * the error detail location is 'subscribe-key' ... passed in 0.000s
+    * the error detail location type is 'path' ... passed in 0.000s
+    * the error service is 'Access Manager' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.005175"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=revokeEncodePathParameter
+  Scenario: Revoke a token with characters that require url encoding
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#' ... passed in 0.000s
+    When I revoke a token ... passed in 0.004s
+    Then I get confirmation that token has been revoked ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

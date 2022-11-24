@@ -1,0 +1,204 @@
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.059555" timestamp="2022-11-24T14:18:54.246045" hostname="fv-az422-664"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.015877"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantAllPermissions
+  Scenario: Grant an access token with all permissions on all resource types with authorized uuid
+    Given I have a keyset with access manager enabled ... passed in 0.000s
+    Given the authorized UUID "test-authorized-uuid" ... passed in 0.000s
+    Given the TTL 60 ... passed in 0.000s
+    Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * grant resource permission READ ... passed in 0.000s
+    * grant resource permission WRITE ... passed in 0.000s
+    * grant resource permission GET ... passed in 0.000s
+    * grant resource permission MANAGE ... passed in 0.000s
+    * grant resource permission UPDATE ... passed in 0.000s
+    * grant resource permission JOIN ... passed in 0.000s
+    * grant resource permission DELETE ... passed in 0.000s
+    Given the 'channel_group-1' CHANNEL_GROUP resource access permissions ... passed in 0.000s
+    * grant resource permission READ ... passed in 0.000s
+    * grant resource permission MANAGE ... passed in 0.000s
+    Given the 'uuid-1' UUID resource access permissions ... passed in 0.000s
+    * grant resource permission GET ... passed in 0.000s
+    * grant resource permission UPDATE ... passed in 0.000s
+    * grant resource permission DELETE ... passed in 0.000s
+    Given the '^channel-\S*$' CHANNEL pattern access permissions ... passed in 0.000s
+    * grant pattern permission READ ... passed in 0.000s
+    * grant pattern permission WRITE ... passed in 0.000s
+    * grant pattern permission GET ... passed in 0.000s
+    * grant pattern permission MANAGE ... passed in 0.000s
+    * grant pattern permission UPDATE ... passed in 0.000s
+    * grant pattern permission JOIN ... passed in 0.000s
+    * grant pattern permission DELETE ... passed in 0.000s
+    Given the '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions ... passed in 0.000s
+    * grant pattern permission READ ... passed in 0.000s
+    * grant pattern permission MANAGE ... passed in 0.000s
+    Given the '^uuid-\S*$' UUID pattern access permissions ... passed in 0.000s
+    * grant pattern permission GET ... passed in 0.000s
+    * grant pattern permission UPDATE ... passed in 0.000s
+    * grant pattern permission DELETE ... passed in 0.000s
+    When I grant a token specifying those permissions ... passed in 0.007s
+    Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
+    Then the token contains the TTL 60 ... passed in 0.000s
+    Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * token resource permission READ ... passed in 0.000s
+    * token resource permission WRITE ... passed in 0.000s
+    * token resource permission GET ... passed in 0.000s
+    * token resource permission MANAGE ... passed in 0.000s
+    * token resource permission UPDATE ... passed in 0.000s
+    * token resource permission JOIN ... passed in 0.000s
+    * token resource permission DELETE ... passed in 0.000s
+    Then the token has 'channel_group-1' CHANNEL_GROUP resource access permissions ... passed in 0.000s
+    * token resource permission READ ... passed in 0.000s
+    * token resource permission MANAGE ... passed in 0.000s
+    Then the token has 'uuid-1' UUID resource access permissions ... passed in 0.000s
+    * token resource permission GET ... passed in 0.000s
+    * token resource permission UPDATE ... passed in 0.000s
+    * token resource permission DELETE ... passed in 0.000s
+    Then the token has '^channel-\S*$' CHANNEL pattern access permissions ... passed in 0.000s
+    * token pattern permission READ ... passed in 0.000s
+    * token pattern permission WRITE ... passed in 0.000s
+    * token pattern permission GET ... passed in 0.000s
+    * token pattern permission MANAGE ... passed in 0.000s
+    * token pattern permission UPDATE ... passed in 0.000s
+    * token pattern permission JOIN ... passed in 0.000s
+    * token pattern permission DELETE ... passed in 0.000s
+    Then the token has '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions ... passed in 0.000s
+    * token pattern permission READ ... passed in 0.000s
+    * token pattern permission MANAGE ... passed in 0.000s
+    Then the token has '^uuid-\S*$' UUID pattern access permissions ... passed in 0.000s
+    * token pattern permission GET ... passed in 0.000s
+    * token pattern permission UPDATE ... passed in 0.000s
+    * token pattern permission DELETE ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.007285"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithoutAuthorizedUUID
+  Scenario: Grant an access token without an authorized uuid
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the TTL 60 ... passed in 0.000s
+    Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * grant resource permission READ ... passed in 0.000s
+    When I grant a token specifying those permissions ... passed in 0.005s
+    Then the token contains the TTL 60 ... passed in 0.000s
+    Then the token does not contain an authorized uuid ... passed in 0.000s
+    Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * token resource permission READ ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.006987"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithAuthorizedUUID
+  Scenario: Grant an access token successfully with an authorized uuid
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the authorized UUID "test-authorized-uuid" ... passed in 0.000s
+    Given the TTL 60 ... passed in 0.000s
+    Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * grant resource permission READ ... passed in 0.000s
+    When I grant a token specifying those permissions ... passed in 0.004s
+    Then the token contains the TTL 60 ... passed in 0.000s
+    Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
+    Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * token resource permission READ ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.007378"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithoutAnyPermissionsError
+  Scenario: Attempt to grant an access token with all permissions empty or false and expect a server error
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the TTL 60 ... passed in 0.000s
+    Given the 'uuid-1' UUID resource access permissions ... passed in 0.000s
+    * deny resource permission GET ... passed in 0.000s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Invalid permissions' ... passed in 0.000s
+    * the error source is 'grant' ... passed in 0.000s
+    * the error detail message is 'Unexpected value: `permissions.resources.uuids.uuid-1` must be positive and non-zero.' ... passed in 0.000s
+    * the error detail location is 'permissions.resources.uuids.uuid-1' ... passed in 0.000s
+    * the error detail location type is 'body' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.007493"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithRegExpSyntaxError
+  Scenario: Attempt to grant an access token with a regular expression containing a syntax error and expect a server error
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the TTL 60 ... passed in 0.000s
+    Given the '!<[^>]+>++' UUID pattern access permissions ... passed in 0.000s
+    * grant pattern permission GET ... passed in 0.000s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Invalid RegExp' ... passed in 0.000s
+    * the error source is 'grant' ... passed in 0.000s
+    * the error detail message is 'Syntax error: multiple repeat.' ... passed in 0.000s
+    * the error detail location is 'permissions.patterns.uuids.!<[^>]+>++' ... passed in 0.000s
+    * the error detail location type is 'body' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.007183"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithRegExpNonCapturingError
+  Scenario: Attempt to grant an access token with a regular expression containing capturing groups and expect a server error
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the TTL 60 ... passed in 0.000s
+    Given the '(!<[^>]+>)+' UUID pattern access permissions ... passed in 0.000s
+    * grant pattern permission GET ... passed in 0.000s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Invalid RegExp' ... passed in 0.000s
+    * the error source is 'grant' ... passed in 0.000s
+    * the error detail message is 'Only non-capturing groups are allowed. Try replacing `(` with `(?:`.' ... passed in 0.000s
+    * the error detail location is 'permissions.patterns.uuids.(!<[^>]+>)+' ... passed in 0.000s
+    * the error detail location type is 'body' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.007352"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=grantWithTTLExceedMaxTTL @beta
+  Scenario: Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)
+    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given the TTL 43201 ... passed in 0.000s
+    Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
+    * grant resource permission READ ... passed in 0.000s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    Then an error is returned ... passed in 0.000s
+    * the error status code is 400 ... passed in 0.000s
+    * the error message is 'Invalid ttl' ... passed in 0.000s
+    * the error source is 'grant' ... passed in 0.000s
+    * the error detail message is 'Range should be 1 to 43200 minute(s).' ... passed in 0.000s
+    * the error detail location is 'ttl' ... passed in 0.000s
+    * the error detail location type is 'body' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

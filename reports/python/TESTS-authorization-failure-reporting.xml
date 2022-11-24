@@ -1,0 +1,66 @@
+<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.02578" timestamp="2022-11-24T14:18:54.124055" hostname="fv-az422-664"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.008648"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=authSuccess
+  Scenario: Publish simple message with valid ttl and auth permissions
+    Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
+    Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
+    When I publish a message using that auth token with channel 'channel-1' ... passed in 0.008s
+    Then the result is successful ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.005909"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=authFailureExpired
+  Scenario: Publish simple message with expired auth token
+    Given I have a keyset with access manager enabled - without secret key ... passed in 0.001s
+    Given an expired token with permissions to publish with channel 'channel-1' ... passed in 0.000s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.005s
+    Then an auth error is returned ... passed in 0.000s
+    * the error status code is 403 ... passed in 0.000s
+    * the auth error message is 'Token is expired.' ... passed in 0.000s
+    * the error service is 'Access Manager' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.005824"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=authFailurePermissions
+  Scenario: Publish simple message with invalid auth permissions
+    Given I have a keyset with access manager enabled - without secret key ... passed in 0.001s
+    Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.005s
+    Then an auth error is returned ... passed in 0.000s
+    * the error status code is 403 ... passed in 0.000s
+    * the auth error message is 'Forbidden' ... passed in 0.000s
+    * the error service is 'Access Manager' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.005399"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=authFailureRevoked
+  Scenario: Publish fails due to revoked token
+    Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
+    Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.005s
+    Then an auth error is returned ... passed in 0.000s
+    * the error status code is 403 ... passed in 0.000s
+    * the auth error message is 'Token is revoked.' ... passed in 0.000s
+    * the error service is 'Access Manager' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
