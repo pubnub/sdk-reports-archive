@@ -1,536 +1,536 @@
 <?xml version="1.0"?>
 <testsuites failures="0" errors="0" tests="85" skipped="76">
-  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.079048" name="Authorization Failure Reporting">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="0.046914">
+  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.113750" name="Authorization Failure Reporting">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="0.049746">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with valid ttl and auth permissions"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.012762">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.012545">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with expired auth token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailureExpired"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.010173">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.010861">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with invalid auth permissions"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailurePermissions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.009199">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.040598">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with revoked auth token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailureRevoked"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="1" time="0.044056" name="Grant an access token">
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.044056">
+  <testsuite failures="0" errors="0" skipped="0" tests="1" time="0.033534" name="Grant an access token">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.033534">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with ttl exceed max ttl"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithTTLExceedMaxTTL"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.047234" name="Revoke an access token">
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.013066">
+  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.055491" name="Revoke an access token">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.012757">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke existing valid token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeValidToken"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.010547">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.012224">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke an invalid token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeInvalidToken"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.012918">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.016611">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke a token while it is disabled on a server"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeFeatureDisabled"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.010703">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.013900">
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke request verify characters with url encoding"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeEncodePathParameter"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.012605" name="Message encryption">
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.006467">
+  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.012990" name="Message encryption">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.005788">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"messageEncryption"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.006138">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.007202">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"messageEncryption"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.028862" name="Files">
-    <testcase classname="Files" name="Listing files" time="0.006078">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.028822" name="Files">
+    <testcase classname="Files" name="Listing files" time="0.005865">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingFiles"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.005768">
+    <testcase classname="Files" name="Publishing file message" time="0.005349">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishingFileMessage"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.006367">
+    <testcase classname="Files" name="Publishing file message failure" time="0.004817">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishingFileMessageFailure"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Deleting a file" time="0.005301">
+    <testcase classname="Files" name="Deleting a file" time="0.005888">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"deletingFile"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.005349">
+    <testcase classname="Files" name="Downloading a file" time="0.006903">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"downloadingFile"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.017130" name="History">
-    <testcase classname="History" name="Fetching message history" time="0.006020">
+  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.016316" name="History">
+    <testcase classname="History" name="Fetching message history" time="0.005569">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistory"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.005742">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.006172">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistoryMulti"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.005368">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.004575">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistoryActions"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.026699" name="Message Actions">
-    <testcase classname="Message Actions" name="Adding a message action" time="0.005818">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.023122" name="Message Actions">
+    <testcase classname="Message Actions" name="Adding a message action" time="0.005171">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulAddMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.004460">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.004573">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedAddMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.005522">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.005122">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageActions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.005534">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.004151">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulDeleteMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.005365">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.004105">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedDeleteMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.035434" name="Objects V2 Channel metadata">
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.005821">
+  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.026723" name="Objects V2 Channel metadata">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.005053">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getChannelMetadataOfChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.004898">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.004376">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getChannelMetadataOfDMWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.004602">
+    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.004620">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setChannelMetadataForChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.008845">
+    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.004132">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeChannelMetadataOfChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.004566">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.004277">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllChannelMetadata"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.006702">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.004265">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllChannelMetadataWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.024538" name="Objects V2 Members">
-    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.005446">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.029624" name="Objects V2 Members">
+    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.004468">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getMembersOfChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.004702">
+    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.004553">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getMembersOfVipChatChannelWithCustomAndUuidWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.005039">
+    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.009642">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setMembersForChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.004667">
+    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.006429">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setMembersForChatChannelWithCustomAndUuidWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.004684">
+    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.004531">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeMembersForChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.034742" name="Objects V2 Memberships">
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.005794">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.032785" name="Objects V2 Memberships">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.004928">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAliceMemberships"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.004668">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.004504">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAliceMemberships"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.004595">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.004313">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getBobMembershipWithCustomAndChannelCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.004832">
+    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.006355">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.005230">
+    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.004326">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.004581">
+    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.004273">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.005042">
+    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.004085">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.036343" name="Objects V2 UUID metadata">
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.005276">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.031344" name="Objects V2 UUID metadata">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.004864">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.007280">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.004410">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getUUIDMetadataOfBobWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.004449">
+    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.004248">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setUUIDMetadataForAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.005447">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.004713">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.004760">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.004108">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.004623">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.004680">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllUUIDMetadata"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.004508">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.004320">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllUUIDMetadataWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="9" tests="9" time="0.045535" name="Publish to Space">
-    <testcase classname="Publish to Space" name="Publish message with space id and message type" time="0.005246">
+  <testsuite failures="0" errors="0" skipped="9" tests="9" time="0.048135" name="Publish to Space">
+    <testcase classname="Publish to Space" name="Publish message with space id and message type" time="0.009779">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with space id and too short message type" time="0.004572">
+    <testcase classname="Publish to Space" name="Publish message with space id and too short message type" time="0.006695">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with space id and too long message type" time="0.004544">
+    <testcase classname="Publish to Space" name="Publish message with space id and too long message type" time="0.004580">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with short too space id and message type" time="0.004666">
+    <testcase classname="Publish to Space" name="Publish message with short too space id and message type" time="0.004757">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with too long space id and message type" time="0.004616">
+    <testcase classname="Publish to Space" name="Publish message with too long space id and message type" time="0.004451">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with space id containing unexpected chars" time="0.005367">
+    <testcase classname="Publish to Space" name="Publish message with space id containing unexpected chars" time="0.005046">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with space id containing reserved 'pn' prefix" time="0.005784">
+    <testcase classname="Publish to Space" name="Publish message with space id containing reserved 'pn' prefix" time="0.004181">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with message type containing unexpected chars" time="0.005329">
+    <testcase classname="Publish to Space" name="Publish message with message type containing unexpected chars" time="0.004515">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message with message type containing reserved 'pn' prefix" time="0.005412">
+    <testcase classname="Publish to Space" name="Publish message with message type containing reserved 'pn' prefix" time="0.004130">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithInvalidSpaceIdAndMessageType"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.023925" name="Publish a message">
-    <testcase classname="Publish a message" name="Publishing a message" time="0.006231">
+  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.019486" name="Publish a message">
+    <testcase classname="Publish a message" name="Publishing a message" time="0.004724">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simplePublish"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.005499">
+    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.004109">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simplePublish"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.005643">
+    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.004025">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simplePublish"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Failing publish" time="0.006552">
+    <testcase classname="Publish a message" name="Failing publish" time="0.006628">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"invalidPublish"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.005953" name="Signal">
-    <testcase classname="Signal" name="Sending a signal" time="0.005953">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.004055" name="Signal">
+    <testcase classname="Signal" name="Sending a signal" time="0.004055">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulSignal"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.056519" name="Push Notifications">
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.005524">
+  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.050620" name="Push Notifications">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.003724">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.001517">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.000868">
       <skipped/>
       <system-out><![CDATA[Using mock
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.005724">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.003758">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.006109">
+    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.004278">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.005724">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.004074">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.001982">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.000718">
       <skipped/>
       <system-out><![CDATA[Using mock
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.004616">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.005222">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.005933">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.005434">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.000842">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.000794">
       <skipped/>
       <system-out><![CDATA[Using mock
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.005225">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.003993">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.007212">
+    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.010136">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingDevice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.001008">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.000911">
       <skipped/>
       <system-out><![CDATA[Using mock
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.005103">
+    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.006711">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingDevice"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.056268" name="Subscribe Loop auto-retry with access denied">
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.013874">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.036444" name="Subscribe Loop auto-retry with access denied">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.005308">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.006029">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.006789">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.006906">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.004777">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.007950">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.005027">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.008347">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.005252">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.006959">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.004587">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.006203">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.004704">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.006374" name="Subscribe Loop">
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.006374">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.004649" name="Subscribe Loop">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.004649">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simpleSubscribe"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.004868" name="Time">
-    <testcase classname="Time" name="Getting PubNub time" time="0.004868">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.003842" name="Time">
+    <testcase classname="Time" name="Getting PubNub time" time="0.003842">
       <skipped/>
       <system-out><![CDATA[Using mock
 {"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulTime"}]]></system-out>
