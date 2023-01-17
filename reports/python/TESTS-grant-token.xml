@@ -1,4 +1,4 @@
-<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.059555" timestamp="2022-11-24T14:18:54.246045" hostname="fv-az422-664"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.015877"><system-out>
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.047186" timestamp="2023-01-17T07:57:42.916753" hostname="fv-az257-124"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.012563"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -37,7 +37,7 @@
     * grant pattern permission GET ... passed in 0.000s
     * grant pattern permission UPDATE ... passed in 0.000s
     * grant pattern permission DELETE ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.007s
+    When I grant a token specifying those permissions ... passed in 0.008s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -74,13 +74,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.007285"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.006059"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithoutAuthorizedUUID
   Scenario: Grant an access token without an authorized uuid
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
@@ -93,18 +93,18 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.006987"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.005933"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithAuthorizedUUID
   Scenario: Grant an access token successfully with an authorized uuid
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.004s
+    When I grant a token specifying those permissions ... passed in 0.005s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -113,17 +113,17 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.007378"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.005877"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithoutAnyPermissionsError
   Scenario: Attempt to grant an access token with all permissions empty or false and expect a server error
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the 'uuid-1' UUID resource access permissions ... passed in 0.000s
     * deny resource permission GET ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    When I attempt to grant a token specifying those permissions ... passed in 0.005s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid permissions' ... passed in 0.000s
@@ -135,17 +135,17 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.007493"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.005892"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithRegExpSyntaxError
   Scenario: Attempt to grant an access token with a regular expression containing a syntax error and expect a server error
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the '!<[^>]+>++' UUID pattern access permissions ... passed in 0.000s
     * grant pattern permission GET ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    When I attempt to grant a token specifying those permissions ... passed in 0.005s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid RegExp' ... passed in 0.000s
@@ -157,13 +157,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.007183"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.005388"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithRegExpNonCapturingError
   Scenario: Attempt to grant an access token with a regular expression containing capturing groups and expect a server error
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the '(!<[^>]+>)+' UUID pattern access permissions ... passed in 0.000s
     * grant pattern permission GET ... passed in 0.000s
@@ -179,17 +179,17 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.007352"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.005473"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantWithTTLExceedMaxTTL @beta
   Scenario: Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)
-    Given I have a keyset with access manager enabled ... passed in 0.001s
+    Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the TTL 43201 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.004s
+    When I attempt to grant a token specifying those permissions ... passed in 0.005s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid ttl' ... passed in 0.000s
