@@ -3,4 +3,5 @@ export type VNode = {
     attributes: Record<string, string>
     children: Array<VNode>
     text?: string
+    value?: any
 }

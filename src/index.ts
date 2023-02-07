@@ -4,8 +4,6 @@ import { getLocalArtifacts, processArtifacts } from './reports'
 import { loadJson, saveJson } from './utils'
 import { makeRepository } from './git'
 
-// import { GithubService } from './github'
-
 async function main() {
     const config = makeConfig()
 
@@ -28,9 +26,6 @@ async function main() {
     const metadata = await loadJson('metadata')
 
     const artifacts = await getLocalArtifacts('./reports', config)
-
-    // const githubService = new GithubService(config)
-    // const artifacts = await githubService.fetchArtifacts()
 
     const reports = processArtifacts(artifacts, metadata)
 

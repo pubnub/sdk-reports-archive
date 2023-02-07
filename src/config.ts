@@ -1,14 +1,13 @@
 import path from 'node:path'
 
 // 1. Add language here
-const supportedRepositories = ['java', 'dart', 'kotlin'] as const
+const supportedRepositories = ['java', 'dart', 'kotlin', 'swift', 'ruby'] as const
 
 export type SupportedRepositories = typeof supportedRepositories[number]
 
 export type RepositoryConfig = {
     name: SupportedRepositories
 
-    artifactName: string
     mainReportName: string
     betaReportName?: string
 }
@@ -52,19 +51,26 @@ export const makeConfig = (): Config => ({
     repositories: {
         java: {
             name: 'java',
-            artifactName: 'acceptance-test-reports',
             mainReportName: 'main.xml',
             betaReportName: 'beta.xml',
         },
         dart: {
             name: 'dart',
-            artifactName: 'acceptance-test-reports',
             mainReportName: 'report.xml',
             betaReportName: 'beta.xml',
         },
         kotlin: {
             name: 'kotlin',
-            artifactName: 'acceptance-test-reports',
+            mainReportName: 'main.xml',
+            betaReportName: 'beta.xml',
+        },
+        swift: {
+            name: 'swift',
+            mainReportName: 'main.json',
+            betaReportName: 'beta.json',
+        },
+        ruby: {
+            name: 'ruby',
             mainReportName: 'main.xml',
             betaReportName: 'beta.xml',
         },

@@ -5,5 +5,5 @@ export const findScenario = (name: string, metadata: Metadata) => {
 }
 
 export const findFeature = (name: string, metadata: Metadata) => {
-    Object.values(metadata.features).find((k) => k.name === name)
+    return Object.values(metadata.features).find((k) => k.name === name)
 }

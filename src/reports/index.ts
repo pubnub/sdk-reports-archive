@@ -1,13 +1,17 @@
+import { basename, resolve } from 'path'
+import { readFile } from 'fs/promises'
+
 import { Artifact, Metadata } from '../manifest'
 import { VNode } from './vnode'
-
-import { xmlParser } from './parsers/xml'
-import { xmlJavaAdapter } from './adapters/java'
-import { xmlDartAdapter } from './adapters/dart'
-import { readFile } from 'fs/promises'
 import { listDirectories, listFiles } from '../utils'
 import { Config, getEntryType, isSupported, SupportedRepositories } from '../config'
-import { basename, resolve } from 'path'
+
+import { xmlParser } from './parsers/xml'
+import { jsonParser } from './parsers/json'
+import { xmlJavaAdapter } from './adapters/java'
+import { xmlDartAdapter } from './adapters/dart'
+import { jsonSwiftAdapter } from './adapters/swift'
+import { xmlRubyAdapter } from './adapters/ruby'
 
 type Formats = Record<
     string,
@@ -27,6 +31,13 @@ const formats: Formats = {
             java: xmlJavaAdapter,
             kotlin: xmlJavaAdapter,
             dart: xmlDartAdapter,
+            ruby: xmlRubyAdapter,
+        },
+    },
+    json: {
+        parser: jsonParser,
+        adapters: {
+            swift: jsonSwiftAdapter,
         },
     },
 }
@@ -78,6 +89,22 @@ export async function getLocalArtifacts(path: string, config: Config): Promise<A
             artifacts.push({
                 type: entryType,
                 extension: 'xml',
+                contents: await readFile(file, 'utf-8'),
+                createdAt: null,
+                language: dir,
+            })
+        }
+
+        for await (const file of listFiles(resolve(path, dir), 'json')) {
+            const entryType = getEntryType(repoConfig, basename(file))
+
+            if (entryType === 'unknown') {
+                continue
+            }
+
+            artifacts.push({
+                type: entryType,
+                extension: 'json',
                 contents: await readFile(file, 'utf-8'),
                 createdAt: null,
                 language: dir,
