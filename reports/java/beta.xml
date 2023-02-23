@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="50" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="68" time="5.317">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.47">
+<testsuite errors="0" failures="92" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="128" time="6.304">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.757">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -9,7 +9,7 @@ Then the result is successful...............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.059">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.067">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given an expired token with permissions to publish with channel 'channel-1'.passed
@@ -21,7 +21,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.053">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.047">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -33,7 +33,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.053">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.046">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -45,185 +45,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Configure SDK to authorize all requests using a specific access token" name="An access token passed in the authKey configuration parameter will be used to authorize requests" time="0.017">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given The SDK is configured with an AuthKey representing an access Token....undefined
-When I publish a messages...................................................skipped
-Then The request uses the specified access token for authorization..........skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Inspect the access token which the SDK is using to authorize requests" name="I can read the current access token" time="0.012">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have associated an access token with the SDK instance...............undefined
-When I request the current access token via the getToken operation..........skipped
-Then The token returned matches.............................................skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Inspect the access token which the SDK is using to authorize requests" name="No token is associated" time="0.007">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have not associated an access token with the SDK instance...........undefined
-When I request the current access token via the getToken operation..........skipped
-Then A non-error response indicating no token is associated will be returned.skipped
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" time="0.325">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the authorized UUID "test-authorized-uuid"............................passed
-Given the TTL 60............................................................passed
-Given the 'channel-1' CHANNEL resource access permissions...................passed
-* grant resource permission READ............................................passed
-* grant resource permission WRITE...........................................passed
-* grant resource permission GET.............................................passed
-* grant resource permission MANAGE..........................................passed
-* grant resource permission UPDATE..........................................passed
-* grant resource permission JOIN............................................passed
-* grant resource permission DELETE..........................................passed
-Given the 'channel_group-1' CHANNEL_GROUP resource access permissions.......passed
-* grant resource permission READ............................................passed
-* grant resource permission MANAGE..........................................passed
-Given the 'uuid-1' UUID resource access permissions.........................passed
-* grant resource permission GET.............................................passed
-* grant resource permission UPDATE..........................................passed
-* grant resource permission DELETE..........................................passed
-Given the '^channel-\S*$' CHANNEL pattern access permissions................passed
-* grant pattern permission READ.............................................passed
-* grant pattern permission WRITE............................................passed
-* grant pattern permission GET..............................................passed
-* grant pattern permission MANAGE...........................................passed
-* grant pattern permission UPDATE...........................................passed
-* grant pattern permission JOIN.............................................passed
-* grant pattern permission DELETE...........................................passed
-Given the '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions...passed
-* grant pattern permission READ.............................................passed
-* grant pattern permission MANAGE...........................................passed
-Given the '^uuid-\S*$' UUID pattern access permissions......................passed
-* grant pattern permission GET..............................................passed
-* grant pattern permission UPDATE...........................................passed
-* grant pattern permission DELETE...........................................passed
-When I grant a token specifying those permissions...........................passed
-Then the token contains the authorized UUID "test-authorized-uuid"..........passed
-Then the token contains the TTL 60..........................................passed
-Then the token has 'channel-1' CHANNEL resource access permissions..........passed
-* token resource permission READ............................................passed
-* token resource permission WRITE...........................................passed
-* token resource permission GET.............................................passed
-* token resource permission MANAGE..........................................passed
-* token resource permission UPDATE..........................................passed
-* token resource permission JOIN............................................passed
-* token resource permission DELETE..........................................passed
-Then the token has 'channel_group-1' CHANNEL_GROUP resource access permissions.passed
-* token resource permission READ............................................passed
-* token resource permission MANAGE..........................................passed
-Then the token has 'uuid-1' UUID resource access permissions................passed
-* token resource permission GET.............................................passed
-* token resource permission UPDATE..........................................passed
-* token resource permission DELETE..........................................passed
-Then the token has '^channel-\S*$' CHANNEL pattern access permissions.......passed
-* token pattern permission READ.............................................passed
-* token pattern permission WRITE............................................passed
-* token pattern permission GET..............................................passed
-* token pattern permission MANAGE...........................................passed
-* token pattern permission UPDATE...........................................passed
-* token pattern permission JOIN.............................................passed
-* token pattern permission DELETE...........................................passed
-Then the token has '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions.passed
-* token pattern permission READ.............................................passed
-* token pattern permission MANAGE...........................................passed
-Then the token has '^uuid-\S*$' UUID pattern access permissions.............passed
-* token pattern permission GET..............................................passed
-* token pattern permission UPDATE...........................................passed
-* token pattern permission DELETE...........................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Grant an access token without an authorized uuid" time="0.097">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the TTL 60............................................................passed
-Given the 'channel-1' CHANNEL resource access permissions...................passed
-* grant resource permission READ............................................passed
-When I grant a token specifying those permissions...........................passed
-Then the token contains the TTL 60..........................................passed
-Then the token does not contain an authorized uuid..........................passed
-Then the token has 'channel-1' CHANNEL resource access permissions..........passed
-* token resource permission READ............................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Grant an access token successfully with an authorized uuid" time="0.092">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the authorized UUID "test-authorized-uuid"............................passed
-Given the TTL 60............................................................passed
-Given the 'channel-1' CHANNEL resource access permissions...................passed
-* grant resource permission READ............................................passed
-When I grant a token specifying those permissions...........................passed
-Then the token contains the TTL 60..........................................passed
-Then the token contains the authorized UUID "test-authorized-uuid"..........passed
-Then the token has 'channel-1' CHANNEL resource access permissions..........passed
-* token resource permission READ............................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" time="0.072">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the TTL 60............................................................passed
-Given the 'uuid-1' UUID resource access permissions.........................passed
-* deny resource permission GET..............................................passed
-When I attempt to grant a token specifying those permissions................passed
-Then an error is returned...................................................passed
-* the error status code is 400..............................................passed
-* the error message is 'Invalid permissions'................................passed
-* the error source is 'grant'...............................................passed
-* the error detail message is 'Unexpected value: `permissions.resources.uuids.uuid-1` must be positive and non-zero.'.passed
-* the error detail location is 'permissions.resources.uuids.uuid-1'.........passed
-* the error detail location type is 'body'..................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" time="0.073">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the TTL 60............................................................passed
-Given the '!<[^>]+>++' UUID pattern access permissions......................passed
-* grant pattern permission GET..............................................passed
-When I attempt to grant a token specifying those permissions................passed
-Then an error is returned...................................................passed
-* the error status code is 400..............................................passed
-* the error message is 'Invalid RegExp'.....................................passed
-* the error source is 'grant'...............................................passed
-* the error detail message is 'Syntax error: multiple repeat.'..............passed
-* the error detail location is 'permissions.patterns.uuids.!<[^>]+>++'......passed
-* the error detail location type is 'body'..................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" time="0.079">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given the TTL 60............................................................passed
-Given the '(!<[^>]+>)+' UUID pattern access permissions.....................passed
-* grant pattern permission GET..............................................passed
-When I attempt to grant a token specifying those permissions................passed
-Then an error is returned...................................................passed
-* the error status code is 400..............................................passed
-* the error message is 'Invalid RegExp'.....................................passed
-* the error source is 'grant'...............................................passed
-* the error detail message is 'Only non-capturing groups are allowed. Try replacing `(` with `(?:`.'.passed
-* the error detail location is 'permissions.patterns.uuids.(!<[^>]+>)+'.....passed
-* the error detail location type is 'body'..................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.09">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.117">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the TTL 43201.........................................................passed
@@ -240,36 +62,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Parse Access Token" name="Validate that a token containing authorized uuid can be parsed correctly" time="0.05">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have a known token containing an authorized UUID....................passed
-When I parse the token......................................................passed
-Then the parsed token output contains the authorized UUID "test-authorized-uuid".passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Parse Access Token" name="Validate that a token containing uuid resource permissions can be parsed correctly" time="0.062">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have a known token containing UUID resource permissions.............passed
-When I parse the token......................................................passed
-Then the token has 'uuid-1' UUID resource access permissions................passed
-* token resource permission GET.............................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Parse Access Token" name="Validate that a token containing uuid pattern permissions can be parsed correctly" time="0.041">
-        <system-out>
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have a known token containing UUID pattern Permissions..............passed
-When I parse the token......................................................passed
-Then the token has '^uuid-\S*$' UUID pattern access permissions.............passed
-* token pattern permission GET..............................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.059">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.078">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -278,7 +71,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.054">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.085">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -294,7 +87,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.073">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.091">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -310,7 +103,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.07">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.058">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#'...........passed
@@ -319,339 +112,851 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="provide an access token to the the SDK to authorize requests" name="An access token provided via the setToken operation will be used to authorize future requests" time="0.002">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have provided an access token to the SDK via the setToken operation.undefined
-When I publish a messages...................................................skipped
-Then The request uses the specified access token for authorization..........skipped
+            <![CDATA[Given the crypto keyset.....................................................undefined
+When I subscribe............................................................skipped
+Then I receive the message in my subscribe response.........................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="provide an access token to the the SDK to authorize requests" name="An Access token provided via the setToken operation overrides access token provided in configuration" time="0.005">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given The SDK is configured with an AuthKey representing an acess Token.....undefined
-And I provide an access token to the SDK via the setToken operation.........skipped
-When I publish a messages...................................................skipped
-Then The request uses the specified access token for authorization..........skipped
+            <![CDATA[Given the invalid-crypto keyset.............................................undefined
+When I subscribe............................................................skipped
+Then an error is thrown.....................................................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="provide an access token to the the SDK to authorize requests" name="It is possible to stop using an access token without replacing it with another one" time="0.009">
+    <testcase classname="Send a file to Space" name="Send a file to space success" time="0.023">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given I have a keyset with access manager enabled...........................passed
-Given I have associated an access token with the SDK instance...............undefined
-And I indicated to the SDK to not use a token...............................skipped
-When I publish a messages...................................................skipped
-Then The request does not include an access token...........................skipped
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a file with 'space-id' space id and 'test_message_type' message type.skipped
+Then I receive a successful response........................................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Listing files" time="0.131">
-        <failure message="Scenario listingFiles considered failure: &#10;                            pending - List files request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too short, shorten than 3 characters" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a file with 'space-id' space id and 'ts' message type...........skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too long, longer than 50 characters" time="0.015">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a file with 'space-id' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Files" name="Listing files" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list files...........................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario listingFiles considered failure: 
-                            pending - List files request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.018">
-        <failure message="Scenario publishingFileMessage considered failure: &#10;                            pending - Publish file message request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Files" name="Publishing file message" time="0.02">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario publishingFileMessage considered failure: 
-                            pending - Publish file message request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.012">
-        <failure message="Scenario publishingFileMessageFailure considered failure: &#10;                            pending - Publish file message request failure,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Files" name="Publishing file message failure" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
 Then I receive error response...............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario publishingFileMessageFailure considered failure: 
-                            pending - Publish file message request failure,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Deleting a file" time="0.025">
-        <failure message="Scenario deletingFile considered failure: &#10;                            pending - Delete file request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Files" name="Deleting a file" time="0.021">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete file..........................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario deletingFile considered failure: 
-                            pending - Delete file request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.022">
-        <failure message="Scenario downloadingFile considered failure: &#10;                            pending - Download file request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Files" name="Downloading a file" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I download file........................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario downloadingFile considered failure: 
-                            pending - Download file request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Sending file" time="0.016">
+    <testcase classname="History for VSP" name="Client can fetch history with PubNub message types using defaults" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given the demo keyset.......................................................undefined
-When I send file............................................................skipped
-Then I receive successful response..........................................skipped
+            <![CDATA[Given the demo keyset with enabled storage..................................undefined
+When I fetch message history for 'simple-channel' channel...................skipped
+Then I receive a successful response........................................skipped
+And history response contains messages with 'message' and 'file' message types.skipped
+And history response contains messages without space ids....................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Sending file with retries" time="0.002">
+    <testcase classname="History for VSP" name="Client can fetch history with PubNub and user-defined message types using defaults" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
-            <![CDATA[Given the demo keyset.......................................................undefined
-When I send file............................................................skipped
-Then I receive successful response..........................................skipped
+            <![CDATA[Given the demo keyset with enabled storage..................................undefined
+When I fetch message history for 'vsp-channel' channel......................skipped
+Then I receive a successful response........................................skipped
+And history response contains messages with 'message' and 'vc-message' message types.skipped
+And history response contains messages without space ids....................skipped
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history" time="0.017">
-        <failure message="Scenario fetchMessageHistory considered failure: &#10;                            pending - Fetch message history request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="History for VSP" name="Client can fetch history without message types enabled by default" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset with enabled storage..................................undefined
+When I fetch message history with 'includeMessageType' set to 'false' for 'vsp-channel' channel.skipped
+Then I receive a successful response........................................skipped
+And history response contains messages without message types................skipped
+And history response contains messages without space ids....................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="History for VSP" name="Client can fetch history with space id disabled by default" time="0.016">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset with enabled storage..................................undefined
+When I fetch message history with 'includeSpaceId' set to 'true' for 'vsp-channel' channel.skipped
+Then I receive a successful response........................................skipped
+And history response contains messages with message types...................skipped
+And history response contains messages with space ids.......................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="History" name="Fetching message history" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for single channel.............................skipped
 Then I receive successful response..........................................skipped
 And the response contains pagination info...................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario fetchMessageHistory considered failure: 
-                            pending - Fetch message history request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.018">
-        <failure message="Scenario fetchMessageHistoryMulti considered failure: &#10;                            pending - Fetch message history with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.015">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for multiple channels..........................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario fetchMessageHistoryMulti considered failure: 
-                            pending - Fetch message history with multiple channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.012">
-        <failure message="Scenario fetchMessageHistoryActions considered failure: &#10;                            pending - Fetch message history actions with multiple channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.016">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history with message actions...........................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario fetchMessageHistoryActions considered failure: 
-                            pending - Fetch message history actions with multiple channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Adding a message action" time="0.016">
-        <failure message="Scenario successfulAddMessageAction considered failure: &#10;                            pending - Add message action request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Message Actions" name="Adding a message action" time="0.012">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario successfulAddMessageAction considered failure: 
-                            pending - Add message action request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.04">
-        <failure message="Scenario failedAddMessageAction considered failure: &#10;                            pending - Add message action request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.017">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
 Then I receive error response...............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedAddMessageAction considered failure: 
-                            pending - Add message action request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.018">
-        <failure message="Scenario fetchMessageActions considered failure: &#10;                            pending - Fetch message action request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.01">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message actions................................................skipped
 Then I receive successful response..........................................skipped
 And the response contains pagination info...................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario fetchMessageActions considered failure: 
-                            pending - Fetch message action request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.018">
-        <failure message="Scenario successfulDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.01">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario successfulDeleteMessageAction considered failure: 
-                            pending - Delete message action request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.027">
-        <failure message="Scenario failedDeleteMessageAction considered failure: &#10;                            pending - Delete message action request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
 Then I receive error response...............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedDeleteMessageAction considered failure: 
-                            pending - Delete message action request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message" time="0.022">
-        <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.078">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Chat' channel.............................................passed
+When I get the channel metadata.............................................passed
+Then I receive a successful response........................................passed
+And the channel metadata for 'Chat' channel.................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.024">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'DM' channel...............................................passed
+When I get the channel metadata with custom.................................passed
+Then I receive a successful response........................................passed
+And the channel metadata for 'DM' channel...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.035">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the data for 'Chat' channel...........................................passed
+When I set the channel metadata.............................................passed
+Then I receive a successful response........................................passed
+And the channel metadata for 'Chat' channel contains updated................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.029">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Chat' channel.............................................passed
+When I remove the channel metadata..........................................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.047">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+When I get all channel metadata.............................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'Chat' and 'Patient' channel metadata...passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.019">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+When I get all channel metadata with custom.................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'DM' and 'VipChat' channel metadata.....passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.031">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Chat' channel.............................................passed
+When I get the channel members..............................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'AmeliaMember' and 'EvaMember' members..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.025">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'VipChat' channel..........................................passed
+When I get the channel members including custom and UUID custom information.passed
+Then I receive a successful response........................................passed
+And the response contains list with 'OliverMember' and 'PeterMember' members.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.044">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the data for 'AmeliaMember' member....................................passed
+And the id for 'Chat' channel...............................................passed
+When I set a channel member.................................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'AmeliaMember' member...................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.037">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the data for 'PeterMember' member.....................................passed
+And the id for 'Chat' channel...............................................passed
+When I set a channel member including custom and UUID with custom...........passed
+Then I receive a successful response........................................passed
+And the response contains list with 'PeterMember' member....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.047">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Chat' channel.............................................passed
+And the data for 'AmeliaMember' member that we want to remove...............passed
+When I remove a channel member..............................................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Members" name="Manage members for a channel" time="0.057">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the data for 'PeterMember' member.....................................passed
+And the data for 'AmeliaMember' member that we want to remove...............passed
+And the id for 'Chat' channel...............................................passed
+When I manage channel members...............................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'PeterMember' member....................passed
+And the response does not contain list with 'AmeliaMember' member...........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.025">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+When I get the memberships..................................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.027">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given current user is 'Alice' persona.......................................passed
+When I get the memberships for current user.................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.025">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Bob' persona..............................................passed
+When I get the memberships including custom and channel custom information..passed
+Then I receive a successful response........................................passed
+And the response contains list with 'VipChatMembership' and 'DMMembership' memberships.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.03">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+And the data for 'ChatMembership' membership................................passed
+When I set the membership...................................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'ChatMembership' membership.............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.018">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given current user is 'Alice' persona.......................................passed
+And the data for 'ChatMembership' membership................................passed
+When I set the membership for current user..................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'ChatMembership' membership.............passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.031">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+And the data for 'ChatMembership' membership................................passed
+When I remove the membership................................................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.043">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given current user is 'Alice' persona.......................................passed
+And the data for 'ChatMembership' membership that we want to remove.........passed
+When I remove the membership for current user...............................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 Memberships" name="Manage memberships for a UUID" time="0.037">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+And the data for 'ChatMembership' membership................................passed
+And the data for 'PatientMembership' membership that we want to remove......passed
+When I manage memberships...................................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'ChatMembership' membership.............passed
+And the response does not contain list with 'PatientMembership' membership..passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.024">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+When I get the UUID metadata................................................passed
+Then I receive a successful response........................................passed
+And the UUID metadata for 'Alice' persona...................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.014">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given current user is 'Bob' persona.........................................passed
+When I get the UUID metadata with custom for current user...................passed
+Then I receive a successful response........................................passed
+And the UUID metadata for 'Bob' persona.....................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.026">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the data for 'Alice' persona..........................................passed
+When I set the UUID metadata................................................passed
+Then I receive a successful response........................................passed
+And the UUID metadata for 'Alice' persona contains updated..................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.021">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given the id for 'Alice' persona............................................passed
+When I remove the UUID metadata.............................................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.037">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+Given current user is 'Alice' persona.......................................passed
+When I remove the UUID metadata for current user............................passed
+Then I receive a successful response........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.027">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+When I get all UUID metadata................................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'Alice' and 'James' UUID metadata.......passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.022">
+        <system-out>
+            <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
+When I get all UUID metadata with custom....................................passed
+Then I receive a successful response........................................passed
+And the response contains list with 'Bob' and 'Lisa' UUID metadata..........passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/data endpoint" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence state for 'test-channel' channel......................skipped
+Then I receive successful response..........................................skipped
+And response contains state.................................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/heartbeat endpoint" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence state for 'test-channel' channel......................skipped
+Then I receive successful response..........................................skipped
+And response contains state.................................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Signal user presence" name="Heartbeat call for channel without 'state' query parameter when state not set" time="0.019">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I call heartbeat for 'test-channel' channel............................skipped
+Then I receive successful response..........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/data endpoint" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+Given presence state set for 'test-channel' channel with withHeartbeat set to 'true'.skipped
+When I call heartbeat for 'test-channel' channel............................skipped
+Then I receive successful response..........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/heartbeat endpoint" time="0.019">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+Given presence state set for 'test-channel' channel with withHeartbeat set to 'false'.skipped
+When I call heartbeat for 'test-channel' channel............................skipped
+Then I receive successful response..........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence on 'test-channel' channel with presence state.........skipped
+Then I receive successful response..........................................skipped
+And there is no active clients..............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel with subscribers" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence on 'test-channel' channel with presence state.........skipped
+Then I receive successful response..........................................skipped
+And there is active clients.................................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence on 'test-channel' channel with presence state.........skipped
+Then I receive successful response..........................................skipped
+And there is no active clients..............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" time="0.017">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I fetch presence on 'test-channel' channel with presence state.........skipped
+Then I receive successful response..........................................skipped
+And there is active clients.................................................skipped
+And state associated with active clients....................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Set presence state" name="Set presence state on channel using presence/data endpoint" time="0.029">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I set state on 'test-channel' channel with withHeartbeat set to 'false'.skipped
+Then I receive successful response..........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Set presence state" name="Set presence state on channel using presence/heartbeat endpoint" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I set state on 'test-channel' channel with withHeartbeat set to 'true'.skipped
+Then I receive successful response..........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space success" time="0.023">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'space-id' space id and 'test_step' message type.skipped
+Then I receive a successful response........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too short" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and 'ts' message type.....skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too long" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too short" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'ts' space id and 'test-step' message type......skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too long" time="0.008">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'this-is-really-long-identifier-for-space-id-to-be-used-with-publish' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'pn-test-space' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.01">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'pn_test-space' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '-' (hyphen) character" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with '-test-space' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '_' (underscore) character" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with '_test-space' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id contains not allowed characters" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test@space.com' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.012">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and 'pn-test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and 'pn_test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with not allowed '-' (hyphen) character" time="0.015">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and '-test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with not allowed '_' (underscore) character" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and '_test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type contains not allowed characters" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I publish message with 'test-space' space id and 'test:step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Publish a message" name="Publishing a message" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message....................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario simplePublish considered failure: 
-                            pending - Publish request with message,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.027">
-        <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with JSON metadata.................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario simplePublish considered failure: 
-                            pending - Publish request with message,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.022">
-        <failure message="Scenario simplePublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.01">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with string metadata...............................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario simplePublish considered failure: 
-                            pending - Publish request with message,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Failing publish" time="0.025">
-        <failure message="Scenario invalidPublish considered failure: &#10;                            pending - Publish request with message,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Publish a message" name="Failing publish" time="0.013">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the invalid keyset....................................................undefined
 When I publish a message....................................................skipped
 Then I receive error response...............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario invalidPublish considered failure: 
-                            pending - Publish request with message,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal" name="Sending a signal" time="0.012">
-        <failure message="Scenario successfulSignal considered failure: &#10;                            pending - Signal request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Send a signal to Space" name="Send a signal to space success" time="0.016">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'space-id' space id and 'test_message_type' message type.skipped
+Then I receive a successful response........................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too short" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and 'ts' message type.......skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too long" time="0.012">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too short" time="0.017">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'ts' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too long" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'this-is-really-long-identifier-for-space-id-to-be-used-with-publish' space id and 'test-step' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'pn-test-space' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.012">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'pn_test-space' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '-' (hyphen) character" time="0.019">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with '-test-space' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '_' (underscore) character" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with '_test-space' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id contains not allowed characters" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test@space.com' space id and 'test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and 'pn-test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and 'pn_test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '-' (hyphen) character" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and '-test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '_' (underscore) character" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and '_test_message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type contains not allowed characters" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I send a signal with 'test-space' space id and 'test:message_type' message type.skipped
+Then I receive an error response............................................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Signal" name="Sending a signal" time="0.018">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal........................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario successfulSignal considered failure: 
-                            pending - Signal request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.017">
-        <failure message="Scenario listingPushChannels considered failure: &#10;                            pending - List push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list GCM push channels...............................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario listingPushChannels considered failure: 
-                            pending - List push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.011">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels.............................................skipped
@@ -659,52 +964,31 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.025">
-        <failure message="Scenario listingPushChannels considered failure: &#10;                            pending - List push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels with topic..................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario listingPushChannels considered failure: 
-                            pending - List push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.028">
-        <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add GCM push channels................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario addingPushChannels considered failure: 
-                            pending - Add push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.021">
-        <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.005">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add FCM push channels................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario addingPushChannels considered failure: 
-                            pending - Add push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.009">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels..............................................skipped
@@ -712,37 +996,23 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.022">
-        <failure message="Scenario addingPushChannels considered failure: &#10;                            pending - Add push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels with topic...................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario addingPushChannels considered failure: 
-                            pending - Add push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.008">
-        <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM push channels.............................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario removingPushChannels considered failure: 
-                            pending - Remove push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.006">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels...........................................skipped
@@ -750,37 +1020,23 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.013">
-        <failure message="Scenario removingPushChannels considered failure: &#10;                            pending - Remove push channels request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels with topic................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario removingPushChannels considered failure: 
-                            pending - Remove push channels request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.007">
-        <failure message="Scenario removingDevice considered failure: &#10;                            pending - Remove device request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM device....................................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario removingDevice considered failure: 
-                            pending - Remove device request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.005">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device..................................................skipped
@@ -788,200 +1044,120 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.006">
-        <failure message="Scenario removingDevice considered failure: &#10;                            pending - Remove device request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device with topic.......................................skipped
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario removingDevice considered failure: 
-                            pending - Remove device request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.016">
-        <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.011">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given no auth key...........................................................undefined
 When I subscribe............................................................skipped
 Then I receive access denied status.........................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.014">
-        <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
 When I subscribe............................................................skipped
 Then I receive access denied status.........................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.025">
-        <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.014">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
 When I subscribe............................................................skipped
 Then I receive access denied status.........................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.014">
-        <failure message="Scenario failedSubscribeWithInvalidAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
 When I subscribe............................................................skipped
 Then I receive access denied status.........................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeWithInvalidAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
     <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.007">
-        <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
 When I subscribe............................................................skipped
 Then I receive the message in my subscribe response.........................skipped
 * I receive access denied status............................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.018">
-        <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
 When I subscribe............................................................skipped
 Then I receive the message in my subscribe response.........................skipped
 * I receive access denied status............................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.009">
-        <failure message="Scenario failedSubscribeInvalidatedAuthKey considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
 When I subscribe............................................................skipped
 Then I receive the message in my subscribe response.........................skipped
 * I receive access denied status............................................skipped
 * I don't auto-retry subscribe..............................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario failedSubscribeInvalidatedAuthKey considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.02">
-        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
-            <![CDATA[Given the crypto keyset.....................................................undefined
-When I subscribe............................................................skipped
-Then I receive the message in my subscribe response.........................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario messageEncryption considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.015">
-        <failure message="Scenario messageEncryption considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
-            <![CDATA[Given the invalid-crypto keyset.............................................undefined
-When I subscribe............................................................skipped
-Then an error is thrown.....................................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario messageEncryption considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
-]]>
-        </failure>
-    </testcase>
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.011">
-        <failure message="Scenario simpleSubscribe considered failure: &#10;                            pending - Subscribe request with timetoken zero,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe............................................................skipped
 When I publish a message....................................................skipped
 Then I receive the message in my subscribe response.........................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario simpleSubscribe considered failure: 
-                            pending - Subscribe request with timetoken zero,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Time" name="Getting PubNub time" time="0.016">
-        <failure message="Scenario successfulTime considered failure: &#10;                            pending - Time request,&#10;                            failed - " type="java.lang.AssertionError">
+    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub message types" time="0.009">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I subscribe to 'simple-channel' channel................................skipped
+Then I receive 2 messages in my subscribe response..........................skipped
+And response contains messages with 'message' and 'signal' message types....skipped
+And response contains messages without space ids............................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub and user-defined message types" time="0.007">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given the demo keyset.......................................................undefined
+When I subscribe to 'vsp-channel' channel...................................skipped
+Then I receive 2 messages in my subscribe response..........................skipped
+And response contains messages with 'message' and 'vc-message' message types.skipped
+And response contains messages with space ids...............................skipped
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Time" name="Getting PubNub time" time="0.006">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[When I request current time.................................................undefined
 Then I receive successful response..........................................skipped
-
-StackTrace:
-java.lang.AssertionError: Scenario successfulTime considered failure: 
-                            pending - Time request,
-                            failed - 
-	at org.junit.Assert.fail(Assert.java:89)
-	at com.pubnub.contract.Hooks.after(Hooks.kt:57)
 ]]>
         </failure>
     </testcase>
