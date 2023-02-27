@@ -1,0 +1,1611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1c036899-3101-4495-bc7f-086e4cbb74b8" name="runneradmin@fv-az368-347 2023-02-27 10:05:25" runUser="fv-az368-347\runneradmin" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2023-02-27T10:05:25.6185068+00:00" queuing="2023-02-27T10:05:25.6185072+00:00" start="2023-02-27T10:05:22.5846944+00:00" finish="2023-02-27T10:05:26.8639971+00:00" />
+  <TestSettings name="default" id="9e3ea2d7-ac77-4866-ac0b-8943873bc47e">
+    <Deployment runDeploymentRoot="runneradmin_fv-az368-347_2023-02-27_10_05_25" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="8fbf8867-2b07-49c6-8778-183f63f91c95" testId="4abae91a-e1c2-11c6-c78e-4c0a98abeb41" testName="ManageMembersForAChannel" computerName="fv-az368-347" duration="00:00:00.0394059" startTime="2023-02-27T10:05:25.7759685+00:00" endTime="2023-02-27T10:05:25.8153776+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8fbf8867-2b07-49c6-8778-183f63f91c95">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("PeterMember") (0.0s)&#xD;
+And the data for 'AmeliaMember' member that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMemberThatWeWantToRemove("AmeliaMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I manage channel members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIManageChannelMembers() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("PeterMember") (0.0s)&#xD;
+And the response does not contain list with 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseDoesNotContainListWithMember("AmeliaMember") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="23ac3e76-667f-4060-8aa4-a2b6ac1c7ded" testId="d717777f-cd83-a14f-a06e-85ad7a167630" testName="GetAUUIDMetadataForId" computerName="fv-az368-347" duration="00:00:00.0448510" startTime="2023-02-27T10:05:26.3741938+00:00" endTime="2023-02-27T10:05:26.4190488+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="23ac3e76-667f-4060-8aa4-a2b6ac1c7ded">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I get the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersona("Alice") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0a6f22d5-c073-4251-9a0b-0e06466f4d76" testId="70fed881-ff3d-cf01-fc50-eec23bec4b15" testName="GetMembersForVipChatChannelWithCustomAndUUIDWithCustom" computerName="fv-az368-347" duration="00:00:00.0234520" startTime="2023-02-27T10:05:25.7516023+00:00" endTime="2023-02-27T10:05:25.7750564+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a6f22d5-c073-4251-9a0b-0e06466f4d76">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'VipChat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("VipChat") (0.0s)&#xD;
+When I get the channel members including custom and UUID custom information&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMembersIncludingCustomAndUUIDCustomInformation() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'OliverMember' and 'PeterMember' members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMembers("OliverMember", "PeterMember") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ee7b47b4-a6af-40bb-89bd-efa2c53c71af" testId="aea0c1c8-e4f2-b00c-e2e5-3958a9100776" testName="ManageMembershipsForAUUID" computerName="fv-az368-347" duration="00:00:00.0335620" startTime="2023-02-27T10:05:25.9920842+00:00" endTime="2023-02-27T10:05:26.0256485+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee7b47b4-a6af-40bb-89bd-efa2c53c71af">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+And the data for 'PatientMembership' membership that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembershipThatWeWantToRemove("PatientMembership") (0.0s)&#xD;
+When I manage memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIManageMemberships() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)&#xD;
+And the response does not contain list with 'PatientMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseDoesNotContainListWithMembership("PatientMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2ea80531-0ddc-4c38-9924-98f59c9638db" testId="4401ff2d-c38b-51a8-f6b5-791f859c7098" testName="GetAChannelMetadataForId" computerName="fv-az368-347" duration="00:00:00.0651620" startTime="2023-02-27T10:05:25.3837080+00:00" endTime="2023-02-27T10:05:25.4488744+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ea80531-0ddc-4c38-9924-98f59c9638db">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I get the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannel("Chat") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d5779027-8566-4d55-a243-2e07a5c6d75e" testId="96ff7052-903d-d61a-0cb2-cdee63831172" testName="RemoveMembership" computerName="fv-az368-347" duration="00:00:00.0201170" startTime="2023-02-27T10:05:26.0265797+00:00" endTime="2023-02-27T10:05:26.0466980+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5779027-8566-4d55-a243-2e07a5c6d75e">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I remove the membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheMembership() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffe6f57e-c376-4031-837c-103b7f9b6209" testId="947b833a-a96c-d64f-e9e3-0beaa935d4d5" testName="SetAChannelMetadata" computerName="fv-az368-347" duration="00:00:00.0299650" startTime="2023-02-27T10:05:25.6893752+00:00" endTime="2023-02-27T10:05:25.7193424+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffe6f57e-c376-4031-837c-103b7f9b6209">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForChannel("Chat") (0.0s)&#xD;
+When I set the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'Chat' channel contains updated&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannelContainsUpdated("Chat") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="acb39bb8-201e-417e-87e4-c0becc3d1adc" testId="ed5af684-441e-e3d8-3bf2-a26f2fd3f117" testName="SetMemberForAChannel" computerName="fv-az368-347" duration="00:00:00.0307650" startTime="2023-02-27T10:05:25.8446831+00:00" endTime="2023-02-27T10:05:25.8754502+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acb39bb8-201e-417e-87e4-c0becc3d1adc">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("AmeliaMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I set a channel member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetAChannelMember() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("AmeliaMember") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f500dcda-24da-49bf-8398-1ef3d69bec28" testId="ee450aac-5f02-8238-a55d-792600e33298" testName="RevokeATokenWhileItIsDisabledOnAServer" computerName="fv-az368-347" duration="00:00:00.0267610" startTime="2023-02-27T10:05:26.5687610+00:00" endTime="2023-02-27T10:05:26.5955236+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f500dcda-24da-49bf-8398-1ef3d69bec28">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Feature disabled'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Feature disabled") (0.0s)&#xD;
+* the error source is 'revoke'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("revoke") (0.0s)&#xD;
+* the error detail message is 'Token revocation is disabled.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Token revocation ...") (0.0s)&#xD;
+* the error detail location is 'subscribe-key'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("subscribe-key") (0.0s)&#xD;
+* the error detail location type is 'path'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("path") (0.0s)&#xD;
+* the error service is 'Access Manager'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorServiceIs("Access Manager") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d2aad883-7529-478d-8c3c-6bbd01a9ba48" testId="23b61850-f73c-f5eb-17ca-9aaba5f44c54" testName="GetAllUUIDMetadataWithCustom" computerName="fv-az368-347" duration="00:00:00.0296060" startTime="2023-02-27T10:05:26.3330001+00:00" endTime="2023-02-27T10:05:26.3626093+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2aad883-7529-478d-8c3c-6bbd01a9ba48">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all UUID metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllUUIDMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Bob' and 'Lisa' UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndUUIDMetadata("Bob", "Lisa") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="615d796c-9534-4a21-a51b-5fd843dc1cb1" testId="446be40b-3f39-dc72-f797-9a3aa2aac484" testName="AttemptToGrantAnAccessTokenWithAllPermissionsEmptyOrFalseAndExpectAServerError" computerName="fv-az368-347" duration="00:00:00.0270250" startTime="2023-02-27T10:05:25.0320358+00:00" endTime="2023-02-27T10:05:25.0590632+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="615d796c-9534-4a21-a51b-5fd843dc1cb1">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* deny resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenDenyResourcePermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid permissions'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid permissions") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Unexpected value: `permissions.resources.uuids.uuid-1` must be positive and non-zero.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Unexpected value:...") (0.0s)&#xD;
+* the error detail location is 'permissions.resources.uuids.uuid-1'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.resou...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8b11b0a7-2863-4d14-bafc-c9fbd6d3fecd" testId="86189ae4-95f9-30e4-f4c6-bfa1b9898a62" testName="SetMemberWithCustomForAChannelAndUUIDWithCustom" computerName="fv-az368-347" duration="00:00:00.0248510" startTime="2023-02-27T10:05:25.8801610+00:00" endTime="2023-02-27T10:05:25.9050137+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b11b0a7-2863-4d14-bafc-c9fbd6d3fecd">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("PeterMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I set a channel member including custom and UUID with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetAChannelMemberIncludingCustomAndUUIDWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("PeterMember") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fc8460d5-dd82-4ee3-bf22-07a7ea6733cc" testId="17537441-5c46-b29c-7a15-7f733fa6a240" testName="AttemptToGrantAnAccessTokenWhenTtlProvidedExceedsTheMaxTtlConfiguredUseDefaultMax43200ForTheTest" computerName="fv-az368-347" duration="00:00:00.2589880" startTime="2023-02-27T10:05:24.7572978+00:00" endTime="2023-02-27T10:05:25.0161721+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fc8460d5-dd82-4ee3-bf22-07a7ea6733cc">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 43201&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(43201) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.1s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid ttl'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid ttl") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Range should be 1 to 43200 minute(s).'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Range should be 1...") (0.0s)&#xD;
+* the error detail location is 'ttl'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("ttl") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="14f4033f-1061-4b0f-ab08-dd6f52bbecc6" testId="046e940e-ed7b-e2be-b9c9-fa82caaefa8a" testName="RemoveMembershipForCurrentUser" computerName="fv-az368-347" duration="00:00:00.0191999" startTime="2023-02-27T10:05:26.0476197+00:00" endTime="2023-02-27T10:05:26.0668214+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14f4033f-1061-4b0f-ab08-dd6f52bbecc6">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembershipThatWeWantToRemove("ChatMembership") (0.0s)&#xD;
+When I remove the membership for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheMembershipForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b7f4d3f4-f1e1-4bc2-9845-23fcfaee16ee" testId="ba48247e-b680-05e2-ec8e-cd712552a6ee" testName="GetMembershipsForCurrentUser" computerName="fv-az368-347" duration="00:00:00.0374320" startTime="2023-02-27T10:05:25.9072189+00:00" endTime="2023-02-27T10:05:25.9446533+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7f4d3f4-f1e1-4bc2-9845-23fcfaee16ee">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+When I get the memberships for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMembershipsForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("ChatMembership", "PatientMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a3f3f22c-f36a-440d-9e08-a84e021437e5" testId="63f82b54-f147-1707-8ae8-1f771750a4c8" testName="GrantAnAccessTokenSuccessfullyWithAnAuthorizedUuid" computerName="fv-az368-347" duration="00:00:00.1119260" startTime="2023-02-27T10:05:25.1037989+00:00" endTime="2023-02-27T10:05:25.2157330+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a3f3f22c-f36a-440d-9e08-a84e021437e5">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.1s)&#xD;
+Then the token contains the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="35e0e262-5f2b-47cc-a08d-0e79495c02aa" testId="f6a7a690-af73-fab8-0ebf-059ccdbb5495" testName="RevokeInvalidToken" computerName="fv-az368-347" duration="00:00:00.0257530" startTime="2023-02-27T10:05:26.6585505+00:00" endTime="2023-02-27T10:05:26.6843052+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35e0e262-5f2b-47cc-a08d-0e79495c02aa">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid token'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid token") (0.0s)&#xD;
+* the error source is 'revoke'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("revoke") (0.0s)&#xD;
+* the error detail message is not empty&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIsNotEmpty() (0.0s)&#xD;
+* the error detail location is 'token'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("token") (0.0s)&#xD;
+* the error detail location type is 'path'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("path") (0.0s)&#xD;
+* the error service is 'Access Manager'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorServiceIs("Access Manager") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4d7597b9-87cb-4735-9f04-8ab8a441e59c" testId="07a0b332-7585-5132-2931-ba67f585bbfd" testName="RemoveAUUIDMetadataForId" computerName="fv-az368-347" duration="00:00:00.0330060" startTime="2023-02-27T10:05:26.4661069+00:00" endTime="2023-02-27T10:05:26.4991159+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4d7597b9-87cb-4735-9f04-8ab8a441e59c">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I remove the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="df81f46f-6832-4ac9-a28a-f86c56bdf6c6" testId="219f8da3-cc63-e002-72df-e2f549e52967" testName="GetAllUUIDMetadata" computerName="fv-az368-347" duration="00:00:00.0384790" startTime="2023-02-27T10:05:26.2862694+00:00" endTime="2023-02-27T10:05:26.3247527+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df81f46f-6832-4ac9-a28a-f86c56bdf6c6">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Alice' and 'James' UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndUUIDMetadata("Alice", "James") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d9d6f8c0-d260-4def-8a30-037ca8b1b808" testId="c824fd41-84e4-6d43-8411-04262c295a77" testName="SetMembership" computerName="fv-az368-347" duration="00:00:00.0236480" startTime="2023-02-27T10:05:26.0677201+00:00" endTime="2023-02-27T10:05:26.0913697+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d9d6f8c0-d260-4def-8a30-037ca8b1b808">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I set the membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheMembership() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a4a58397-eb66-49fa-bfa3-44e23b1f82fb" testId="85374129-b31e-6699-e3e3-35edfbf2f310" testName="GrantAnAccessTokenWithAllPermissionsOnAllResourceTypesWithAuthorizedUuid" computerName="fv-az368-347" duration="00:00:00.1027909" startTime="2023-02-27T10:05:25.2296316+00:00" endTime="2023-02-27T10:05:25.3324300+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4a58397-eb66-49fa-bfa3-44e23b1f82fb">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+* grant resource permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionWRITE() (0.0s)&#xD;
+* grant resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionGET() (0.0s)&#xD;
+* grant resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionMANAGE() (0.0s)&#xD;
+* grant resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionUPDATE() (0.0s)&#xD;
+* grant resource permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionJOIN() (0.0s)&#xD;
+* grant resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionDELETE() (0.0s)&#xD;
+Given the 'channel_group-1' CHANNEL_GROUP resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNEL_GROUPResourceAccessPermissions("channel_group-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+* grant resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionMANAGE() (0.0s)&#xD;
+Given the 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* grant resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionGET() (0.0s)&#xD;
+* grant resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionUPDATE() (0.0s)&#xD;
+* grant resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionDELETE() (0.0s)&#xD;
+Given the '^channel-\S*$' CHANNEL pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELPatternAccessPermissions("^channel-\S*$") (0.0s)&#xD;
+* grant pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionREAD() (0.0s)&#xD;
+* grant pattern permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionWRITE() (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+* grant pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionMANAGE() (0.0s)&#xD;
+* grant pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionUPDATE() (0.0s)&#xD;
+* grant pattern permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionJOIN() (0.0s)&#xD;
+* grant pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionDELETE() (0.0s)&#xD;
+Given the '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNEL_GROUPPatternAccessPermissions("^:channel_group-\S*$") (0.0s)&#xD;
+* grant pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionREAD() (0.0s)&#xD;
+* grant pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionMANAGE() (0.0s)&#xD;
+Given the '^uuid-\S*$' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("^uuid-\S*$") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+* grant pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionUPDATE() (0.0s)&#xD;
+* grant pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionDELETE() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+* token resource permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionWRITE() (0.0s)&#xD;
+* token resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionGET() (0.0s)&#xD;
+* token resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionMANAGE() (0.0s)&#xD;
+* token resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionUPDATE() (0.0s)&#xD;
+* token resource permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionJOIN() (0.0s)&#xD;
+* token resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionDELETE() (0.0s)&#xD;
+Then the token has 'channel_group-1' CHANNEL_GROUP resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNEL_GROUPResourceAccessPermissions("channel_group-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+* token resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionMANAGE() (0.0s)&#xD;
+Then the token has 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* token resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionGET() (0.0s)&#xD;
+* token resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionUPDATE() (0.0s)&#xD;
+* token resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionDELETE() (0.0s)&#xD;
+Then the token has '^channel-\S*$' CHANNEL pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELPatternAccessPermissions("^channel-\S*$") (0.0s)&#xD;
+* token pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionREAD() (0.0s)&#xD;
+* token pattern permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionWRITE() (0.0s)&#xD;
+* token pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionGET() (0.0s)&#xD;
+* token pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionMANAGE() (0.0s)&#xD;
+* token pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionUPDATE() (0.0s)&#xD;
+* token pattern permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionJOIN() (0.0s)&#xD;
+* token pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionDELETE() (0.0s)&#xD;
+Then the token has '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNEL_GROUPPatternAccessPermissions("^:channel_group-\S*$") (0.0s)&#xD;
+* token pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionREAD() (0.0s)&#xD;
+* token pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionMANAGE() (0.0s)&#xD;
+Then the token has '^uuid-\S*$' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasUUIDPatternAccessPermissions("^uuid-\S*$") (0.0s)&#xD;
+* token pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionGET() (0.0s)&#xD;
+* token pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionUPDATE() (0.0s)&#xD;
+* token pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionDELETE() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ffe951ff-7d91-44fe-a1a4-7be45ee41d51" testId="0c1a37b6-b16e-3d65-7b38-756d59a051b1" testName="GetAllChannelMetadata" computerName="fv-az368-347" duration="00:00:00.1079950" startTime="2023-02-27T10:05:25.5348872+00:00" endTime="2023-02-27T10:05:25.6428907+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffe951ff-7d91-44fe-a1a4-7be45ee41d51">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Chat' and 'Patient' channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndChannelMetadata("Chat", "Patient") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e363934e-5477-4614-8e4a-be50c6d25344" testId="b2c9c319-05d3-858f-ecdb-c785279a33e5" testName="RemoveMemberForAChannel" computerName="fv-az368-347" duration="00:00:00.0209830" startTime="2023-02-27T10:05:25.8163083+00:00" endTime="2023-02-27T10:05:25.8372931+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e363934e-5477-4614-8e4a-be50c6d25344">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+And the data for 'AmeliaMember' member that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMemberThatWeWantToRemove("AmeliaMember") (0.0s)&#xD;
+When I remove a channel member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveAChannelMember() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8a5ae91b-5533-4e28-9f80-510d40aaf124" testId="5271a851-e8d2-c42c-aad6-49024c68a9d5" testName="GetAllChannelMetadataWithCustom" computerName="fv-az368-347" duration="00:00:00.0199470" startTime="2023-02-27T10:05:25.6438479+00:00" endTime="2023-02-27T10:05:25.6637963+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8a5ae91b-5533-4e28-9f80-510d40aaf124">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all channel metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllChannelMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'DM' and 'VipChat' channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndChannelMetadata("DM", "VipChat") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3d91f490-b0f3-4eda-b948-3327bf018428" testId="b811bc2b-ac6c-1eab-5504-b3af1ec9a805" testName="RevokeATokenWithCharactersThatRequireUrlEncoding" computerName="fv-az368-347" duration="00:00:00.0282010" startTime="2023-02-27T10:05:26.5964342+00:00" endTime="2023-02-27T10:05:26.6246372+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d91f490-b0f3-4eda-b948-3327bf018428">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&amp;=+$#'&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTokenString("unescaped-_.ABCab...") (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then I get confirmation that token has been revoked&#xD;
+-&gt; done: FeatureAccessSteps.ThenIGetConfirmationThatTokenHasBeenRevoked() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="05504ec3-9749-4b86-b4d2-d2ef98e5aac5" testId="238d7046-3682-e357-765d-2a21c813602e" testName="AttemptToGrantAnAccessTokenWithARegularExpressionContainingASyntaxErrorAndExpectAServerError" computerName="fv-az368-347" duration="00:00:00.0225480" startTime="2023-02-27T10:05:25.0625981+00:00" endTime="2023-02-27T10:05:25.0851481+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05504ec3-9749-4b86-b4d2-d2ef98e5aac5">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the '!&lt;[^&gt;]+&gt;++' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("!&lt;[^&gt;]+&gt;++") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid RegExp'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid RegExp") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Syntax error: multiple repeat.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Syntax error: mul...") (0.0s)&#xD;
+* the error detail location is 'permissions.patterns.uuids.!&lt;[^&gt;]+&gt;++'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.patte...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="79124dd8-1a57-417d-999b-5990da3a2040" testId="9e948d14-1697-7020-7d46-e7d0ab1a839a" testName="RevokeExistingValidToken" computerName="fv-az368-347" duration="00:00:00.0167640" startTime="2023-02-27T10:05:26.6354298+00:00" endTime="2023-02-27T10:05:26.6521958+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="79124dd8-1a57-417d-999b-5990da3a2040">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then I get confirmation that token has been revoked&#xD;
+-&gt; done: FeatureAccessSteps.ThenIGetConfirmationThatTokenHasBeenRevoked() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="bcdeb2a6-7096-49ac-95df-f12e70ccbc62" testId="be8b1c28-897b-72b1-79de-44eed3d3394f" testName="RemoveAChannelMetadataForId" computerName="fv-az368-347" duration="00:00:00.0235170" startTime="2023-02-27T10:05:25.6646873+00:00" endTime="2023-02-27T10:05:25.6882064+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bcdeb2a6-7096-49ac-95df-f12e70ccbc62">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I remove the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ed86a923-1a5a-4bc8-942c-725469a31446" testId="10a87c1f-7e7a-0e53-402e-aefcc00a21da" testName="GetMembershipsForUUID" computerName="fv-az368-347" duration="00:00:00.0201850" startTime="2023-02-27T10:05:25.9456036+00:00" endTime="2023-02-27T10:05:25.9657903+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed86a923-1a5a-4bc8-942c-725469a31446">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I get the memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMemberships() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("ChatMembership", "PatientMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1596a953-1094-4ca7-bcbd-126d7a8db95f" testId="1f73b5a1-d21f-1feb-a5dc-31aa30bfbe2c" testName="SetMembershipForCurrentUser" computerName="fv-az368-347" duration="00:00:00.1710440" startTime="2023-02-27T10:05:26.0923327+00:00" endTime="2023-02-27T10:05:26.2633878+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1596a953-1094-4ca7-bcbd-126d7a8db95f">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I set the membership for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheMembershipForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7a41e25d-208e-43c1-bcd8-c59bb8264a7a" testId="5a108f95-d949-be1c-ba70-794e5a89cb2c" testName="SetAUUIDMetadata" computerName="fv-az368-347" duration="00:00:00.0234650" startTime="2023-02-27T10:05:26.5431933+00:00" endTime="2023-02-27T10:05:26.5666607+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a41e25d-208e-43c1-bcd8-c59bb8264a7a">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForPersona("Alice") (0.0s)&#xD;
+When I set the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Alice' persona contains updated&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersonaContainsUpdated("Alice") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a4b211c7-e57d-4b01-a138-d439aa52e516" testId="7acf7525-aaca-a5f2-7032-491d9caf1cf8" testName="GetMembershipsForUUIDWithCustomAndChannelCustom" computerName="fv-az368-347" duration="00:00:00.0240710" startTime="2023-02-27T10:05:25.9666528+00:00" endTime="2023-02-27T10:05:25.9907252+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a4b211c7-e57d-4b01-a138-d439aa52e516">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Bob") (0.0s)&#xD;
+When I get the memberships including custom and channel custom information&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMembershipsIncludingCustomAndChannelCustomInformation() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'VipChatMembership' and 'DMMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("VipChatMembership", "DMMembership") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2cd3b1bd-c8af-491c-b743-3e966d5f6f68" testId="3405a88a-853b-5aa4-dc52-211f74db4a9b" testName="GetMembersForAChannel" computerName="fv-az368-347" duration="00:00:00.0286210" startTime="2023-02-27T10:05:25.7220599+00:00" endTime="2023-02-27T10:05:25.7506830+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2cd3b1bd-c8af-491c-b743-3e966d5f6f68">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I get the channel members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMembers() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'AmeliaMember' and 'EvaMember' members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMembers("AmeliaMember", "EvaMember") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="acb57e22-5001-418a-90d7-27857bb9d35d" testId="0992672a-4884-80d0-5142-7d4a75036ed9" testName="AttemptToGrantAnAccessTokenWithARegularExpressionContainingCapturingGroupsAndExpectAServerError" computerName="fv-az368-347" duration="00:00:00.0163880" startTime="2023-02-27T10:05:25.0862537+00:00" endTime="2023-02-27T10:05:25.1026428+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acb57e22-5001-418a-90d7-27857bb9d35d">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the '(!&lt;[^&gt;]+&gt;)+' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("(!&lt;[^&gt;]+&gt;)+") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid RegExp'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid RegExp") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Only non-capturing groups are allowed. Try replacing `(` with `(?:`.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Only non-capturin...") (0.0s)&#xD;
+* the error detail location is 'permissions.patterns.uuids.(!&lt;[^&gt;]+&gt;)+'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.patte...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f4106153-11e1-401b-b871-9d629f3134f4" testId="78605226-9a65-4701-5dbe-74fd1152b767" testName="GetAUUIDWithCustomMetadataIdStoredInConfig" computerName="fv-az368-347" duration="00:00:00.0237730" startTime="2023-02-27T10:05:26.4335457+00:00" endTime="2023-02-27T10:05:26.4573220+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f4106153-11e1-401b-b871-9d629f3134f4">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Bob") (0.0s)&#xD;
+When I get the UUID metadata with custom for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheUUIDMetadataWithCustomForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersona("Bob") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="4859a218-8413-46fb-ae8c-0b29cdf961bc" testId="8a1c2bbd-f61b-135c-270f-157e7106103a" testName="GetAChannelWithCustomMetadata" computerName="fv-az368-347" duration="00:00:00.0239420" startTime="2023-02-27T10:05:25.4582870+00:00" endTime="2023-02-27T10:05:25.4822308+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4859a218-8413-46fb-ae8c-0b29cdf961bc">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'DM' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("DM") (0.0s)&#xD;
+When I get the channel metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'DM' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannel("DM") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="35916e8b-c238-4e73-af94-da3d26601917" testId="3a8dac54-e42a-8256-0f95-9b2771dcaeda" testName="RemoveAUUIDMetadataIdStoredInConfig" computerName="fv-az368-347" duration="00:00:00.0281980" startTime="2023-02-27T10:05:26.5054964+00:00" endTime="2023-02-27T10:05:26.5336971+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35916e8b-c238-4e73-af94-da3d26601917">
+      <Output>
+        <StdOut>Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+When I remove the UUID metadata for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheUUIDMetadataForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="48d06c7a-3770-4878-9f11-bc163ea37464" testId="5e071152-ee43-67c0-dc5d-67a966171b99" testName="GrantAnAccessTokenWithoutAnAuthorizedUuid" computerName="fv-az368-347" duration="00:00:00.0266360" startTime="2023-02-27T10:05:25.3418347+00:00" endTime="2023-02-27T10:05:25.3684729+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48d06c7a-3770-4878-9f11-bc163ea37464">
+      <Output>
+        <StdOut>Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.0s)&#xD;
+Then the token does not contain an authorized uuid&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenDoesNotContainAnAuthorizedUuid() (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RevokeATokenWhileItIsDisabledOnAServer" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="ee450aac-5f02-8238-a55d-792600e33298">
+      <Execution id="f500dcda-24da-49bf-8398-1ef3d69bec28" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.RevokeAnAccessTokenFeature" name="RevokeATokenWhileItIsDisabledOnAServer" />
+    </UnitTest>
+    <UnitTest name="GetMembersForAChannel" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="3405a88a-853b-5aa4-dc52-211f74db4a9b">
+      <Execution id="2cd3b1bd-c8af-491c-b743-3e966d5f6f68" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="GetMembersForAChannel" />
+    </UnitTest>
+    <UnitTest name="SetMembership" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="c824fd41-84e4-6d43-8411-04262c295a77">
+      <Execution id="d9d6f8c0-d260-4def-8a30-037ca8b1b808" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="SetMembership" />
+    </UnitTest>
+    <UnitTest name="RemoveMembership" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="96ff7052-903d-d61a-0cb2-cdee63831172">
+      <Execution id="d5779027-8566-4d55-a243-2e07a5c6d75e" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="RemoveMembership" />
+    </UnitTest>
+    <UnitTest name="GetAChannelWithCustomMetadata" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="8a1c2bbd-f61b-135c-270f-157e7106103a">
+      <Execution id="4859a218-8413-46fb-ae8c-0b29cdf961bc" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="GetAChannelWithCustomMetadata" />
+    </UnitTest>
+    <UnitTest name="RevokeATokenWithCharactersThatRequireUrlEncoding" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="b811bc2b-ac6c-1eab-5504-b3af1ec9a805">
+      <Execution id="3d91f490-b0f3-4eda-b948-3327bf018428" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.RevokeAnAccessTokenFeature" name="RevokeATokenWithCharactersThatRequireUrlEncoding" />
+    </UnitTest>
+    <UnitTest name="AttemptToGrantAnAccessTokenWithARegularExpressionContainingASyntaxErrorAndExpectAServerError" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="238d7046-3682-e357-765d-2a21c813602e">
+      <Execution id="05504ec3-9749-4b86-b4d2-d2ef98e5aac5" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="AttemptToGrantAnAccessTokenWithARegularExpressionContainingASyntaxErrorAndExpectAServerError" />
+    </UnitTest>
+    <UnitTest name="GrantAnAccessTokenSuccessfullyWithAnAuthorizedUuid" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="63f82b54-f147-1707-8ae8-1f771750a4c8">
+      <Execution id="a3f3f22c-f36a-440d-9e08-a84e021437e5" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="GrantAnAccessTokenSuccessfullyWithAnAuthorizedUuid" />
+    </UnitTest>
+    <UnitTest name="SetMemberWithCustomForAChannelAndUUIDWithCustom" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="86189ae4-95f9-30e4-f4c6-bfa1b9898a62">
+      <Execution id="8b11b0a7-2863-4d14-bafc-c9fbd6d3fecd" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="SetMemberWithCustomForAChannelAndUUIDWithCustom" />
+    </UnitTest>
+    <UnitTest name="GetAllUUIDMetadataWithCustom" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="23b61850-f73c-f5eb-17ca-9aaba5f44c54">
+      <Execution id="d2aad883-7529-478d-8c3c-6bbd01a9ba48" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="GetAllUUIDMetadataWithCustom" />
+    </UnitTest>
+    <UnitTest name="GetMembersForVipChatChannelWithCustomAndUUIDWithCustom" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="70fed881-ff3d-cf01-fc50-eec23bec4b15">
+      <Execution id="0a6f22d5-c073-4251-9a0b-0e06466f4d76" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="GetMembersForVipChatChannelWithCustomAndUUIDWithCustom" />
+    </UnitTest>
+    <UnitTest name="AttemptToGrantAnAccessTokenWhenTtlProvidedExceedsTheMaxTtlConfiguredUseDefaultMax43200ForTheTest" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="17537441-5c46-b29c-7a15-7f733fa6a240">
+      <Execution id="fc8460d5-dd82-4ee3-bf22-07a7ea6733cc" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="AttemptToGrantAnAccessTokenWhenTtlProvidedExceedsTheMaxTtlConfiguredUseDefaultMax43200ForTheTest" />
+    </UnitTest>
+    <UnitTest name="ManageMembershipsForAUUID" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="aea0c1c8-e4f2-b00c-e2e5-3958a9100776">
+      <Execution id="ee7b47b4-a6af-40bb-89bd-efa2c53c71af" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="ManageMembershipsForAUUID" />
+    </UnitTest>
+    <UnitTest name="GetMembershipsForCurrentUser" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="ba48247e-b680-05e2-ec8e-cd712552a6ee">
+      <Execution id="b7f4d3f4-f1e1-4bc2-9845-23fcfaee16ee" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="GetMembershipsForCurrentUser" />
+    </UnitTest>
+    <UnitTest name="SetMembershipForCurrentUser" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="1f73b5a1-d21f-1feb-a5dc-31aa30bfbe2c">
+      <Execution id="1596a953-1094-4ca7-bcbd-126d7a8db95f" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="SetMembershipForCurrentUser" />
+    </UnitTest>
+    <UnitTest name="SetAChannelMetadata" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="947b833a-a96c-d64f-e9e3-0beaa935d4d5">
+      <Execution id="ffe6f57e-c376-4031-837c-103b7f9b6209" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="SetAChannelMetadata" />
+    </UnitTest>
+    <UnitTest name="GetAUUIDWithCustomMetadataIdStoredInConfig" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="78605226-9a65-4701-5dbe-74fd1152b767">
+      <Execution id="f4106153-11e1-401b-b871-9d629f3134f4" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="GetAUUIDWithCustomMetadataIdStoredInConfig" />
+    </UnitTest>
+    <UnitTest name="GetAUUIDMetadataForId" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="d717777f-cd83-a14f-a06e-85ad7a167630">
+      <Execution id="23ac3e76-667f-4060-8aa4-a2b6ac1c7ded" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="GetAUUIDMetadataForId" />
+    </UnitTest>
+    <UnitTest name="GetAllChannelMetadata" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="0c1a37b6-b16e-3d65-7b38-756d59a051b1">
+      <Execution id="ffe951ff-7d91-44fe-a1a4-7be45ee41d51" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="GetAllChannelMetadata" />
+    </UnitTest>
+    <UnitTest name="RemoveMembershipForCurrentUser" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="046e940e-ed7b-e2be-b9c9-fa82caaefa8a">
+      <Execution id="14f4033f-1061-4b0f-ab08-dd6f52bbecc6" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="RemoveMembershipForCurrentUser" />
+    </UnitTest>
+    <UnitTest name="RemoveMemberForAChannel" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="b2c9c319-05d3-858f-ecdb-c785279a33e5">
+      <Execution id="e363934e-5477-4614-8e4a-be50c6d25344" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="RemoveMemberForAChannel" />
+    </UnitTest>
+    <UnitTest name="GetMembershipsForUUID" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="10a87c1f-7e7a-0e53-402e-aefcc00a21da">
+      <Execution id="ed86a923-1a5a-4bc8-942c-725469a31446" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="GetMembershipsForUUID" />
+    </UnitTest>
+    <UnitTest name="SetMemberForAChannel" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="ed5af684-441e-e3d8-3bf2-a26f2fd3f117">
+      <Execution id="acb39bb8-201e-417e-87e4-c0becc3d1adc" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="SetMemberForAChannel" />
+    </UnitTest>
+    <UnitTest name="RemoveAUUIDMetadataForId" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="07a0b332-7585-5132-2931-ba67f585bbfd">
+      <Execution id="4d7597b9-87cb-4735-9f04-8ab8a441e59c" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="RemoveAUUIDMetadataForId" />
+    </UnitTest>
+    <UnitTest name="RemoveAUUIDMetadataIdStoredInConfig" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="3a8dac54-e42a-8256-0f95-9b2771dcaeda">
+      <Execution id="35916e8b-c238-4e73-af94-da3d26601917" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="RemoveAUUIDMetadataIdStoredInConfig" />
+    </UnitTest>
+    <UnitTest name="GetAChannelMetadataForId" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="4401ff2d-c38b-51a8-f6b5-791f859c7098">
+      <Execution id="2ea80531-0ddc-4c38-9924-98f59c9638db" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="GetAChannelMetadataForId" />
+    </UnitTest>
+    <UnitTest name="GetAllChannelMetadataWithCustom" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="5271a851-e8d2-c42c-aad6-49024c68a9d5">
+      <Execution id="8a5ae91b-5533-4e28-9f80-510d40aaf124" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="GetAllChannelMetadataWithCustom" />
+    </UnitTest>
+    <UnitTest name="RevokeInvalidToken" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="f6a7a690-af73-fab8-0ebf-059ccdbb5495">
+      <Execution id="35e0e262-5f2b-47cc-a08d-0e79495c02aa" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.RevokeAnAccessTokenFeature" name="RevokeInvalidToken" />
+    </UnitTest>
+    <UnitTest name="GrantAnAccessTokenWithAllPermissionsOnAllResourceTypesWithAuthorizedUuid" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="85374129-b31e-6699-e3e3-35edfbf2f310">
+      <Execution id="a4a58397-eb66-49fa-bfa3-44e23b1f82fb" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="GrantAnAccessTokenWithAllPermissionsOnAllResourceTypesWithAuthorizedUuid" />
+    </UnitTest>
+    <UnitTest name="GetMembershipsForUUIDWithCustomAndChannelCustom" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="7acf7525-aaca-a5f2-7032-491d9caf1cf8">
+      <Execution id="a4b211c7-e57d-4b01-a138-d439aa52e516" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembershipsFeature" name="GetMembershipsForUUIDWithCustomAndChannelCustom" />
+    </UnitTest>
+    <UnitTest name="RemoveAChannelMetadataForId" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="be8b1c28-897b-72b1-79de-44eed3d3394f">
+      <Execution id="bcdeb2a6-7096-49ac-95df-f12e70ccbc62" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2ChannelMetadataFeature" name="RemoveAChannelMetadataForId" />
+    </UnitTest>
+    <UnitTest name="AttemptToGrantAnAccessTokenWithAllPermissionsEmptyOrFalseAndExpectAServerError" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="446be40b-3f39-dc72-f797-9a3aa2aac484">
+      <Execution id="615d796c-9534-4a21-a51b-5fd843dc1cb1" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="AttemptToGrantAnAccessTokenWithAllPermissionsEmptyOrFalseAndExpectAServerError" />
+    </UnitTest>
+    <UnitTest name="AttemptToGrantAnAccessTokenWithARegularExpressionContainingCapturingGroupsAndExpectAServerError" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="0992672a-4884-80d0-5142-7d4a75036ed9">
+      <Execution id="acb57e22-5001-418a-90d7-27857bb9d35d" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="AttemptToGrantAnAccessTokenWithARegularExpressionContainingCapturingGroupsAndExpectAServerError" />
+    </UnitTest>
+    <UnitTest name="GetAllUUIDMetadata" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="219f8da3-cc63-e002-72df-e2f549e52967">
+      <Execution id="df81f46f-6832-4ac9-a28a-f86c56bdf6c6" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="GetAllUUIDMetadata" />
+    </UnitTest>
+    <UnitTest name="SetAUUIDMetadata" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="5a108f95-d949-be1c-ba70-794e5a89cb2c">
+      <Execution id="7a41e25d-208e-43c1-bcd8-c59bb8264a7a" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2UUIDMetadataFeature" name="SetAUUIDMetadata" />
+    </UnitTest>
+    <UnitTest name="GrantAnAccessTokenWithoutAnAuthorizedUuid" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="5e071152-ee43-67c0-dc5d-67a966171b99">
+      <Execution id="48d06c7a-3770-4878-9f11-bc163ea37464" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.GrantAnAccessTokenFeature" name="GrantAnAccessTokenWithoutAnAuthorizedUuid" />
+    </UnitTest>
+    <UnitTest name="RevokeExistingValidToken" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="9e948d14-1697-7020-7d46-e7d0ab1a839a">
+      <Execution id="79124dd8-1a57-417d-999b-5990da3a2040" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.RevokeAnAccessTokenFeature" name="RevokeExistingValidToken" />
+    </UnitTest>
+    <UnitTest name="ManageMembersForAChannel" storage="d:\a\c-sharp\c-sharp\src\unittests\acceptancetests\bin\debug\net6.0\acceptancetests.dll" id="4abae91a-e1c2-11c6-c78e-4c0a98abeb41">
+      <Execution id="8fbf8867-2b07-49c6-8778-183f63f91c95" />
+      <TestMethod codeBase="D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="AcceptanceTests.Features.ObjectsV2MembersFeature" name="ManageMembersForAChannel" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="4abae91a-e1c2-11c6-c78e-4c0a98abeb41" executionId="8fbf8867-2b07-49c6-8778-183f63f91c95" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d717777f-cd83-a14f-a06e-85ad7a167630" executionId="23ac3e76-667f-4060-8aa4-a2b6ac1c7ded" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70fed881-ff3d-cf01-fc50-eec23bec4b15" executionId="0a6f22d5-c073-4251-9a0b-0e06466f4d76" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aea0c1c8-e4f2-b00c-e2e5-3958a9100776" executionId="ee7b47b4-a6af-40bb-89bd-efa2c53c71af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4401ff2d-c38b-51a8-f6b5-791f859c7098" executionId="2ea80531-0ddc-4c38-9924-98f59c9638db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="96ff7052-903d-d61a-0cb2-cdee63831172" executionId="d5779027-8566-4d55-a243-2e07a5c6d75e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="947b833a-a96c-d64f-e9e3-0beaa935d4d5" executionId="ffe6f57e-c376-4031-837c-103b7f9b6209" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed5af684-441e-e3d8-3bf2-a26f2fd3f117" executionId="acb39bb8-201e-417e-87e4-c0becc3d1adc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee450aac-5f02-8238-a55d-792600e33298" executionId="f500dcda-24da-49bf-8398-1ef3d69bec28" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="23b61850-f73c-f5eb-17ca-9aaba5f44c54" executionId="d2aad883-7529-478d-8c3c-6bbd01a9ba48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="446be40b-3f39-dc72-f797-9a3aa2aac484" executionId="615d796c-9534-4a21-a51b-5fd843dc1cb1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86189ae4-95f9-30e4-f4c6-bfa1b9898a62" executionId="8b11b0a7-2863-4d14-bafc-c9fbd6d3fecd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17537441-5c46-b29c-7a15-7f733fa6a240" executionId="fc8460d5-dd82-4ee3-bf22-07a7ea6733cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="046e940e-ed7b-e2be-b9c9-fa82caaefa8a" executionId="14f4033f-1061-4b0f-ab08-dd6f52bbecc6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba48247e-b680-05e2-ec8e-cd712552a6ee" executionId="b7f4d3f4-f1e1-4bc2-9845-23fcfaee16ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="63f82b54-f147-1707-8ae8-1f771750a4c8" executionId="a3f3f22c-f36a-440d-9e08-a84e021437e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f6a7a690-af73-fab8-0ebf-059ccdbb5495" executionId="35e0e262-5f2b-47cc-a08d-0e79495c02aa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07a0b332-7585-5132-2931-ba67f585bbfd" executionId="4d7597b9-87cb-4735-9f04-8ab8a441e59c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="219f8da3-cc63-e002-72df-e2f549e52967" executionId="df81f46f-6832-4ac9-a28a-f86c56bdf6c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c824fd41-84e4-6d43-8411-04262c295a77" executionId="d9d6f8c0-d260-4def-8a30-037ca8b1b808" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85374129-b31e-6699-e3e3-35edfbf2f310" executionId="a4a58397-eb66-49fa-bfa3-44e23b1f82fb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0c1a37b6-b16e-3d65-7b38-756d59a051b1" executionId="ffe951ff-7d91-44fe-a1a4-7be45ee41d51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b2c9c319-05d3-858f-ecdb-c785279a33e5" executionId="e363934e-5477-4614-8e4a-be50c6d25344" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5271a851-e8d2-c42c-aad6-49024c68a9d5" executionId="8a5ae91b-5533-4e28-9f80-510d40aaf124" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b811bc2b-ac6c-1eab-5504-b3af1ec9a805" executionId="3d91f490-b0f3-4eda-b948-3327bf018428" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="238d7046-3682-e357-765d-2a21c813602e" executionId="05504ec3-9749-4b86-b4d2-d2ef98e5aac5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9e948d14-1697-7020-7d46-e7d0ab1a839a" executionId="79124dd8-1a57-417d-999b-5990da3a2040" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be8b1c28-897b-72b1-79de-44eed3d3394f" executionId="bcdeb2a6-7096-49ac-95df-f12e70ccbc62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="10a87c1f-7e7a-0e53-402e-aefcc00a21da" executionId="ed86a923-1a5a-4bc8-942c-725469a31446" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f73b5a1-d21f-1feb-a5dc-31aa30bfbe2c" executionId="1596a953-1094-4ca7-bcbd-126d7a8db95f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5a108f95-d949-be1c-ba70-794e5a89cb2c" executionId="7a41e25d-208e-43c1-bcd8-c59bb8264a7a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7acf7525-aaca-a5f2-7032-491d9caf1cf8" executionId="a4b211c7-e57d-4b01-a138-d439aa52e516" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3405a88a-853b-5aa4-dc52-211f74db4a9b" executionId="2cd3b1bd-c8af-491c-b743-3e966d5f6f68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0992672a-4884-80d0-5142-7d4a75036ed9" executionId="acb57e22-5001-418a-90d7-27857bb9d35d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="78605226-9a65-4701-5dbe-74fd1152b767" executionId="f4106153-11e1-401b-b871-9d629f3134f4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8a1c2bbd-f61b-135c-270f-157e7106103a" executionId="4859a218-8413-46fb-ae8c-0b29cdf961bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3a8dac54-e42a-8256-0f95-9b2771dcaeda" executionId="35916e8b-c238-4e73-af94-da3d26601917" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5e071152-ee43-67c0-dc5d-67a966171b99" executionId="48d06c7a-3770-4878-9f11-bc163ea37464" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="38" executed="38" passed="38" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
+Running all tests in D:\a\c-sharp\c-sharp\src\UnitTests\AcceptanceTests\bin\Debug\net6.0\AcceptanceTests.dll&#xD;
+   NUnit3TestExecutor discovered 38 of 38 NUnit test cases&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 43201&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(43201) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.1s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid ttl'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid ttl") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Range should be 1 to 43200 minute(s).'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Range should be 1...") (0.0s)&#xD;
+* the error detail location is 'ttl'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("ttl") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* deny resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenDenyResourcePermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid permissions'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid permissions") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Unexpected value: `permissions.resources.uuids.uuid-1` must be positive and non-zero.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Unexpected value:...") (0.0s)&#xD;
+* the error detail location is 'permissions.resources.uuids.uuid-1'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.resou...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the '!&lt;[^&gt;]+&gt;++' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("!&lt;[^&gt;]+&gt;++") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid RegExp'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid RegExp") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Syntax error: multiple repeat.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Syntax error: mul...") (0.0s)&#xD;
+* the error detail location is 'permissions.patterns.uuids.!&lt;[^&gt;]+&gt;++'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.patte...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the '(!&lt;[^&gt;]+&gt;)+' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("(!&lt;[^&gt;]+&gt;)+") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+When I attempt to grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIAttemptToGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid RegExp'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid RegExp") (0.0s)&#xD;
+* the error source is 'grant'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("grant") (0.0s)&#xD;
+* the error detail message is 'Only non-capturing groups are allowed. Try replacing `(` with `(?:`.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Only non-capturin...") (0.0s)&#xD;
+* the error detail location is 'permissions.patterns.uuids.(!&lt;[^&gt;]+&gt;)+'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("permissions.patte...") (0.0s)&#xD;
+* the error detail location type is 'body'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("body") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.1s)&#xD;
+Then the token contains the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+* grant resource permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionWRITE() (0.0s)&#xD;
+* grant resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionGET() (0.0s)&#xD;
+* grant resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionMANAGE() (0.0s)&#xD;
+* grant resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionUPDATE() (0.0s)&#xD;
+* grant resource permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionJOIN() (0.0s)&#xD;
+* grant resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionDELETE() (0.0s)&#xD;
+Given the 'channel_group-1' CHANNEL_GROUP resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNEL_GROUPResourceAccessPermissions("channel_group-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+* grant resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionMANAGE() (0.0s)&#xD;
+Given the 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* grant resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionGET() (0.0s)&#xD;
+* grant resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionUPDATE() (0.0s)&#xD;
+* grant resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionDELETE() (0.0s)&#xD;
+Given the '^channel-\S*$' CHANNEL pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELPatternAccessPermissions("^channel-\S*$") (0.0s)&#xD;
+* grant pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionREAD() (0.0s)&#xD;
+* grant pattern permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionWRITE() (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+* grant pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionMANAGE() (0.0s)&#xD;
+* grant pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionUPDATE() (0.0s)&#xD;
+* grant pattern permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionJOIN() (0.0s)&#xD;
+* grant pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionDELETE() (0.0s)&#xD;
+Given the '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNEL_GROUPPatternAccessPermissions("^:channel_group-\S*$") (0.0s)&#xD;
+* grant pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionREAD() (0.0s)&#xD;
+* grant pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionMANAGE() (0.0s)&#xD;
+Given the '^uuid-\S*$' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheUUIDPatternAccessPermissions("^uuid-\S*$") (0.0s)&#xD;
+* grant pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionGET() (0.0s)&#xD;
+* grant pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionUPDATE() (0.0s)&#xD;
+* grant pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantPatternPermissionDELETE() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the authorized UUID "test-authorized-uuid"&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheAuthorizedUUID("test-authorized-uuid") (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+* token resource permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionWRITE() (0.0s)&#xD;
+* token resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionGET() (0.0s)&#xD;
+* token resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionMANAGE() (0.0s)&#xD;
+* token resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionUPDATE() (0.0s)&#xD;
+* token resource permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionJOIN() (0.0s)&#xD;
+* token resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionDELETE() (0.0s)&#xD;
+Then the token has 'channel_group-1' CHANNEL_GROUP resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNEL_GROUPResourceAccessPermissions("channel_group-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+* token resource permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionMANAGE() (0.0s)&#xD;
+Then the token has 'uuid-1' UUID resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasUUIDResourceAccessPermissions("uuid-1") (0.0s)&#xD;
+* token resource permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionGET() (0.0s)&#xD;
+* token resource permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionUPDATE() (0.0s)&#xD;
+* token resource permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionDELETE() (0.0s)&#xD;
+Then the token has '^channel-\S*$' CHANNEL pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELPatternAccessPermissions("^channel-\S*$") (0.0s)&#xD;
+* token pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionREAD() (0.0s)&#xD;
+* token pattern permission WRITE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionWRITE() (0.0s)&#xD;
+* token pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionGET() (0.0s)&#xD;
+* token pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionMANAGE() (0.0s)&#xD;
+* token pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionUPDATE() (0.0s)&#xD;
+* token pattern permission JOIN&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionJOIN() (0.0s)&#xD;
+* token pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionDELETE() (0.0s)&#xD;
+Then the token has '^:channel_group-\S*$' CHANNEL_GROUP pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNEL_GROUPPatternAccessPermissions("^:channel_group-\S*$") (0.0s)&#xD;
+* token pattern permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionREAD() (0.0s)&#xD;
+* token pattern permission MANAGE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionMANAGE() (0.0s)&#xD;
+Then the token has '^uuid-\S*$' UUID pattern access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasUUIDPatternAccessPermissions("^uuid-\S*$") (0.0s)&#xD;
+* token pattern permission GET&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionGET() (0.0s)&#xD;
+* token pattern permission UPDATE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionUPDATE() (0.0s)&#xD;
+* token pattern permission DELETE&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenPatternPermissionDELETE() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTTL(60) (0.0s)&#xD;
+Given the 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* grant resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.GivenGrantResourcePermissionREAD() (0.0s)&#xD;
+When I grant a token specifying those permissions&#xD;
+-&gt; done: FeatureAccessSteps.WhenIGrantATokenSpecifyingThosePermissions() (0.0s)&#xD;
+Then the token contains the TTL 60&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenContainsTheTTL(60) (0.0s)&#xD;
+Then the token does not contain an authorized uuid&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenDoesNotContainAnAuthorizedUuid() (0.0s)&#xD;
+Then the token has 'channel-1' CHANNEL resource access permissions&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheTokenHasCHANNELResourceAccessPermissions("channel-1") (0.0s)&#xD;
+* token resource permission READ&#xD;
+-&gt; done: FeatureAccessSteps.ThenTokenResourcePermissionREAD() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I get the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannel("Chat") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'DM' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("DM") (0.0s)&#xD;
+When I get the channel metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'DM' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannel("DM") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Chat' and 'Patient' channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndChannelMetadata("Chat", "Patient") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all channel metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllChannelMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'DM' and 'VipChat' channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndChannelMetadata("DM", "VipChat") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I remove the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForChannel("Chat") (0.0s)&#xD;
+When I set the channel metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheChannelMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the channel metadata for 'Chat' channel contains updated&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheChannelMetadataForChannelContainsUpdated("Chat") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I get the channel members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMembers() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'AmeliaMember' and 'EvaMember' members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMembers("AmeliaMember", "EvaMember") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'VipChat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("VipChat") (0.0s)&#xD;
+When I get the channel members including custom and UUID custom information&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheChannelMembersIncludingCustomAndUUIDCustomInformation() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'OliverMember' and 'PeterMember' members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMembers("OliverMember", "PeterMember") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("PeterMember") (0.0s)&#xD;
+And the data for 'AmeliaMember' member that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMemberThatWeWantToRemove("AmeliaMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I manage channel members&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIManageChannelMembers() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("PeterMember") (0.0s)&#xD;
+And the response does not contain list with 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseDoesNotContainListWithMember("AmeliaMember") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+And the data for 'AmeliaMember' member that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMemberThatWeWantToRemove("AmeliaMember") (0.0s)&#xD;
+When I remove a channel member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveAChannelMember() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("AmeliaMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I set a channel member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetAChannelMember() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'AmeliaMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("AmeliaMember") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMember("PeterMember") (0.0s)&#xD;
+And the id for 'Chat' channel&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForChannel("Chat") (0.0s)&#xD;
+When I set a channel member including custom and UUID with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetAChannelMemberIncludingCustomAndUUIDWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'PeterMember' member&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMember("PeterMember") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+When I get the memberships for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMembershipsForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("ChatMembership", "PatientMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I get the memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMemberships() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' and 'PatientMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("ChatMembership", "PatientMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Bob") (0.0s)&#xD;
+When I get the memberships including custom and channel custom information&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheMembershipsIncludingCustomAndChannelCustomInformation() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'VipChatMembership' and 'DMMembership' memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndMemberships("VipChatMembership", "DMMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+And the data for 'PatientMembership' membership that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembershipThatWeWantToRemove("PatientMembership") (0.0s)&#xD;
+When I manage memberships&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIManageMemberships() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)&#xD;
+And the response does not contain list with 'PatientMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseDoesNotContainListWithMembership("PatientMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I remove the membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheMembership() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership that we want to remove&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembershipThatWeWantToRemove("ChatMembership") (0.0s)&#xD;
+When I remove the membership for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheMembershipForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I set the membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheMembership() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+And the data for 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForMembership("ChatMembership") (0.0s)&#xD;
+When I set the membership for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheMembershipForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'ChatMembership' membership&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithMembership("ChatMembership") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Alice' and 'James' UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndUUIDMetadata("Alice", "James") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+When I get all UUID metadata with custom&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetAllUUIDMetadataWithCustom() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the response contains list with 'Bob' and 'Lisa' UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheResponseContainsListWithAndUUIDMetadata("Bob", "Lisa") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I get the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersona("Alice") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Bob") (0.0s)&#xD;
+When I get the UUID metadata with custom for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIGetTheUUIDMetadataWithCustomForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Bob' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersona("Bob") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the id for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheIdForPersona("Alice") (0.0s)&#xD;
+When I remove the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given current user is 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenCurrentUserIsPersona("Alice") (0.0s)&#xD;
+When I remove the UUID metadata for current user&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenIRemoveTheUUIDMetadataForCurrentUser() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with Objects V2 enabled&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenIHaveAKeysetWithObjectsVEnabled(2) (0.0s)&#xD;
+Given the data for 'Alice' persona&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.GivenTheDataForPersona("Alice") (0.0s)&#xD;
+When I set the UUID metadata&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.WhenISetTheUUIDMetadata() (0.0s)&#xD;
+Then I receive a successful response&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenIReceiveASuccessfulResponse() (0.0s)&#xD;
+And the UUID metadata for 'Alice' persona contains updated&#xD;
+-&gt; done: FeatureObjectsV2MetadataSteps.ThenTheUUIDMetadataForPersonaContainsUpdated("Alice") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Feature disabled'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Feature disabled") (0.0s)&#xD;
+* the error source is 'revoke'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("revoke") (0.0s)&#xD;
+* the error detail message is 'Token revocation is disabled.'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIs("Token revocation ...") (0.0s)&#xD;
+* the error detail location is 'subscribe-key'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("subscribe-key") (0.0s)&#xD;
+* the error detail location type is 'path'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("path") (0.0s)&#xD;
+* the error service is 'Access Manager'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorServiceIs("Access Manager") (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&amp;=+$#'&#xD;
+-&gt; done: FeatureAccessSteps.GivenTheTokenString("unescaped-_.ABCab...") (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then I get confirmation that token has been revoked&#xD;
+-&gt; done: FeatureAccessSteps.ThenIGetConfirmationThatTokenHasBeenRevoked() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then I get confirmation that token has been revoked&#xD;
+-&gt; done: FeatureAccessSteps.ThenIGetConfirmationThatTokenHasBeenRevoked() (0.0s)&#xD;
+&#xD;
+Given I have a keyset with access manager enabled&#xD;
+-&gt; done: FeatureAccessSteps.GivenIHaveAKeysetWithAccessManagerEnabled() (0.0s)&#xD;
+Given a token&#xD;
+-&gt; done: FeatureAccessSteps.GivenAToken() (0.0s)&#xD;
+When I revoke a token&#xD;
+-&gt; done: FeatureAccessSteps.WhenIRevokeAToken() (0.0s)&#xD;
+Then an error is returned&#xD;
+-&gt; done: FeatureAccessSteps.ThenAnErrorIsReturned() (0.0s)&#xD;
+* the error status code is 400&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorStatusCodeIs(400) (0.0s)&#xD;
+* the error message is 'Invalid token'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorMessageIs("Invalid token") (0.0s)&#xD;
+* the error source is 'revoke'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorSourceIs("revoke") (0.0s)&#xD;
+* the error detail message is not empty&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailMessageIsNotEmpty() (0.0s)&#xD;
+* the error detail location is 'token'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationIs("token") (0.0s)&#xD;
+* the error detail location type is 'path'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorDetailLocationTypeIs("path") (0.0s)&#xD;
+* the error service is 'Access Manager'&#xD;
+-&gt; done: FeatureAccessSteps.ThenTheErrorServiceIs("Access Manager") (0.0s)&#xD;
+&#xD;
+NUnit Adapter 3.17.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
