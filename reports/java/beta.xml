@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="92" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="128" time="5.865">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.476">
+<testsuite errors="0" failures="92" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="128" time="6.945">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="1.771">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -9,7 +9,7 @@ Then the result is successful...............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.062">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.098">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given an expired token with permissions to publish with channel 'channel-1'.passed
@@ -21,7 +21,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.062">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.06">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -33,7 +33,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.048">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.074">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled - without secret key......passed
 Given a valid token with permissions to publish with channel 'channel-1'....passed
@@ -45,7 +45,7 @@ Then an auth error is returned..............................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.095">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.136">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the TTL 43201.........................................................passed
@@ -62,7 +62,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.043">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.058">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -71,7 +71,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.058">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.033">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -87,7 +87,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.047">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.026">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given a token...............................................................passed
@@ -103,7 +103,7 @@ Then an error is returned...................................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.04">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.021">
         <system-out>
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#'...........passed
@@ -112,7 +112,7 @@ Then I get confirmation that token has been revoked.........................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.021">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the crypto keyset.....................................................undefined
 When I subscribe............................................................skipped
@@ -120,7 +120,7 @@ Then I receive the message in my subscribe response.........................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.006">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the invalid-crypto keyset.............................................undefined
 When I subscribe............................................................skipped
@@ -128,7 +128,7 @@ Then an error is thrown.....................................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a file to Space" name="Send a file to space success" time="0.017">
+    <testcase classname="Send a file to Space" name="Send a file to space success" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a file with 'space-id' space id and 'test_message_type' message type.skipped
@@ -136,7 +136,7 @@ Then I receive a successful response........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too short, shorten than 3 characters" time="0.009">
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too short, shorten than 3 characters" time="0.024">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a file with 'space-id' space id and 'ts' message type...........skipped
@@ -144,7 +144,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too long, longer than 50 characters" time="0.008">
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too long, longer than 50 characters" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a file with 'space-id' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
@@ -152,7 +152,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Listing files" time="0.006">
+    <testcase classname="Files" name="Listing files" time="0.011">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list files...........................................................skipped
@@ -160,7 +160,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.01">
+    <testcase classname="Files" name="Publishing file message" time="0.017">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -168,7 +168,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.017">
+    <testcase classname="Files" name="Publishing file message failure" time="0.018">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish file message.................................................skipped
@@ -176,7 +176,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Deleting a file" time="0.025">
+    <testcase classname="Files" name="Deleting a file" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete file..........................................................skipped
@@ -184,7 +184,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.013">
+    <testcase classname="Files" name="Downloading a file" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I download file........................................................skipped
@@ -192,7 +192,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history with PubNub message types using defaults" time="0.009">
+    <testcase classname="History for VSP" name="Client can fetch history with PubNub message types using defaults" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset with enabled storage..................................undefined
 When I fetch message history for 'simple-channel' channel...................skipped
@@ -202,7 +202,7 @@ And history response contains messages without space ids....................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history with PubNub and user-defined message types using defaults" time="0.014">
+    <testcase classname="History for VSP" name="Client can fetch history with PubNub and user-defined message types using defaults" time="0.021">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset with enabled storage..................................undefined
 When I fetch message history for 'vsp-channel' channel......................skipped
@@ -212,7 +212,7 @@ And history response contains messages without space ids....................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history without message types enabled by default" time="0.013">
+    <testcase classname="History for VSP" name="Client can fetch history without message types enabled by default" time="0.028">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset with enabled storage..................................undefined
 When I fetch message history with 'includeMessageType' set to 'false' for 'vsp-channel' channel.skipped
@@ -222,7 +222,7 @@ And history response contains messages without space ids....................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history with space id disabled by default" time="0.014">
+    <testcase classname="History for VSP" name="Client can fetch history with space id disabled by default" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset with enabled storage..................................undefined
 When I fetch message history with 'includeSpaceId' set to 'true' for 'vsp-channel' channel.skipped
@@ -232,7 +232,7 @@ And history response contains messages with space ids.......................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history" time="0.016">
+    <testcase classname="History" name="Fetching message history" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for single channel.............................skipped
@@ -241,7 +241,7 @@ And the response contains pagination info...................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.013">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history for multiple channels..........................skipped
@@ -249,7 +249,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.017">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.024">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message history with message actions...........................skipped
@@ -257,7 +257,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Adding a message action" time="0.009">
+    <testcase classname="Message Actions" name="Adding a message action" time="0.015">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
@@ -265,7 +265,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.007">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.022">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add a message action.................................................skipped
@@ -273,7 +273,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.007">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.014">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch message actions................................................skipped
@@ -282,7 +282,7 @@ And the response contains pagination info...................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.009">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.017">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -290,7 +290,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.009">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.022">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I delete a message action..............................................skipped
@@ -298,7 +298,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.037">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.065">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Chat' channel.............................................passed
@@ -308,7 +308,7 @@ And the channel metadata for 'Chat' channel.................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.018">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.045">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'DM' channel...............................................passed
@@ -318,7 +318,7 @@ And the channel metadata for 'DM' channel...................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.024">
+    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.05">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the data for 'Chat' channel...........................................passed
@@ -328,7 +328,7 @@ And the channel metadata for 'Chat' channel contains updated................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.016">
+    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.046">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Chat' channel.............................................passed
@@ -337,7 +337,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.024">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.101">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all channel metadata.............................................passed
@@ -346,7 +346,7 @@ And the response contains list with 'Chat' and 'Patient' channel metadata...pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.013">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.046">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all channel metadata with custom.................................passed
@@ -355,7 +355,7 @@ And the response contains list with 'DM' and 'VipChat' channel metadata.....pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.02">
+    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.053">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Chat' channel.............................................passed
@@ -365,7 +365,7 @@ And the response contains list with 'AmeliaMember' and 'EvaMember' members..pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.025">
+    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.047">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'VipChat' channel..........................................passed
@@ -375,7 +375,7 @@ And the response contains list with 'OliverMember' and 'PeterMember' members.pas
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.048">
+    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.045">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the data for 'AmeliaMember' member....................................passed
@@ -386,7 +386,7 @@ And the response contains list with 'AmeliaMember' member...................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.03">
+    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.039">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the data for 'PeterMember' member.....................................passed
@@ -397,7 +397,7 @@ And the response contains list with 'PeterMember' member....................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.042">
+    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.049">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Chat' channel.............................................passed
@@ -407,7 +407,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Manage members for a channel" time="0.063">
+    <testcase classname="Objects V2 Members" name="Manage members for a channel" time="0.074">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the data for 'PeterMember' member.....................................passed
@@ -420,7 +420,7 @@ And the response does not contain list with 'AmeliaMember' member...........pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.042">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.043">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -430,7 +430,7 @@ And the response contains list with 'ChatMembership' and 'PatientMembership' mem
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.033">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.041">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given current user is 'Alice' persona.......................................passed
@@ -440,7 +440,7 @@ And the response contains list with 'ChatMembership' and 'PatientMembership' mem
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.032">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.03">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Bob' persona..............................................passed
@@ -450,7 +450,7 @@ And the response contains list with 'VipChatMembership' and 'DMMembership' membe
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.025">
+    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.052">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -461,7 +461,7 @@ And the response contains list with 'ChatMembership' membership.............pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.031">
+    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.039">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given current user is 'Alice' persona.......................................passed
@@ -472,7 +472,7 @@ And the response contains list with 'ChatMembership' membership.............pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.064">
+    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.025">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -482,7 +482,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.051">
+    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.035">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given current user is 'Alice' persona.......................................passed
@@ -492,7 +492,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Manage memberships for a UUID" time="0.055">
+    <testcase classname="Objects V2 Memberships" name="Manage memberships for a UUID" time="0.039">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -505,7 +505,7 @@ And the response does not contain list with 'PatientMembership' membership..pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.045">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.14">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -515,7 +515,7 @@ And the UUID metadata for 'Alice' persona...................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.09">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.043">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given current user is 'Bob' persona.........................................passed
@@ -525,7 +525,7 @@ And the UUID metadata for 'Bob' persona.....................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.052">
+    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.032">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the data for 'Alice' persona..........................................passed
@@ -535,7 +535,7 @@ And the UUID metadata for 'Alice' persona contains updated..................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.025">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.027">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given the id for 'Alice' persona............................................passed
@@ -544,7 +544,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.025">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.041">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 Given current user is 'Alice' persona.......................................passed
@@ -553,7 +553,7 @@ Then I receive a successful response........................................pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.015">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.031">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all UUID metadata................................................passed
@@ -562,7 +562,7 @@ And the response contains list with 'Alice' and 'James' UUID metadata.......pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.024">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.021">
         <system-out>
             <![CDATA[Given I have a keyset with Objects V2 enabled...............................passed
 When I get all UUID metadata with custom....................................passed
@@ -571,7 +571,7 @@ And the response contains list with 'Bob' and 'Lisa' UUID metadata..........pass
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/data endpoint" time="0.019">
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/data endpoint" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence state for 'test-channel' channel......................skipped
@@ -580,7 +580,7 @@ And response contains state.................................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/heartbeat endpoint" time="0.009">
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/heartbeat endpoint" time="0.011">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence state for 'test-channel' channel......................skipped
@@ -589,7 +589,7 @@ And response contains state.................................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal user presence" name="Heartbeat call for channel without 'state' query parameter when state not set" time="0.009">
+    <testcase classname="Signal user presence" name="Heartbeat call for channel without 'state' query parameter when state not set" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I call heartbeat for 'test-channel' channel............................skipped
@@ -606,7 +606,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/heartbeat endpoint" time="0.011">
+    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/heartbeat endpoint" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 Given presence state set for 'test-channel' channel with withHeartbeat set to 'false'.skipped
@@ -615,7 +615,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers" time="0.009">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence on 'test-channel' channel with presence state.........skipped
@@ -624,7 +624,7 @@ And there is no active clients..............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel with subscribers" time="0.006">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel with subscribers" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence on 'test-channel' channel with presence state.........skipped
@@ -633,7 +633,7 @@ And there is active clients.................................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" time="0.006">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" time="0.016">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence on 'test-channel' channel with presence state.........skipped
@@ -642,7 +642,7 @@ And there is no active clients..............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" time="0.009">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I fetch presence on 'test-channel' channel with presence state.........skipped
@@ -660,7 +660,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Set presence state" name="Set presence state on channel using presence/heartbeat endpoint" time="0.014">
+    <testcase classname="Set presence state" name="Set presence state on channel using presence/heartbeat endpoint" time="0.023">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I set state on 'test-channel' channel with withHeartbeat set to 'true'.skipped
@@ -668,7 +668,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space success" time="0.022">
+    <testcase classname="Publish to Space" name="Publish message to space success" time="0.031">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'space-id' space id and 'test_step' message type.skipped
@@ -676,7 +676,7 @@ Then I receive a successful response........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too short" time="0.006">
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too short" time="0.017">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test-space' space id and 'ts' message type.....skipped
@@ -684,7 +684,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too long" time="0.014">
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type is too long" time="0.019">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test-space' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
@@ -700,7 +700,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too long" time="0.028">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too long" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'this-is-really-long-identifier-for-space-id-to-be-used-with-publish' space id and 'test-step' message type.skipped
@@ -708,7 +708,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.006">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'pn-test-space' space id and 'test-step' message type.skipped
@@ -716,7 +716,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.005">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'pn_test-space' space id and 'test-step' message type.skipped
@@ -724,7 +724,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '-' (hyphen) character" time="0.005">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '-' (hyphen) character" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with '-test-space' space id and 'test-step' message type.skipped
@@ -740,7 +740,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id contains not allowed characters" time="0.005">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id contains not allowed characters" time="0.009">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test@space.com' space id and 'test-step' message type.skipped
@@ -748,7 +748,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.013">
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.016">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test-space' space id and 'pn-test-step' message type.skipped
@@ -756,7 +756,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.005">
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test-space' space id and 'pn_test-step' message type.skipped
@@ -780,7 +780,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when message type contains not allowed characters" time="0.006">
+    <testcase classname="Publish to Space" name="Publish message to space fails when message type contains not allowed characters" time="0.016">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish message with 'test-space' space id and 'test:step' message type.skipped
@@ -788,7 +788,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message" time="0.003">
+    <testcase classname="Publish a message" name="Publishing a message" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message....................................................skipped
@@ -796,7 +796,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.004">
+    <testcase classname="Publish a message" name="Publishing a message with JSON metadata" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with JSON metadata.................................skipped
@@ -804,7 +804,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.008">
+    <testcase classname="Publish a message" name="Publishing a message with string metadata" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I publish a message with string metadata...............................skipped
@@ -812,7 +812,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Publish a message" name="Failing publish" time="0.005">
+    <testcase classname="Publish a message" name="Failing publish" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the invalid keyset....................................................undefined
 When I publish a message....................................................skipped
@@ -820,7 +820,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space success" time="0.016">
+    <testcase classname="Send a signal to Space" name="Send a signal to space success" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'space-id' space id and 'test_message_type' message type.skipped
@@ -828,7 +828,7 @@ Then I receive a successful response........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too short" time="0.041">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too short" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and 'ts' message type.......skipped
@@ -836,7 +836,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too long" time="0.01">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type is too long" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and 'this-is-really-long-message-type-to-be-used-with-publish' message type.skipped
@@ -844,7 +844,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too short" time="0.012">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too short" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'ts' space id and 'test_message_type' message type.skipped
@@ -852,7 +852,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too long" time="0.009">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too long" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'this-is-really-long-identifier-for-space-id-to-be-used-with-publish' space id and 'test-step' message type.skipped
@@ -860,7 +860,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.016">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'pn-test-space' space id and 'test_message_type' message type.skipped
@@ -868,7 +868,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.017">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.005">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'pn_test-space' space id and 'test_message_type' message type.skipped
@@ -876,7 +876,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '-' (hyphen) character" time="0.011">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '-' (hyphen) character" time="0.009">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with '-test-space' space id and 'test_message_type' message type.skipped
@@ -884,7 +884,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '_' (underscore) character" time="0.014">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '_' (underscore) character" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with '_test-space' space id and 'test_message_type' message type.skipped
@@ -900,7 +900,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.013">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn-' (hyphen) string" time="0.008">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and 'pn-test_message_type' message type.skipped
@@ -908,7 +908,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.009">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with reserved 'pn_' (underscore) string" time="0.013">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and 'pn_test_message_type' message type.skipped
@@ -916,7 +916,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '-' (hyphen) character" time="0.011">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '-' (hyphen) character" time="0.019">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and '-test_message_type' message type.skipped
@@ -924,7 +924,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '_' (underscore) character" time="0.004">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type starts with not allowed '_' (underscore) character" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and '_test_message_type' message type.skipped
@@ -932,7 +932,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type contains not allowed characters" time="0.004">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when message type contains not allowed characters" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal with 'test-space' space id and 'test:message_type' message type.skipped
@@ -940,7 +940,7 @@ Then I receive an error response............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Signal" name="Sending a signal" time="0.017">
+    <testcase classname="Signal" name="Sending a signal" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I send a signal........................................................skipped
@@ -948,7 +948,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.013">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.025">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list GCM push channels...............................................skipped
@@ -956,7 +956,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.001">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.016">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels.............................................skipped
@@ -964,7 +964,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.013">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.032">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I list APNS2 push channels with topic..................................skipped
@@ -972,7 +972,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.006">
+    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.033">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add GCM push channels................................................skipped
@@ -980,7 +980,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.032">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add FCM push channels................................................skipped
@@ -988,7 +988,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.006">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels..............................................skipped
@@ -996,7 +996,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.019">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I add APNS2 push channels with topic...................................skipped
@@ -1004,7 +1004,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.046">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.014">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM push channels.............................................skipped
@@ -1020,7 +1020,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.009">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 push channels with topic................................skipped
@@ -1028,7 +1028,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.015">
+    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.005">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove GCM device....................................................skipped
@@ -1036,7 +1036,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.001">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device..................................................skipped
@@ -1044,7 +1044,7 @@ Then I receive error response...............................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.004">
+    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.017">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I remove APNS2 device with topic.......................................skipped
@@ -1052,7 +1052,7 @@ Then I receive successful response..........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.012">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.011">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given no auth key...........................................................undefined
@@ -1062,7 +1062,7 @@ Then I receive access denied status.........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.009">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.006">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
@@ -1072,7 +1072,7 @@ Then I receive access denied status.........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.013">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.014">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given token.................................................................undefined
@@ -1082,7 +1082,7 @@ Then I receive access denied status.........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.005">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.008">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -1092,7 +1092,7 @@ Then I receive access denied status.........................................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.005">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given auth key..............................................................undefined
@@ -1114,7 +1114,7 @@ Then I receive the message in my subscribe response.........................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.006">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given I have a keyset with access manager enabled...........................passed
 Given secret key............................................................undefined
@@ -1125,7 +1125,7 @@ Then I receive the message in my subscribe response.........................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.004">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.007">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe............................................................skipped
@@ -1134,7 +1134,7 @@ Then I receive the message in my subscribe response.........................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub message types" time="0.017">
+    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub message types" time="0.012">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe to 'simple-channel' channel................................skipped
@@ -1144,7 +1144,7 @@ And response contains messages without space ids............................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub and user-defined message types" time="0.005">
+    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with PubNub and user-defined message types" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[Given the demo keyset.......................................................undefined
 When I subscribe to 'vsp-channel' channel...................................skipped
@@ -1154,7 +1154,7 @@ And response contains messages with space ids...............................skip
 ]]>
         </failure>
     </testcase>
-    <testcase classname="Time" name="Getting PubNub time" time="0.012">
+    <testcase classname="Time" name="Getting PubNub time" time="0.01">
         <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
             <![CDATA[When I request current time.................................................undefined
 Then I receive successful response..........................................skipped
