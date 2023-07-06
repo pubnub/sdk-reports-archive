@@ -1,10 +1,10 @@
-<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.047186" timestamp="2023-01-17T07:57:42.916753" hostname="fv-az257-124"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.012563"><system-out>
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.038688" timestamp="2023-07-06T09:41:14.725191" hostname="fv-az344-792"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.010819"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=grantAllPermissions
   Scenario: Grant an access token with all permissions on all resource types with authorized uuid
-    Given I have a keyset with access manager enabled ... passed in 0.000s
+    Given I have a keyset with access manager enabled ... passed in 0.001s
     Given the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Given the TTL 60 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -37,7 +37,7 @@
     * grant pattern permission GET ... passed in 0.000s
     * grant pattern permission UPDATE ... passed in 0.000s
     * grant pattern permission DELETE ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.008s
+    When I grant a token specifying those permissions ... passed in 0.006s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -74,7 +74,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.006059"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.004792"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -84,7 +84,7 @@
     Given the TTL 60 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.005s
+    When I grant a token specifying those permissions ... passed in 0.004s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token does not contain an authorized uuid ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -93,7 +93,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.005933"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.004578"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -104,7 +104,7 @@
     Given the TTL 60 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.005s
+    When I grant a token specifying those permissions ... passed in 0.004s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -113,7 +113,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.005877"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.004388"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -123,7 +123,7 @@
     Given the TTL 60 ... passed in 0.000s
     Given the 'uuid-1' UUID resource access permissions ... passed in 0.000s
     * deny resource permission GET ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.005s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid permissions' ... passed in 0.000s
@@ -135,7 +135,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.005892"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.004483"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -145,7 +145,7 @@
     Given the TTL 60 ... passed in 0.000s
     Given the '!<[^>]+>++' UUID pattern access permissions ... passed in 0.000s
     * grant pattern permission GET ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.005s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid RegExp' ... passed in 0.000s
@@ -157,7 +157,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.005388"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.004782"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -179,7 +179,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.005473"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.004845"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -189,7 +189,7 @@
     Given the TTL 43201 ... passed in 0.000s
     Given the 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
     * grant resource permission READ ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.005s
+    When I attempt to grant a token specifying those permissions ... passed in 0.004s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid ttl' ... passed in 0.000s

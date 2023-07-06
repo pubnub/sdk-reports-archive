@@ -1,4 +1,4 @@
-<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.026413" timestamp="2023-01-17T07:57:42.795884" hostname="fv-az257-124"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.00865"><system-out>
+<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.022838" timestamp="2023-07-06T09:41:14.630879" hostname="fv-az344-792"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.007279"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -6,13 +6,13 @@
   Scenario: Publish simple message with valid ttl and auth permissions
     Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
-    When I publish a message using that auth token with channel 'channel-1' ... passed in 0.008s
+    When I publish a message using that auth token with channel 'channel-1' ... passed in 0.007s
     Then the result is successful ... passed in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.006145"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.005192"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -29,7 +29,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.006078"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.005324"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.005541"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.005044"><system-out>
 <![CDATA[
 @scenario.begin
 
