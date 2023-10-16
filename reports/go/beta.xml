@@ -1,58 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="" tests="136" skipped="0" failures="0" errors="127" time="0.704585991">
-  <testsuite name="Authorization Failure Reporting" tests="4" skipped="0" failures="0" errors="0" time="0.055674766">
-    <testcase name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.022035922"></testcase>
-    <testcase name="Publish simple message with expired auth token" status="passed" time="0.005578207"></testcase>
-    <testcase name="Publish simple message with invalid auth permissions" status="passed" time="0.010667304"></testcase>
-    <testcase name="Publish fails due to revoked token" status="passed" time="0.006662027"></testcase>
+<testsuites name="" tests="191" skipped="0" failures="0" errors="133" time="0.992290088">
+  <testsuite name="Authorization Failure Reporting" tests="4" skipped="0" failures="0" errors="0" time="0.057504681">
+    <testcase name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.020522972"></testcase>
+    <testcase name="Publish simple message with expired auth token" status="passed" time="0.007889066"></testcase>
+    <testcase name="Publish simple message with invalid auth permissions" status="passed" time="0.006364553"></testcase>
+    <testcase name="Publish fails due to revoked token" status="passed" time="0.006079651"></testcase>
   </testsuite>
-  <testsuite name="Files" tests="5" skipped="0" failures="0" errors="5" time="0.023260146">
-    <testcase name="Listing files" status="undefined" time="0.002777953">
+  <testsuite name="Crypto module" tests="49" skipped="0" failures="0" errors="0" time="0.112306238">
+    <testcase name="AES-CBC cryptor data header can be processed #1" status="passed" time="0.000332803"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #2" status="passed" time="0.000241302"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #3" status="passed" time="0.000328703"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #4" status="passed" time="0.000590305"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #5" status="passed" time="0.000292403"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #6" status="passed" time="0.000251303"></testcase>
+    <testcase name="AES-CBC cryptor data header can be processed #7" status="passed" time="0.000230902"></testcase>
+    <testcase name="Empty data encryption should fail #1" status="passed" time="0.000291903"></testcase>
+    <testcase name="Empty data encryption should fail #2" status="passed" time="0.000942908"></testcase>
+    <testcase name="Empty data encryption should fail #3" status="passed" time="0.000248302"></testcase>
+    <testcase name="Empty data encryption should fail #4" status="passed" time="0.000276403"></testcase>
+    <testcase name="Empty stream data encryption should fail #1" status="passed" time="0.000320102"></testcase>
+    <testcase name="Empty stream data encryption should fail #2" status="passed" time="0.000672805"></testcase>
+    <testcase name="Empty stream data encryption should fail #3" status="passed" time="0.000289402"></testcase>
+    <testcase name="Empty stream data encryption should fail #4" status="passed" time="0.000336303"></testcase>
+    <testcase name="Empty data decryption should fail #1" status="passed" time="0.000264802"></testcase>
+    <testcase name="Empty data decryption should fail #2" status="passed" time="0.000260702"></testcase>
+    <testcase name="Empty data decryption should fail #3" status="passed" time="0.000697905"></testcase>
+    <testcase name="Empty data decryption should fail #4" status="passed" time="0.000317603"></testcase>
+    <testcase name="Empty data decryption should fail #5" status="passed" time="0.000325503"></testcase>
+    <testcase name="Empty stream data decryption should fail #1" status="passed" time="0.000382903"></testcase>
+    <testcase name="Empty stream data decryption should fail #2" status="passed" time="0.000240502"></testcase>
+    <testcase name="Empty stream data decryption should fail #3" status="passed" time="0.000513604"></testcase>
+    <testcase name="Empty stream data decryption should fail #4" status="passed" time="0.000316803"></testcase>
+    <testcase name="Empty stream data decryption should fail #5" status="passed" time="0.000251802"></testcase>
+    <testcase name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #1" status="passed" time="0.005065842"></testcase>
+    <testcase name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #2" status="passed" time="0.002022617"></testcase>
+    <testcase name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #3" status="passed" time="0.00118181"></testcase>
+    <testcase name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #4" status="passed" time="0.000358403"></testcase>
+    <testcase name="Stream data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #1" status="passed" time="0.00348603"></testcase>
+    <testcase name="Stream data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation #2" status="passed" time="0.000733806"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #1" status="passed" time="0.001073109"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #2" status="passed" time="0.001766715"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #3" status="passed" time="0.000375203"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #4" status="passed" time="0.000398703"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #5" status="passed" time="0.000947608"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #6" status="passed" time="0.002080117"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #7" status="passed" time="0.000321702"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #8" status="passed" time="0.000312803"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #9" status="passed" time="0.001413911"></testcase>
+    <testcase name="Cryptor is able to process sample files as binary #10" status="passed" time="0.000318003"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #1" status="passed" time="0.002345819"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #2" status="passed" time="0.000273802"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #3" status="passed" time="0.00356233"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #4" status="passed" time="0.000348802"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #5" status="passed" time="0.002587022"></testcase>
+    <testcase name="Cryptor is able to process sample files as stream #6" status="passed" time="0.000758206"></testcase>
+    <testcase name="Crypto module can handle encrypted data from different cryptors #1" status="passed" time="0.000821207"></testcase>
+    <testcase name="Crypto module can handle encrypted data from different cryptors #2" status="passed" time="0.000920907"></testcase>
+  </testsuite>
+  <testsuite name="Event Engine" tests="6" skipped="0" failures="0" errors="6" time="0.031852766">
+    <testcase name="Successfully receive messages" status="undefined" time="0.002692523">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step I subscribe" type="undefined"></error>
+      <error message="Step I receive the message in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+    <testcase name="Successfully restore subscribe" status="undefined" time="0.003024425">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step I subscribe with timetoken 42" type="undefined"></error>
+      <error message="Step I receive the message in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+    <testcase name="Successfully restore subscribe with failures" status="undefined" time="0.003141726">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step a linear reconnection policy with 3 retries" type="undefined"></error>
+      <error message="Step I subscribe with timetoken 42" type="undefined"></error>
+      <error message="Step I receive the message in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+    <testcase name="Complete handshake failure" status="undefined" time="0.002838424">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step a linear reconnection policy with 3 retries" type="undefined"></error>
+      <error message="Step I subscribe" type="undefined"></error>
+      <error message="Step I receive an error in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+    <testcase name="Handshake failure recovery" status="undefined" time="0.004974841">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step a linear reconnection policy with 3 retries" type="undefined"></error>
+      <error message="Step I subscribe" type="undefined"></error>
+      <error message="Step I receive the message in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+    <testcase name="Receiving failure recovery" status="undefined" time="0.003065025">
+      <error message="Step the demo keyset with event engine enabled" type="undefined"></error>
+      <error message="Step a linear reconnection policy with 3 retries" type="undefined"></error>
+      <error message="Step I subscribe" type="undefined"></error>
+      <error message="Step I receive the message in my subscribe response" type="undefined"></error>
+      <error message="Step I observe the following:" type="undefined"></error>
+    </testcase>
+  </testsuite>
+  <testsuite name="Files" tests="5" skipped="0" failures="0" errors="5" time="0.023828199">
+    <testcase name="Listing files" status="undefined" time="0.002800324">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I list files" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publishing file message" status="undefined" time="0.00417378">
+    <testcase name="Publishing file message" status="undefined" time="0.00241282">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish file message" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publishing file message failure" status="undefined" time="0.002422246">
+    <testcase name="Publishing file message failure" status="undefined" time="0.00237522">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish file message" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Deleting a file" status="undefined" time="0.002800153">
+    <testcase name="Deleting a file" status="undefined" time="0.004264936">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I delete file" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Downloading a file" status="undefined" time="0.003709171">
+    <testcase name="Downloading a file" status="undefined" time="0.006683555">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I download file" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Get channels and groups presence" tests="4" skipped="0" failures="0" errors="4" time="0.014417076">
-    <testcase name="Check active clients on channel without subscribers" status="undefined" time="0.002366146">
+  <testsuite name="Get channels and groups presence" tests="4" skipped="0" failures="0" errors="4" time="0.036155502">
+    <testcase name="Check active clients on channel without subscribers" status="undefined" time="0.002547421">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence on &#39;test-channel&#39; channel with presence state" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step there is no active clients" type="undefined"></error>
     </testcase>
-    <testcase name="Check active clients on channel with subscribers" status="undefined" time="0.004907193">
+    <testcase name="Check active clients on channel with subscribers" status="undefined" time="0.002186618">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence on &#39;test-channel&#39; channel with presence state" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step there is active clients" type="undefined"></error>
     </testcase>
-    <testcase name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" status="undefined" time="0.002308444">
+    <testcase name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" status="undefined" time="0.02278029">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence on &#39;test-channel&#39; channel with presence state" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step there is no active clients" type="undefined"></error>
     </testcase>
-    <testcase name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" status="undefined" time="0.002293144">
+    <testcase name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" status="undefined" time="0.005216444">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence on &#39;test-channel&#39; channel with presence state" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
@@ -60,167 +153,167 @@
       <error message="Step state associated with active clients" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Get presence state" tests="2" skipped="0" failures="0" errors="2" time="0.005431404">
-    <testcase name="Get presence state which has been set on channel using presence/data endpoint" status="undefined" time="0.002239542">
+  <testsuite name="Get presence state" tests="2" skipped="0" failures="0" errors="2" time="0.007942867">
+    <testcase name="Get presence state which has been set on channel using presence/data endpoint" status="undefined" time="0.004528938">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence state for &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step response contains state" type="undefined"></error>
     </testcase>
-    <testcase name="Get presence state which has been set on channel using presence/heartbeat endpoint" status="undefined" time="0.002464248">
+    <testcase name="Get presence state which has been set on channel using presence/heartbeat endpoint" status="undefined" time="0.00233632">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch presence state for &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step response contains state" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Grant an access token" tests="1" skipped="0" failures="0" errors="0" time="0.010572402">
-    <testcase name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.010572402"></testcase>
+  <testsuite name="Grant an access token" tests="1" skipped="0" failures="0" errors="0" time="0.012099001">
+    <testcase name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.012099001"></testcase>
   </testsuite>
-  <testsuite name="History" tests="3" skipped="0" failures="0" errors="3" time="0.013158352">
-    <testcase name="Fetching message history" status="undefined" time="0.004243881">
+  <testsuite name="History" tests="3" skipped="0" failures="0" errors="3" time="0.013590014">
+    <testcase name="Fetching message history" status="undefined" time="0.005722448">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch message history for single channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step the response contains pagination info" type="undefined"></error>
     </testcase>
-    <testcase name="Fetching message history for multiple channels" status="undefined" time="0.002894655">
+    <testcase name="Fetching message history for multiple channels" status="undefined" time="0.00244882">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch message history for multiple channels" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Fetching message history with message actions" status="undefined" time="0.004577288">
+    <testcase name="Fetching message history with message actions" status="undefined" time="0.002769724">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch message history with message actions" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="History for VSP" tests="4" skipped="0" failures="0" errors="4" time="0.012648342">
-    <testcase name="Client can fetch history with message types" status="undefined" time="0.002918656">
+  <testsuite name="History for VSP" tests="4" skipped="0" failures="0" errors="4" time="0.017424046">
+    <testcase name="Client can fetch history with message types" status="undefined" time="0.004558738">
       <error message="Step the demo keyset with enabled storage" type="undefined"></error>
       <error message="Step I fetch message history for &#39;simple-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step history response contains messages with &#39;0&#39; and &#39;4&#39; message types" type="undefined"></error>
       <error message="Step history response contains messages without space ids" type="undefined"></error>
     </testcase>
-    <testcase name="Client can fetch history with types" status="undefined" time="0.002505848">
+    <testcase name="Client can fetch history with types" status="undefined" time="0.003057426">
       <error message="Step the demo keyset with enabled storage" type="undefined"></error>
       <error message="Step I fetch message history for &#39;vsp-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step history response contains messages with &#39;custom-message&#39; and &#39;vc-message&#39; types" type="undefined"></error>
       <error message="Step history response contains messages without space ids" type="undefined"></error>
     </testcase>
-    <testcase name="Client can fetch history without types enabled by default" status="undefined" time="0.002539048">
+    <testcase name="Client can fetch history without types enabled by default" status="undefined" time="0.003021325">
       <error message="Step the demo keyset with enabled storage" type="undefined"></error>
       <error message="Step I fetch message history with &#39;includeType&#39; set to &#39;false&#39; for &#39;vsp-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step history response contains messages without types" type="undefined"></error>
       <error message="Step history response contains messages without space ids" type="undefined"></error>
     </testcase>
-    <testcase name="Client can fetch history with space id disabled by default" status="undefined" time="0.002287443">
+    <testcase name="Client can fetch history with space id disabled by default" status="undefined" time="0.002638622">
       <error message="Step the demo keyset with enabled storage" type="undefined"></error>
       <error message="Step I fetch message history with &#39;includeSpaceId&#39; set to &#39;true&#39; for &#39;vsp-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step history response contains messages with space ids" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Message Actions" tests="5" skipped="0" failures="0" errors="5" time="0.015281393">
-    <testcase name="Adding a message action" status="undefined" time="0.001829035">
+  <testsuite name="Message Actions" tests="5" skipped="0" failures="0" errors="5" time="0.023188293">
+    <testcase name="Adding a message action" status="undefined" time="0.00244582">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add a message action" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Failing to add a message action" status="undefined" time="0.004047178">
+    <testcase name="Failing to add a message action" status="undefined" time="0.003019525">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add a message action" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Fetching message actions with pagination" status="undefined" time="0.002142441">
+    <testcase name="Fetching message actions with pagination" status="undefined" time="0.005569947">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I fetch message actions" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
       <error message="Step the response contains pagination info" type="undefined"></error>
     </testcase>
-    <testcase name="Deleting a message action" status="undefined" time="0.002174242">
+    <testcase name="Deleting a message action" status="undefined" time="0.003755431">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I delete a message action" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Failing to delete a message action" status="undefined" time="0.002283144">
+    <testcase name="Failing to delete a message action" status="undefined" time="0.002897424">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I delete a message action" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Message encryption" tests="2" skipped="0" failures="0" errors="2" time="0.007697047">
-    <testcase name="Receiving an encrypted message with correct crypto key" status="undefined" time="0.004100178">
+  <testsuite name="Message encryption" tests="2" skipped="0" failures="0" errors="2" time="0.007304561">
+    <testcase name="Receiving an encrypted message with correct crypto key" status="undefined" time="0.00356933">
       <error message="Step the crypto keyset" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive the message in my subscribe response" type="undefined"></error>
     </testcase>
-    <testcase name="Receiving an encrypted message with invalid crypto key" status="undefined" time="0.002790553">
+    <testcase name="Receiving an encrypted message with invalid crypto key" status="undefined" time="0.002860924">
       <error message="Step the invalid-crypto keyset" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step an error is thrown" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Objects V2 Channel metadata" tests="6" skipped="0" failures="0" errors="6" time="0.020800598">
-    <testcase name="Get a channel metadata for id" status="undefined" time="0.003405865">
+  <testsuite name="Objects V2 Channel metadata" tests="6" skipped="0" failures="0" errors="6" time="0.032165269">
+    <testcase name="Get a channel metadata for id" status="undefined" time="0.002898224">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
       <error message="Step I get the channel metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the channel metadata for &#39;Chat&#39; channel" type="undefined"></error>
     </testcase>
-    <testcase name="Get a channel with custom metadata" status="undefined" time="0.002304444">
+    <testcase name="Get a channel with custom metadata" status="undefined" time="0.002825023">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;DM&#39; channel" type="undefined"></error>
       <error message="Step I get the channel metadata with custom" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the channel metadata for &#39;DM&#39; channel" type="undefined"></error>
     </testcase>
-    <testcase name="Set a channel metadata" status="undefined" time="0.00207284">
+    <testcase name="Set a channel metadata" status="undefined" time="0.005142843">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the data for &#39;Chat&#39; channel" type="undefined"></error>
       <error message="Step I set the channel metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the channel metadata for &#39;Chat&#39; channel contains updated" type="undefined"></error>
     </testcase>
-    <testcase name="Remove a channel metadata for id" status="undefined" time="0.003848274">
+    <testcase name="Remove a channel metadata for id" status="undefined" time="0.003677931">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
       <error message="Step I remove the channel metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Get all channel metadata" status="undefined" time="0.002210643">
+    <testcase name="Get all channel metadata" status="undefined" time="0.002781323">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step I get all channel metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;Chat&#39; and &#39;Patient&#39; channel metadata" type="undefined"></error>
     </testcase>
-    <testcase name="Get all channel metadata with custom" status="undefined" time="0.002219342">
+    <testcase name="Get all channel metadata with custom" status="undefined" time="0.002849024">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step I get all channel metadata with custom" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;DM&#39; and &#39;VipChat&#39; channel metadata" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Objects V2 Members" tests="6" skipped="0" failures="0" errors="6" time="0.019063165">
-    <testcase name="Get members for a channel" status="undefined" time="0.002132941">
+  <testsuite name="Objects V2 Members" tests="6" skipped="0" failures="0" errors="6" time="0.030394754">
+    <testcase name="Get members for a channel" status="undefined" time="0.002703923">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
       <error message="Step I get the channel members" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;AmeliaMember&#39; and &#39;EvaMember&#39; members" type="undefined"></error>
     </testcase>
-    <testcase name="Get members for VipChat channel with custom and UUID with custom" status="undefined" time="0.002622051">
+    <testcase name="Get members for VipChat channel with custom and UUID with custom" status="undefined" time="0.003095625">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;VipChat&#39; channel" type="undefined"></error>
       <error message="Step I get the channel members including custom and UUID custom information" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;OliverMember&#39; and &#39;PeterMember&#39; members" type="undefined"></error>
     </testcase>
-    <testcase name="Set member for a channel" status="undefined" time="0.002181742">
+    <testcase name="Set member for a channel" status="undefined" time="0.00355023">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the data for &#39;AmeliaMember&#39; member" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
@@ -228,7 +321,7 @@
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;AmeliaMember&#39; member" type="undefined"></error>
     </testcase>
-    <testcase name="Set member with custom for a channel and UUID with custom" status="undefined" time="0.002876455">
+    <testcase name="Set member with custom for a channel and UUID with custom" status="undefined" time="0.002716822">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the data for &#39;PeterMember&#39; member" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
@@ -236,14 +329,14 @@
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;PeterMember&#39; member" type="undefined"></error>
     </testcase>
-    <testcase name="Remove member for a channel" status="undefined" time="0.002311744">
+    <testcase name="Remove member for a channel" status="undefined" time="0.00476174">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Chat&#39; channel" type="undefined"></error>
       <error message="Step the data for &#39;AmeliaMember&#39; member that we want to remove" type="undefined"></error>
       <error message="Step I remove a channel member" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Manage members for a channel" status="undefined" time="0.003432365">
+    <testcase name="Manage members for a channel" status="undefined" time="0.003241327">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the data for &#39;PeterMember&#39; member" type="undefined"></error>
       <error message="Step the data for &#39;AmeliaMember&#39; member that we want to remove" type="undefined"></error>
@@ -254,29 +347,29 @@
       <error message="Step the response does not contain list with &#39;AmeliaMember&#39; member" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Objects V2 Memberships" tests="8" skipped="0" failures="0" errors="8" time="0.024294465">
-    <testcase name="Get memberships for UUID" status="undefined" time="0.002364345">
+  <testsuite name="Objects V2 Memberships" tests="8" skipped="0" failures="0" errors="8" time="0.036121902">
+    <testcase name="Get memberships for UUID" status="undefined" time="0.002471121">
+      <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
+      <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I get the memberships" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;ChatMembership&#39; and &#39;PatientMembership&#39; memberships" type="undefined"></error>
-      <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
-      <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
     </testcase>
-    <testcase name="Get memberships for current user" status="undefined" time="0.002183542">
+    <testcase name="Get memberships for current user" status="undefined" time="0.002467821">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step current user is &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I get the memberships for current user" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;ChatMembership&#39; and &#39;PatientMembership&#39; memberships" type="undefined"></error>
     </testcase>
-    <testcase name="Get memberships for UUID with custom and channel custom" status="undefined" time="0.002515948">
+    <testcase name="Get memberships for UUID with custom and channel custom" status="undefined" time="0.003966933">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Bob&#39; persona" type="undefined"></error>
       <error message="Step I get the memberships including custom and channel custom information" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;VipChatMembership&#39; and &#39;DMMembership&#39; memberships" type="undefined"></error>
     </testcase>
-    <testcase name="Set membership" status="undefined" time="0.002201142">
+    <testcase name="Set membership" status="undefined" time="0.00240372">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step the data for &#39;ChatMembership&#39; membership" type="undefined"></error>
@@ -284,7 +377,7 @@
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;ChatMembership&#39; membership" type="undefined"></error>
     </testcase>
-    <testcase name="Set membership for current user" status="undefined" time="0.00208024">
+    <testcase name="Set membership for current user" status="undefined" time="0.00239652">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step current user is &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step the data for &#39;ChatMembership&#39; membership" type="undefined"></error>
@@ -292,21 +385,21 @@
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;ChatMembership&#39; membership" type="undefined"></error>
     </testcase>
-    <testcase name="Remove membership" status="undefined" time="0.002853555">
+    <testcase name="Remove membership" status="undefined" time="0.002551522">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step the data for &#39;ChatMembership&#39; membership" type="undefined"></error>
       <error message="Step I remove the membership" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Remove membership for current user" status="undefined" time="0.001839235">
+    <testcase name="Remove membership for current user" status="undefined" time="0.002837423">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step current user is &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step the data for &#39;ChatMembership&#39; membership that we want to remove" type="undefined"></error>
       <error message="Step I remove the membership for current user" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Manage memberships for a UUID" status="undefined" time="0.002442447">
+    <testcase name="Manage memberships for a UUID" status="undefined" time="0.006438354">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step the data for &#39;ChatMembership&#39; membership" type="undefined"></error>
@@ -317,453 +410,452 @@
       <error message="Step the response does not contain list with &#39;PatientMembership&#39; membership" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Objects V2 UUID metadata" tests="7" skipped="0" failures="0" errors="7" time="0.024075861">
-    <testcase name="Get a UUID metadata for id" status="undefined" time="0.003286163">
+  <testsuite name="Objects V2 UUID metadata" tests="7" skipped="0" failures="0" errors="7" time="0.026400121">
+    <testcase name="Get a UUID metadata for id" status="undefined" time="0.00231092">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I get the UUID metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the UUID metadata for &#39;Alice&#39; persona" type="undefined"></error>
     </testcase>
-    <testcase name="Get a UUID with custom metadata, id stored in config" status="undefined" time="0.002367445">
+    <testcase name="Get a UUID with custom metadata, id stored in config" status="undefined" time="0.002512621">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step current user is &#39;Bob&#39; persona" type="undefined"></error>
       <error message="Step I get the UUID metadata with custom for current user" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the UUID metadata for &#39;Bob&#39; persona" type="undefined"></error>
     </testcase>
-    <testcase name="Set a UUID metadata" status="undefined" time="0.002256243">
+    <testcase name="Set a UUID metadata" status="undefined" time="0.00238272">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the data for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I set the UUID metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the UUID metadata for &#39;Alice&#39; persona contains updated" type="undefined"></error>
     </testcase>
-    <testcase name="Remove a UUID metadata for id" status="undefined" time="0.003270062">
+    <testcase name="Remove a UUID metadata for id" status="undefined" time="0.002200119">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step the id for &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I remove the UUID metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Remove a UUID metadata, id stored in config" status="undefined" time="0.002560749">
+    <testcase name="Remove a UUID metadata, id stored in config" status="undefined" time="0.002069718">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step current user is &#39;Alice&#39; persona" type="undefined"></error>
       <error message="Step I remove the UUID metadata for current user" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Get all UUID metadata" status="undefined" time="0.002476048">
+    <testcase name="Get all UUID metadata" status="undefined" time="0.002927025">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step I get all UUID metadata" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;Alice&#39; and &#39;James&#39; UUID metadata" type="undefined"></error>
     </testcase>
-    <testcase name="Get all UUID metadata with custom" status="undefined" time="0.002373346">
+    <testcase name="Get all UUID metadata with custom" status="undefined" time="0.002221619">
       <error message="Step I have a keyset with Objects V2 enabled" type="undefined"></error>
       <error message="Step I get all UUID metadata with custom" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
       <error message="Step the response contains list with &#39;Bob&#39; and &#39;Lisa&#39; UUID metadata" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Publish a message" tests="13" skipped="0" failures="0" errors="13" time="0.086810262">
-    <testcase name="Publish string success" status="undefined" time="0.008671666">
+  <testsuite name="Publish a message" tests="13" skipped="0" failures="0" errors="13" time="0.055575664">
+    <testcase name="Publish string success" status="undefined" time="0.002727423">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;tm+Jp@%X=JJgu!7$gHWpa0ee4S;8DZ=zCc3%&#39; string as message to &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish dictionary with compression success" status="undefined" time="0.02452367">
+    <testcase name="Publish dictionary with compression success" status="undefined" time="0.002624922">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;{&#34;pubnub&#34;:&#34;message is here&#34;}&#39; dictionary as message to &#39;@Bm4=#%@X*oZ6Df&#39; channel with compression" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish dictionary as POST body success" status="undefined" time="0.010732206">
+    <testcase name="Publish dictionary as POST body success" status="undefined" time="0.00242702">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;{&#34;pubnub&#34;:&#34;message is here&#34;}&#39; dictionary as message to &#39;test-channel&#39; channel as POST body" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish number success" status="undefined" time="0.002863055">
+    <testcase name="Publish number success" status="undefined" time="0.002802523">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;2010&#39; number as message to &#39;test_channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish array success" status="undefined" time="0.002562949">
+    <testcase name="Publish array success" status="undefined" time="0.00248372">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;[&#34;pubnub&#34;,&#34;message is here&#34;]&#39; array as message to &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish dictionary success" status="undefined" time="0.00205564">
+    <testcase name="Publish dictionary success" status="undefined" time="0.002781023">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;{&#34;pubnub&#34;:&#34;message is here&#34;}&#39; dictionary as message to &#39;test+channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message with meta success" status="undefined" time="0.002499047">
+    <testcase name="Publish message with meta success" status="undefined" time="0.004623739">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;hello meta&#39; string as message to &#39;test-channel&#39; channel with &#39;meta&#39; set to &#39;{&#34;payload&#34;:&#34;surprise&#34;}&#39;" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message with store success" status="undefined" time="0.002334245">
+    <testcase name="Publish message with store success" status="undefined" time="0.002861823">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;hello store&#39; string as message to &#39;test-channel&#39; channel with &#39;store&#39; set to &#39;0&#39;" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message with ttl success" status="undefined" time="0.002303344">
+    <testcase name="Publish message with ttl success" status="undefined" time="0.00239132">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;hello ttl&#39; string as message to &#39;test channel&#39; channel with &#39;ttl&#39; set to &#39;123&#39;" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message fails when message payload is larger than 32 KiB" status="undefined" time="0.00205554">
+    <testcase name="Publish message fails when message payload is larger than 32 KiB" status="undefined" time="0.003237127">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish too long message to &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
       <error message="Step the error status code is 414" type="skipped"></error>
     </testcase>
-    <testcase name="Publish message with meta fails when meta isn&#39;t dictionary" status="undefined" time="0.002005639">
+    <testcase name="Publish message with meta fails when meta isn&#39;t dictionary" status="undefined" time="0.003078626">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish &#39;hello meta&#39; string as message to &#39;test-channel&#39; channel with &#39;meta&#39; set to &#39;string-value&#39;" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message with the wrong publish key fail" status="undefined" time="0.007988853">
+    <testcase name="Publish message with the wrong publish key fail" status="undefined" time="0.002734023">
       <error message="Step the wrong publish key" type="undefined"></error>
       <error message="Step I publish &#39;{&#34;pubnub&#34;:&#34;message&#34;}&#39; dictionary as message to &#39;test+channel&#39; channel" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
       <error message="Step the error status code is 400" type="skipped"></error>
     </testcase>
-    <testcase name="Publish message with the wrong subscribe key fail" status="undefined" time="0.002124041">
+    <testcase name="Publish message with the wrong subscribe key fail" status="undefined" time="0.002545021">
       <error message="Step the wrong subscribe key" type="undefined"></error>
       <error message="Step I publish &#39;{&#34;pubnub&#34;:&#34;message&#34;}&#39; dictionary as message to &#39;test!channel&#39; channel" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
       <error message="Step the error status code is 400" type="skipped"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Publish to Space" tests="15" skipped="0" failures="0" errors="15" time="0.120306404">
-    <testcase name="Publish message to space success" status="undefined" time="0.002462047">
+  <testsuite name="Publish to Space" tests="15" skipped="0" failures="0" errors="15" time="0.150976561">
+    <testcase name="Publish message to space success" status="undefined" time="0.015736831">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;space-id&#39; space id and &#39;test_step&#39; type" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type is too short" status="undefined" time="0.003640369">
+    <testcase name="Publish message to space fails when type is too short" status="undefined" time="0.00363723">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;ts&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type is too long" status="undefined" time="0.002397146">
+    <testcase name="Publish message to space fails when type is too long" status="undefined" time="0.003932633">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;this-is-really-long-message-type-to-be-used-with-publish&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id is too short" status="undefined" time="0.00365927">
+    <testcase name="Publish message to space fails when space id is too short" status="undefined" time="0.009545579">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;ts&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id is too long" status="undefined" time="0.015798202">
+    <testcase name="Publish message to space fails when space id is too long" status="undefined" time="0.013628714">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;this-is-really-long-identifier-for-space-id-to-be-used-with-publish&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.003267962">
+    <testcase name="Publish message to space fails when space id starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.003502329">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;pn-test-space&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.002928756">
+    <testcase name="Publish message to space fails when space id starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.045267078">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;pn_test-space&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.005464404">
+    <testcase name="Publish message to space fails when space id starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.011190393">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;-test-space&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.017542136">
+    <testcase name="Publish message to space fails when space id starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.00239342">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;_test-space&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when space id contains not allowed characters" status="undefined" time="0.003299663">
+    <testcase name="Publish message to space fails when space id contains not allowed characters" status="undefined" time="0.002257718">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test@space.com&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.00469539">
+    <testcase name="Publish message to space fails when type starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.00230782">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;pn-test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.012841345">
+    <testcase name="Publish message to space fails when type starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.00240742">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;pn_test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.002968457">
+    <testcase name="Publish message to space fails when type starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.002251119">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;-test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.003040458">
+    <testcase name="Publish message to space fails when type starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.00244312">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;_test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Publish message to space fails when type contains not allowed characters" status="undefined" time="0.011319717">
+    <testcase name="Publish message to space fails when type contains not allowed characters" status="undefined" time="0.007801865">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I publish message with &#39;test-space&#39; space id and &#39;test:step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Push Notifications" tests="13" skipped="0" failures="0" errors="13" time="0.033631244">
-    <testcase name="Listing push channels for GCM gateway" status="undefined" time="0.001713632">
+  <testsuite name="Push Notifications" tests="13" skipped="0" failures="0" errors="13" time="0.048444004">
+    <testcase name="Listing push channels for GCM gateway" status="undefined" time="0.002025417">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I list GCM push channels" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Listing push channels for APNS2 without topic" status="undefined" time="0.000104302">
+    <testcase name="Listing push channels for APNS2 without topic" status="undefined" time="0.000176701">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I list APNS2 push channels" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Listing push channels for APNS2" status="undefined" time="0.002413546">
+    <testcase name="Listing push channels for APNS2" status="undefined" time="0.002103717">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I list APNS2 push channels with topic" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Adding push channels for GCM" status="undefined" time="0.002045939">
+    <testcase name="Adding push channels for GCM" status="undefined" time="0.002470521">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add GCM push channels" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Adding push channels for FCM" status="undefined" time="0.001926537">
+    <testcase name="Adding push channels for FCM" status="undefined" time="0.002528921">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add FCM push channels" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Adding push channels for APNS2 without topic" status="undefined" time="0.000635812">
+    <testcase name="Adding push channels for APNS2 without topic" status="undefined" time="0.000155701">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add APNS2 push channels" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Adding push channels for APNS2" status="undefined" time="0.001879436">
+    <testcase name="Adding push channels for APNS2" status="undefined" time="0.002100618">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I add APNS2 push channels with topic" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing push channels for GCM" status="undefined" time="0.002389745">
+    <testcase name="Removing push channels for GCM" status="undefined" time="0.002108217">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove GCM push channels" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing push channels for APNS2 without topic" status="undefined" time="0.000143503">
+    <testcase name="Removing push channels for APNS2 without topic" status="undefined" time="0.000152601">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove APNS2 push channels" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing push channels for APNS2" status="undefined" time="0.002456347">
+    <testcase name="Removing push channels for APNS2" status="undefined" time="0.002374319">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove APNS2 push channels with topic" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing device for GCM" status="undefined" time="0.004350783">
+    <testcase name="Removing device for GCM" status="undefined" time="0.00237672">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove GCM device" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing device for APNS2 without topic" status="undefined" time="0.000129102">
+    <testcase name="Removing device for APNS2 without topic" status="undefined" time="0.000149301">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove APNS2 device" type="undefined"></error>
       <error message="Step I receive error response" type="undefined"></error>
     </testcase>
-    <testcase name="Removing device for APNS2" status="undefined" time="0.002521849">
+    <testcase name="Removing device for APNS2" status="undefined" time="0.003834332">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I remove APNS2 device with topic" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Revoke an access token" tests="4" skipped="0" failures="0" errors="0" time="0.032870229">
-    <testcase name="Revoke existing valid token" status="passed" time="0.00474499"></testcase>
-    <testcase name="Revoke invalid token" status="passed" time="0.006191319"></testcase>
-    <testcase name="Revoke a token while it is disabled on a server" status="passed" time="0.006682828"></testcase>
-    <testcase name="Revoke a token with characters that require url encoding" status="passed" time="0.005407404"></testcase>
+  <testsuite name="Revoke an access token" tests="4" skipped="0" failures="0" errors="0" time="0.04193845">
+    <testcase name="Revoke existing valid token" status="passed" time="0.005329244"></testcase>
+    <testcase name="Revoke invalid token" status="passed" time="0.008230268"></testcase>
+    <testcase name="Revoke a token while it is disabled on a server" status="passed" time="0.005757748"></testcase>
+    <testcase name="Revoke a token with characters that require url encoding" status="passed" time="0.009370178"></testcase>
   </testsuite>
-  <testsuite name="Send a file to Space" tests="3" skipped="0" failures="0" errors="3" time="0.011875927">
-    <testcase name="Send a file to space success" status="undefined" time="0.004471485">
+  <testsuite name="Send a file to Space" tests="3" skipped="0" failures="0" errors="3" time="0.013075009">
+    <testcase name="Send a file to space success" status="undefined" time="0.003063325">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a file with &#39;space-id&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a file to space fails when message type is too short, shorten than 3 characters" status="undefined" time="0.002999658">
+    <testcase name="Send a file to space fails when message type is too short, shorten than 3 characters" status="undefined" time="0.00240542">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a file with &#39;space-id&#39; space id and &#39;ts&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a file to space fails when message type is too long, longer than 50 characters" status="undefined" time="0.00263455">
+    <testcase name="Send a file to space fails when message type is too long, longer than 50 characters" status="undefined" time="0.00483954">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a file with &#39;space-id&#39; space id and &#39;this-is-really-long-message-type-to-be-used-with-publish&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Send a signal to Space" tests="15" skipped="0" failures="0" errors="15" time="0.070826056">
-    <testcase name="Send a signal to space success" status="undefined" time="0.001974737">
+  <testsuite name="Send a signal to Space" tests="15" skipped="0" failures="0" errors="15" time="0.083574498">
+    <testcase name="Send a signal to space success" status="undefined" time="0.004990342">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;space-id&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive a successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type is too short" status="undefined" time="0.002039239">
+    <testcase name="Send a signal to space fails when type is too short" status="undefined" time="0.002627722">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;ts&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type is too long" status="undefined" time="0.002351645">
+    <testcase name="Send a signal to space fails when type is too long" status="undefined" time="0.002726822">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;this-is-really-long-message-type-to-be-used-with-publish&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id is too short" status="undefined" time="0.002266743">
+    <testcase name="Send a signal to space fails when space id is too short" status="undefined" time="0.00243332">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;ts&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id is too long" status="undefined" time="0.00212294">
+    <testcase name="Send a signal to space fails when space id is too long" status="undefined" time="0.00245202">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;this-is-really-long-identifier-for-space-id-to-be-used-with-publish&#39; space id and &#39;test-step&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.004609789">
+    <testcase name="Send a signal to space fails when space id starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.002631922">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;pn-test-space&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.002346245">
+    <testcase name="Send a signal to space fails when space id starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.005339344">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;pn_test-space&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.002687251">
+    <testcase name="Send a signal to space fails when space id starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.002801523">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;-test-space&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.002412846">
+    <testcase name="Send a signal to space fails when space id starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.00236882">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;_test-space&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when space id contains not allowed characters" status="undefined" time="0.002500447">
+    <testcase name="Send a signal to space fails when space id contains not allowed characters" status="undefined" time="0.002842724">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test@space.com&#39; space id and &#39;test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.002465647">
+    <testcase name="Send a signal to space fails when type starts with reserved &#39;pn-&#39; (hyphen) string" status="undefined" time="0.002800823">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;pn-test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.002478848">
+    <testcase name="Send a signal to space fails when type starts with reserved &#39;pn_&#39; (underscore) string" status="undefined" time="0.005087042">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;pn_test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.00258385">
+    <testcase name="Send a signal to space fails when type starts with not allowed &#39;-&#39; (hyphen) character" status="undefined" time="0.002725022">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;-test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.017806641">
+    <testcase name="Send a signal to space fails when type starts with not allowed &#39;_&#39; (underscore) character" status="undefined" time="0.015789032">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;_test_message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
-    <testcase name="Send a signal to space fails when type contains not allowed characters" status="undefined" time="0.002420547">
+    <testcase name="Send a signal to space fails when type contains not allowed characters" status="undefined" time="0.002796523">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal with &#39;test-space&#39; space id and &#39;test:message_type&#39; type" type="undefined"></error>
       <error message="Step I receive an error response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Set presence state" tests="2" skipped="0" failures="0" errors="2" time="0.007649446">
-    <testcase name="Set presence state on channel using presence/data endpoint" status="undefined" time="0.00314586">
+  <testsuite name="Set presence state" tests="2" skipped="0" failures="0" errors="2" time="0.019023159">
+    <testcase name="Set presence state on channel using presence/data endpoint" status="undefined" time="0.014500221">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I set state on &#39;test-channel&#39; channel with withHeartbeat set to &#39;false&#39;" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Set presence state on channel using presence/heartbeat endpoint" status="undefined" time="0.003704071">
+    <testcase name="Set presence state on channel using presence/heartbeat endpoint" status="undefined" time="0.003215927">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I set state on &#39;test-channel&#39; channel with withHeartbeat set to &#39;true&#39;" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Signal" tests="1" skipped="0" failures="0" errors="1" time="0.002151041">
-    <testcase name="Sending a signal" status="undefined" time="0.002151041">
+  <testsuite name="Signal" tests="1" skipped="0" failures="0" errors="1" time="0.00239142">
+    <testcase name="Sending a signal" status="undefined" time="0.00239142">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I send a signal" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Signal user presence" tests="3" skipped="0" failures="0" errors="3" time="0.010471">
-    <testcase name="Heartbeat call for channel without &#39;state&#39; query parameter when state not set" status="undefined" time="0.003857774">
+  <testsuite name="Signal user presence" tests="3" skipped="0" failures="0" errors="3" time="0.010962592">
+    <testcase name="Heartbeat call for channel without &#39;state&#39; query parameter when state not set" status="undefined" time="0.00238082">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I call heartbeat for &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Heartbeat call for channel with &#39;state&#39; query parameter when state is set with presence/data endpoint" status="undefined" time="0.002444946">
+    <testcase name="Heartbeat call for channel with &#39;state&#39; query parameter when state is set with presence/data endpoint" status="undefined" time="0.002106718">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step presence state set for &#39;test-channel&#39; channel with withHeartbeat set to &#39;true&#39;" type="undefined"></error>
       <error message="Step I call heartbeat for &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
-    <testcase name="Heartbeat call for channel with &#39;state&#39; query parameter when state is set with presence/heartbeat endpoint" status="undefined" time="0.002500548">
+    <testcase name="Heartbeat call for channel with &#39;state&#39; query parameter when state is set with presence/heartbeat endpoint" status="undefined" time="0.003683931">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step presence state set for &#39;test-channel&#39; channel with withHeartbeat set to &#39;false&#39;" type="undefined"></error>
       <error message="Step I call heartbeat for &#39;test-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Subscribe Loop" tests="1" skipped="0" failures="0" errors="1" time="0.008680966">
-    <testcase name="subscribe and recieve a published message" status="undefined" time="0.008680966">
+  <testsuite name="Subscribe Loop" tests="1" skipped="0" failures="0" errors="1" time="0.003132327">
+    <testcase name="subscribe and recieve a published message" status="undefined" time="0.003132327">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
-      <error message="Step I publish a message" type="undefined"></error>
       <error message="Step I receive the message in my subscribe response" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Subscribe Loop auto-retry with access denied" tests="7" skipped="0" failures="0" errors="7" time="0.027294222">
-    <testcase name="don&#39;t auto-retry without auth key" status="undefined" time="0.003898174">
+  <testsuite name="Subscribe Loop auto-retry with access denied" tests="7" skipped="0" failures="0" errors="7" time="0.035241895">
+    <testcase name="don&#39;t auto-retry without auth key" status="undefined" time="0.003475029">
       <error message="Step no auth key" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with invalid PAMv2 auth key" status="undefined" time="0.003098259">
+    <testcase name="don&#39;t auto-retry with invalid PAMv2 auth key" status="undefined" time="0.003141327">
       <error message="Step auth key" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with invalid PAMv3 token" status="undefined" time="0.002448647">
+    <testcase name="don&#39;t auto-retry with invalid PAMv3 token" status="undefined" time="0.003153526">
       <error message="Step token" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with invalid secret key" status="undefined" time="0.002168042">
+    <testcase name="don&#39;t auto-retry with invalid secret key" status="undefined" time="0.002784023">
       <error message="Step secret key" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with PAMv2 auth key permissions reset after subscribe" status="undefined" time="0.003047458">
+    <testcase name="don&#39;t auto-retry with PAMv2 auth key permissions reset after subscribe" status="undefined" time="0.007660364">
       <error message="Step auth key" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive the message in my subscribe response" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with PAMv3 token revoked after subscribe" status="undefined" time="0.002211142">
+    <testcase name="don&#39;t auto-retry with PAMv3 token revoked after subscribe" status="undefined" time="0.003137426">
       <error message="Step token" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive the message in my subscribe response" type="undefined"></error>
       <error message="Step I receive access denied status" type="undefined"></error>
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
-    <testcase name="don&#39;t auto-retry with secret key invalidated after subscribe" status="undefined" time="0.004602288">
+    <testcase name="don&#39;t auto-retry with secret key invalidated after subscribe" status="undefined" time="0.003825932">
       <error message="Step secret key" type="undefined"></error>
       <error message="Step I subscribe" type="undefined"></error>
       <error message="Step I receive the message in my subscribe response" type="undefined"></error>
@@ -771,8 +863,8 @@
       <error message="Step I don&#39;t auto-retry subscribe" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Subscribe for VSP" tests="1" skipped="0" failures="0" errors="1" time="0.002560149">
-    <testcase name="Client can subscribe and receive messages with types" status="undefined" time="0.002560149">
+  <testsuite name="Subscribe for VSP" tests="1" skipped="0" failures="0" errors="1" time="0.002896924">
+    <testcase name="Client can subscribe and receive messages with types" status="undefined" time="0.002896924">
       <error message="Step the demo keyset" type="undefined"></error>
       <error message="Step I subscribe to &#39;vsp-channel&#39; channel" type="undefined"></error>
       <error message="Step I receive 2 messages in my subscribe response" type="undefined"></error>
@@ -780,8 +872,8 @@
       <error message="Step response contains messages with space ids" type="undefined"></error>
     </testcase>
   </testsuite>
-  <testsuite name="Time" tests="1" skipped="0" failures="0" errors="1" time="0.002365745">
-    <testcase name="Getting PubNub time" status="undefined" time="0.002365745">
+  <testsuite name="Time" tests="1" skipped="0" failures="0" errors="1" time="0.002599322">
+    <testcase name="Getting PubNub time" status="undefined" time="0.002599322">
       <error message="Step I request current time" type="undefined"></error>
       <error message="Step I receive successful response" type="undefined"></error>
     </testcase>
