@@ -20,9 +20,7 @@ on:
 jobs:
   store-test-reports:
     name: Download and store test reports.
-    runs-on:
-      group: Default Larger Runners
-      labels: ubuntu-latest-m
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
