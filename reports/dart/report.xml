@@ -29,6 +29,7 @@
   <testsuite name="Objects V2 Members"/>
   <testsuite name="Objects V2 Memberships"/>
   <testsuite name="Objects V2 UUID metadata"/>
+  <testsuite name="Presence Event Engine"/>
   <testsuite name="Get presence state"/>
   <testsuite name="Signal user presence"/>
   <testsuite name="Get channels and groups presence"/>
