@@ -1,883 +1,920 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="172" failures="0" errors="0" skipped="131" time="0.047819">
-  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.047819" name="Authorization Failure Reporting">
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="0.030234">
+<testsuites tests="179" failures="0" errors="0" skipped="138" time="0.053796">
+  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.053796" name="Authorization Failure Reporting">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" time="0.033873">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with valid ttl and auth permissions"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.005804">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with expired auth token" time="0.006795">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with expired auth token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailureExpired"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.006042">
+    <testcase classname="Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" time="0.006602">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with invalid auth permissions"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailurePermissions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.005739">
+    <testcase classname="Authorization Failure Reporting" name="Publish fails due to revoked token" time="0.006526">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Publish simple message with revoked auth token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"authFailureRevoked"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="1" time="0.008558" name="Grant an access token">
-    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.008558">
+  <testsuite failures="0" errors="0" skipped="0" tests="1" time="0.009103" name="Grant an access token">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" time="0.009103">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with ttl exceed max ttl"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithTTLExceedMaxTTL"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.025555" name="Revoke an access token">
-    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.008850">
+  <testsuite failures="0" errors="0" skipped="0" tests="4" time="0.025297" name="Revoke an access token">
+    <testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.006539">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke existing valid token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeValidToken"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.005859">
+    <testcase classname="Revoke an access token" name="Revoke invalid token" time="0.006905">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke an invalid token"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeInvalidToken"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.005734">
+    <testcase classname="Revoke an access token" name="Revoke a token while it is disabled on a server" time="0.006342">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke a token while it is disabled on a server"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeFeatureDisabled"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.005112">
+    <testcase classname="Revoke an access token" name="Revoke a token with characters that require url encoding" time="0.005511">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Revoke request verify characters with url encoding"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"revokeEncodePathParameter"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="32" time="0.016929" name="Crypto module">
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-legacy-civ.jpg | unknown cryptor error |)" time="0.000867">
+  <testsuite failures="0" errors="0" skipped="0" tests="32" time="0.022279" name="Crypto module">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-legacy-civ.jpg | unknown cryptor error |)" time="0.000944">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-no-version.txt | decryption error |)" time="0.000316">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-no-version.txt | decryption error |)" time="0.000313">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-unknown-acrh.jpg | unknown cryptor error |)" time="0.000378">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-unknown-acrh.jpg | unknown cryptor error |)" time="0.000395">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-short.txt | decryption error |)" time="0.000300">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-short.txt | decryption error |)" time="0.000295">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-unknown.txt | unknown cryptor error |)" time="0.000356">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-unknown.txt | unknown cryptor error |)" time="0.000336">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | empty-file-cryptor-v1-acrh.txt | decryption error |)" time="0.000300">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | empty-file-cryptor-v1-acrh.txt | decryption error |)" time="0.004776">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-acrh.jpg | success |)" time="0.001051">
+    <testcase classname="Crypto module" name="AES-CBC cryptor data header can be processed (outline example : | pubnubenigma | file-cryptor-v1-acrh.jpg | success |)" time="0.001148">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | legacy | pubnubenigma | constant |)" time="0.000504">
+    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | legacy | pubnubenigma | constant |)" time="0.001057">
       <system-out><![CDATA[Pubnub :: ENCRYPTION ERROR: Empty data for encryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | legacy | pubnubenigma | random |)" time="0.000414">
+    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | legacy | pubnubenigma | random |)" time="0.000295">
       <system-out><![CDATA[Pubnub :: ENCRYPTION ERROR: Empty data for encryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | acrh | pubnubenigma | - |)" time="0.000293">
+    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | acrh | pubnubenigma | - |)" time="0.000329">
       <system-out><![CDATA[Pubnub :: ENCRYPTION ERROR: Empty data for encryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | acrh | pubnubenigma | - |)" time="0.000375">
+    <testcase classname="Crypto module" name="Empty data encryption should fail (outline example : | acrh | pubnubenigma | - |)" time="0.000434">
       <system-out><![CDATA[Pubnub :: ENCRYPTION ERROR: Empty data for encryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | constant | empty-file.txt |)" time="0.000537">
+    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | constant | empty-file.txt |)" time="0.000570">
       <system-out><![CDATA[Pubnub :: DECRYPTION ERROR: Empty data for decryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | random | empty-file.txt |)" time="0.000306">
+    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | random | empty-file.txt |)" time="0.000371">
       <system-out><![CDATA[Pubnub :: DECRYPTION ERROR: Empty data for decryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | acrh | pubnubenigma | - | empty-file.txt |)" time="0.000286">
+    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | acrh | pubnubenigma | - | empty-file.txt |)" time="0.000295">
       <system-out><![CDATA[Pubnub :: DECRYPTION ERROR: Empty data for decryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | random | empty-file-cryptor-legacy-riv.txt |)" time="0.000313">
+    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | legacy | pubnubenigma | random | empty-file-cryptor-legacy-riv.txt |)" time="0.000319">
       <system-out><![CDATA[Pubnub :: DECRYPTION ERROR: Empty data for decryption
 ]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | acrh | pubnubenigma | - | empty-file-cryptor-v1-acrh.txt |)" time="0.000290">
+    <testcase classname="Crypto module" name="Empty data decryption should fail (outline example : | acrh | pubnubenigma | - | empty-file-cryptor-v1-acrh.txt |)" time="0.000507">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | random | file.jpg |)" time="0.001545">
+    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | random | file.jpg |)" time="0.001582">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | constant | file.jpg |)" time="0.001211">
+    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | constant | file.jpg |)" time="0.001263">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | random | file.txt |)" time="0.000370">
+    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | random | file.txt |)" time="0.000381">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | constant | file.txt |)" time="0.000331">
+    <testcase classname="Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation (outline example : | pubnubenigma | constant | file.txt |)" time="0.000338">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-cryptor-legacy-civ.jpg | file.jpg |)" time="0.000898">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-cryptor-legacy-civ.jpg | file.jpg |)" time="0.000767">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-cryptor-legacy-riv.jpg | file.jpg |)" time="0.000588">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-cryptor-legacy-riv.jpg | file.jpg |)" time="0.000631">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-cryptor-legacy-civ.txt | file.txt |)" time="0.000324">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-cryptor-legacy-civ.txt | file.txt |)" time="0.000442">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-cryptor-legacy-riv.txt | file.txt |)" time="0.000555">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-cryptor-legacy-riv.txt | file.txt |)" time="0.000362">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-legacy-civ.jpg | file.jpg |)" time="0.000523">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-legacy-civ.jpg | file.jpg |)" time="0.000493">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-legacy-riv.jpg | file.jpg |)" time="0.000593">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-legacy-riv.jpg | file.jpg |)" time="0.000596">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-legacy-civ.txt | file.txt |)" time="0.000327">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | constant | file-legacy-civ.txt | file.txt |)" time="0.000365">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-legacy-riv.txt | file.txt |)" time="0.000332">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | legacy | pubnubenigma | random | file-legacy-riv.txt | file.txt |)" time="0.000328">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | acrh | pubnubenigma | - | file-cryptor-v1-acrh.jpg | file.jpg |)" time="0.000629">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | acrh | pubnubenigma | - | file-cryptor-v1-acrh.jpg | file.jpg |)" time="0.000592">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | acrh | pubnubenigma | - | file-cryptor-v1-acrh.txt | file.txt |)" time="0.000329">
+    <testcase classname="Crypto module" name="Cryptor is able to process sample files as binary (outline example : | acrh | pubnubenigma | - | file-cryptor-v1-acrh.txt | file.txt |)" time="0.000331">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Crypto module can handle encrypted data from different cryptors (outline example : | legacy | acrh | pubnubenigma | constant | file-cryptor-legacy-civ.jpg | file.jpg |)" time="0.000849">
+    <testcase classname="Crypto module" name="Crypto module can handle encrypted data from different cryptors (outline example : | legacy | acrh | pubnubenigma | constant | file-cryptor-legacy-civ.jpg | file.jpg |)" time="0.000798">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Crypto module" name="Crypto module can handle encrypted data from different cryptors (outline example : | acrh | legacy | pubnubenigma | random | file-legacy-riv.jpg | file.jpg |)" time="0.000638">
+    <testcase classname="Crypto module" name="Crypto module can handle encrypted data from different cryptors (outline example : | acrh | legacy | pubnubenigma | random | file-legacy-riv.jpg | file.jpg |)" time="0.000627">
       <system-out/>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.005918" name="Message encryption">
-    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.003190">
+  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.011019" name="Message encryption">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with correct crypto key" time="0.007720">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"messageEncryption"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.002728">
+    <testcase classname="Message encryption" name="Receiving an encrypted message with invalid crypto key" time="0.003299">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"messageEncryption"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.008340" name="Send a file to Space">
-    <testcase classname="Send a file to Space" name="Send a file to space success" time="0.003085">
+  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.009543" name="Send a file to Space">
+    <testcase classname="Send a file to Space" name="Send a file to space success" time="0.003410">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"sendFileWithSpaceIdAndType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too short, shorten than 3 characters" time="0.002651">
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too short, shorten than 3 characters" time="0.003007">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"sendFileWithTooShortType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too long, longer than 50 characters" time="0.002604">
+    <testcase classname="Send a file to Space" name="Send a file to space fails when message type is too long, longer than 50 characters" time="0.003127">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"sendFileWithTooLongType"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.014649" name="Files">
-    <testcase classname="Files" name="Listing files" time="0.003291">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.016224" name="Files">
+    <testcase classname="Files" name="Listing files" time="0.003357">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingFiles"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Publishing file message" time="0.002829">
+    <testcase classname="Files" name="Publishing file message" time="0.003208">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishingFileMessage"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Publishing file message failure" time="0.002852">
+    <testcase classname="Files" name="Publishing file message failure" time="0.003254">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishingFileMessageFailure"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Deleting a file" time="0.002767">
+    <testcase classname="Files" name="Deleting a file" time="0.003219">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"deletingFile"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Files" name="Downloading a file" time="0.002910">
+    <testcase classname="Files" name="Downloading a file" time="0.003187">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"downloadingFile"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.011761" name="History for VSP">
-    <testcase classname="History for VSP" name="Client can fetch history with message types" time="0.003221">
+  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.013974" name="History for VSP">
+    <testcase classname="History for VSP" name="Client can fetch history with message types" time="0.003831">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchHistoryWithPubNubMessageTypes"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history with types" time="0.002934">
+    <testcase classname="History for VSP" name="Client can fetch history with types" time="0.003596">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchHistoryWithUserAndPubNubTypes"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history without types enabled by default" time="0.002952">
+    <testcase classname="History for VSP" name="Client can fetch history without types enabled by default" time="0.003286">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchHistoryWithoutTypes"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History for VSP" name="Client can fetch history with space id disabled by default" time="0.002653">
+    <testcase classname="History for VSP" name="Client can fetch history with space id disabled by default" time="0.003262">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchHistoryWithSpaceId"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.008085" name="History">
-    <testcase classname="History" name="Fetching message history" time="0.002866">
+  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.009925" name="History">
+    <testcase classname="History" name="Fetching message history" time="0.003516">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistory"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History" name="Fetching message history for multiple channels" time="0.002629">
+    <testcase classname="History" name="Fetching message history for multiple channels" time="0.003143">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistoryMulti"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="History" name="Fetching message history with message actions" time="0.002590">
+    <testcase classname="History" name="Fetching message history with message actions" time="0.003266">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageHistoryActions"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.013190" name="Message Actions">
-    <testcase classname="Message Actions" name="Adding a message action" time="0.002705">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.016725" name="Message Actions">
+    <testcase classname="Message Actions" name="Adding a message action" time="0.003496">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulAddMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to add a message action" time="0.002511">
+    <testcase classname="Message Actions" name="Failing to add a message action" time="0.003175">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedAddMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.002626">
+    <testcase classname="Message Actions" name="Fetching message actions with pagination" time="0.003219">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"fetchMessageActions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Deleting a message action" time="0.002696">
+    <testcase classname="Message Actions" name="Deleting a message action" time="0.003144">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulDeleteMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.002652">
+    <testcase classname="Message Actions" name="Failing to delete a message action" time="0.003692">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedDeleteMessageAction"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.021592" name="Objects V2 Channel metadata">
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.002961">
+  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.019130" name="Objects V2 Channel metadata">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel metadata for id" time="0.003739">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getChannelMetadataOfChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.002781">
+    <testcase classname="Objects V2 Channel metadata" name="Get a channel with custom metadata" time="0.003188">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getChannelMetadataOfDMWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.002672">
+    <testcase classname="Objects V2 Channel metadata" name="Set a channel metadata" time="0.003106">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setChannelMetadataForChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.002908">
+    <testcase classname="Objects V2 Channel metadata" name="Remove a channel metadata for id" time="0.002996">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeChannelMetadataOfChat"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.002948">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata" time="0.003082">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllChannelMetadata"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.007321">
+    <testcase classname="Objects V2 Channel metadata" name="Get all channel metadata with custom" time="0.003019">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllChannelMetadataWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.015112" name="Objects V2 Members">
-    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.003296">
+  <testsuite failures="0" errors="0" skipped="5" tests="5" time="0.016499" name="Objects V2 Members">
+    <testcase classname="Objects V2 Members" name="Get members for a channel" time="0.003422">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getMembersOfChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.003007">
+    <testcase classname="Objects V2 Members" name="Get members for VipChat channel with custom and UUID with custom" time="0.003155">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getMembersOfVipChatChannelWithCustomAndUuidWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.003043">
+    <testcase classname="Objects V2 Members" name="Set member for a channel" time="0.003543">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setMembersForChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.003060">
+    <testcase classname="Objects V2 Members" name="Set member with custom for a channel and UUID with custom" time="0.003164">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setMembersForChatChannelWithCustomAndUuidWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.002706">
+    <testcase classname="Objects V2 Members" name="Remove member for a channel" time="0.003215">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeMembersForChatChannel"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.021856" name="Objects V2 Memberships">
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.004209">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.022050" name="Objects V2 Memberships">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID" time="0.003417">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAliceMemberships"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.002857">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for current user" time="0.003127">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAliceMemberships"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.002864">
+    <testcase classname="Objects V2 Memberships" name="Get memberships for UUID with custom and channel custom" time="0.003205">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getBobMembershipWithCustomAndChannelCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.003188">
+    <testcase classname="Objects V2 Memberships" name="Set membership" time="0.003163">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.002932">
+    <testcase classname="Objects V2 Memberships" name="Set membership for current user" time="0.003276">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.003010">
+    <testcase classname="Objects V2 Memberships" name="Remove membership" time="0.003113">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.002796">
+    <testcase classname="Objects V2 Memberships" name="Remove membership for current user" time="0.002748">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeAliceMembership"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.019973" name="Objects V2 UUID metadata">
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.003132">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.021772" name="Objects V2 UUID metadata">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID metadata for id" time="0.003167">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.002790">
+    <testcase classname="Objects V2 UUID metadata" name="Get a UUID with custom metadata, id stored in config" time="0.003025">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getUUIDMetadataOfBobWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.002680">
+    <testcase classname="Objects V2 UUID metadata" name="Set a UUID metadata" time="0.002935">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setUUIDMetadataForAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.002830">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata for id" time="0.003220">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.002873">
+    <testcase classname="Objects V2 UUID metadata" name="Remove a UUID metadata, id stored in config" time="0.003521">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removeUUIDMetadataOfAlice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.002744">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata" time="0.003061">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllUUIDMetadata"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.002924">
+    <testcase classname="Objects V2 UUID metadata" name="Get all UUID metadata with custom" time="0.002844">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getAllUUIDMetadataWithCustom"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.005132" name="Get presence state">
-    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/data endpoint" time="0.002768">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.030888" name="Presence Event Engine">
+    <testcase classname="Presence Event Engine" name="Successfully joined a few channels" time="0.004085">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceTestMultipleWait"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Successfully joined a few channels with presence" time="0.008233">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceJoin"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Recovery from one unexpected error along the way" time="0.003610">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceJoinWithAnError"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Complete handshake failure" time="0.004174">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceJoinWithContinuousFailures"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Joining and leaving channels" time="0.003840">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceLeave"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Joining a few channels with heartbeat interval set to 0" time="0.003304">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceJoinWithHeartbeatDisabled"}]]></system-out>
+      <system-err/>
+    </testcase>
+    <testcase classname="Presence Event Engine" name="Leaving channels while sending out leave requests is disabled" time="0.003642">
+      <skipped/>
+      <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"presenceSuppressLeaveEvents"}]]></system-out>
+      <system-err/>
+    </testcase>
+  </testsuite>
+  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.006179" name="Get presence state">
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/data endpoint" time="0.003068">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getPresenceStateSetUsingPresenceDataEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/heartbeat endpoint" time="0.002364">
+    <testcase classname="Get presence state" name="Get presence state which has been set on channel using presence/heartbeat endpoint" time="0.003111">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"getPresenceStateSetUsingPresenceHeartbeatEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.007915" name="Signal user presence">
-    <testcase classname="Signal user presence" name="Heartbeat call for channel without 'state' query parameter when state not set" time="0.002856">
+  <testsuite failures="0" errors="0" skipped="3" tests="3" time="0.009258" name="Signal user presence">
+    <testcase classname="Signal user presence" name="Heartbeat call for channel without 'state' query parameter when state not set" time="0.003213">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"heartbeatWithoutPresenceState"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/data endpoint" time="0.002466">
+    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/data endpoint" time="0.003105">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"heartbeatWitPresenceStateSetWithPresenceDataEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/heartbeat endpoint" time="0.002593">
+    <testcase classname="Signal user presence" name="Heartbeat call for channel with 'state' query parameter when state is set with presence/heartbeat endpoint" time="0.002940">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"heartbeatWitPresenceStateSetWithPresenceHeartbeatEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.010982" name="Get channels and groups presence">
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers" time="0.002684">
+  <testsuite failures="0" errors="0" skipped="4" tests="4" time="0.012254" name="Get channels and groups presence">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers" time="0.003030">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"hereNowChannelWithNoSubscriptions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel with subscribers" time="0.002633">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel with subscribers" time="0.003072">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"hereNowChannelWithSubscriptions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" time="0.002572">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers and with presence state set with presence/data endpoint" time="0.003076">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"hereNowChannelWithNoSubscriptionsAndPresenceState1"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" time="0.003092">
+    <testcase classname="Get channels and groups presence" name="Check active clients on channel without subscribers but with presence state set with presence/heartbeat endpoint" time="0.003076">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"hereNowChannelWithNoSubscriptionsAndPresenceState2"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.005437" name="Set presence state">
-    <testcase classname="Set presence state" name="Set presence state on channel using presence/data endpoint" time="0.002561">
+  <testsuite failures="0" errors="0" skipped="2" tests="2" time="0.005858" name="Set presence state">
+    <testcase classname="Set presence state" name="Set presence state on channel using presence/data endpoint" time="0.002998">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setPresenceStateUsingPresenceDataEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Set presence state" name="Set presence state on channel using presence/heartbeat endpoint" time="0.002876">
+    <testcase classname="Set presence state" name="Set presence state on channel using presence/heartbeat endpoint" time="0.002860">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"setPresenceStateUsingPresenceHeartbeatEndpoint"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="15" tests="15" time="0.039250" name="Publish to Space">
-    <testcase classname="Publish to Space" name="Publish message to space success" time="0.003633">
+  <testsuite failures="0" errors="0" skipped="15" tests="15" time="0.042456" name="Publish to Space">
+    <testcase classname="Publish to Space" name="Publish message to space success" time="0.003437">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdAndType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type is too short" time="0.002714">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type is too short" time="0.002734">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTooShortType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type is too long" time="0.002544">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type is too long" time="0.002718">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTooLongType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too short" time="0.002521">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too short" time="0.002876">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTooShortSpaceId"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too long" time="0.002700">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id is too long" time="0.002883">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTooLongSpaceId"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.002675">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.002814">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.002400">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.002614">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '-' (hyphen) character" time="0.002561">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '-' (hyphen) character" time="0.002614">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '_' (underscore) character" time="0.002402">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id starts with not allowed '_' (underscore) character" time="0.002858">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when space id contains not allowed characters" time="0.002456">
+    <testcase classname="Publish to Space" name="Publish message to space fails when space id contains not allowed characters" time="0.002681">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithSpaceIdContainingNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with reserved 'pn-' (hyphen) string" time="0.002778">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with reserved 'pn-' (hyphen) string" time="0.002649">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTypeStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with reserved 'pn_' (underscore) string" time="0.002326">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with reserved 'pn_' (underscore) string" time="0.002777">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTypeStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with not allowed '-' (hyphen) character" time="0.002700">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with not allowed '-' (hyphen) character" time="0.002863">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTypeStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with not allowed '_' (underscore) character" time="0.002365">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type starts with not allowed '_' (underscore) character" time="0.002869">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTypeStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish to Space" name="Publish message to space fails when type contains not allowed characters" time="0.002475">
+    <testcase classname="Publish to Space" name="Publish message to space fails when type contains not allowed characters" time="0.003069">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishWithTypeContainingNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.038437" name="Publish a message">
-    <testcase classname="Publish a message" name="Publish string success" time="0.003272">
+  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.039899" name="Publish a message">
+    <testcase classname="Publish a message" name="Publish string success" time="0.003279">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithStringSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish dictionary with compression success" time="0.003639">
+    <testcase classname="Publish a message" name="Publish dictionary with compression success" time="0.002823">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithCompressionSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish dictionary as POST body success" time="0.002775">
+    <testcase classname="Publish a message" name="Publish dictionary as POST body success" time="0.003109">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageAsPOSTBodySuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish number success" time="0.002520">
+    <testcase classname="Publish a message" name="Publish number success" time="0.003032">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithNumberSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish array success" time="0.002565">
+    <testcase classname="Publish a message" name="Publish array success" time="0.002967">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithArraySuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish dictionary success" time="0.002560">
+    <testcase classname="Publish a message" name="Publish dictionary success" time="0.002950">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithDictionarySuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with meta success" time="0.003468">
+    <testcase classname="Publish a message" name="Publish message with meta success" time="0.003419">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithMetaSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with store success" time="0.002895">
+    <testcase classname="Publish a message" name="Publish message with store success" time="0.003242">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithStoreSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with ttl success" time="0.002841">
+    <testcase classname="Publish a message" name="Publish message with ttl success" time="0.003181">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithTTLSuccess"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message fails when message payload is larger than 32 KiB" time="0.003001">
+    <testcase classname="Publish a message" name="Publish message fails when message payload is larger than 32 KiB" time="0.003181">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithTooLongMessageFail"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with meta fails when meta isn't dictionary" time="0.002969">
+    <testcase classname="Publish a message" name="Publish message with meta fails when meta isn't dictionary" time="0.002999">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithMetaFail"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with the wrong publish key fail" time="0.002973">
+    <testcase classname="Publish a message" name="Publish message with the wrong publish key fail" time="0.002893">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithWrongPublishKeyFail"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Publish a message" name="Publish message with the wrong subscribe key fail" time="0.002959">
+    <testcase classname="Publish a message" name="Publish message with the wrong subscribe key fail" time="0.002826">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"publishMessageWithWrongSubscribeKeyFail"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="15" tests="15" time="0.040828" name="Send a signal to Space">
-    <testcase classname="Send a signal to Space" name="Send a signal to space success" time="0.002966">
+  <testsuite failures="0" errors="0" skipped="15" tests="15" time="0.043907" name="Send a signal to Space">
+    <testcase classname="Send a signal to Space" name="Send a signal to space success" time="0.003243">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdAndType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type is too short" time="0.002696">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type is too short" time="0.002885">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTooShortType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type is too long" time="0.002673">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type is too long" time="0.002877">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTooLongType"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too short" time="0.002742">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too short" time="0.002680">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTooShortSpaceId"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too long" time="0.002670">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id is too long" time="0.002870">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTooLongSpaceId"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.002736">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn-' (hyphen) string" time="0.002945">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.002610">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with reserved 'pn_' (underscore) string" time="0.002830">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '-' (hyphen) character" time="0.002936">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '-' (hyphen) character" time="0.002970">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '_' (underscore) character" time="0.002551">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id starts with not allowed '_' (underscore) character" time="0.002919">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id contains not allowed characters" time="0.002892">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when space id contains not allowed characters" time="0.003020">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithSpaceIdContainingNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with reserved 'pn-' (hyphen) string" time="0.002719">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with reserved 'pn-' (hyphen) string" time="0.002988">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTypeStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with reserved 'pn_' (underscore) string" time="0.002557">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with reserved 'pn_' (underscore) string" time="0.002783">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTypeStartingWithReservedStrings"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with not allowed '-' (hyphen) character" time="0.002727">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with not allowed '-' (hyphen) character" time="0.003129">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTypeStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with not allowed '_' (underscore) character" time="0.002675">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type starts with not allowed '_' (underscore) character" time="0.002717">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTypeStartingWithNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type contains not allowed characters" time="0.002678">
+    <testcase classname="Send a signal to Space" name="Send a signal to space fails when type contains not allowed characters" time="0.003051">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"signalWithTypeContainingNotAllowedCharacter"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002648" name="Signal">
-    <testcase classname="Signal" name="Sending a signal" time="0.002648">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.003240" name="Signal">
+    <testcase classname="Signal" name="Sending a signal" time="0.003240">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulSignal"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.025353" name="Push Notifications">
-    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.002830">
+  <testsuite failures="0" errors="0" skipped="13" tests="13" time="0.029237" name="Push Notifications">
+    <testcase classname="Push Notifications" name="Listing push channels for GCM gateway" time="0.003090">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.000494">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2 without topic" time="0.000578">
       <skipped/>
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.002491">
+    <testcase classname="Push Notifications" name="Listing push channels for APNS2" time="0.002795">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"listingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.002570">
+    <testcase classname="Push Notifications" name="Adding push channels for GCM" time="0.002877">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.002495">
+    <testcase classname="Push Notifications" name="Adding push channels for FCM" time="0.002789">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.000483">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2 without topic" time="0.000540">
       <skipped/>
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.002545">
+    <testcase classname="Push Notifications" name="Adding push channels for APNS2" time="0.002799">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"addingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.002565">
+    <testcase classname="Push Notifications" name="Removing push channels for GCM" time="0.002922">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.000488">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2 without topic" time="0.001508">
       <skipped/>
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.002622">
+    <testcase classname="Push Notifications" name="Removing push channels for APNS2" time="0.003034">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingPushChannels"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.002590">
+    <testcase classname="Push Notifications" name="Removing device for GCM" time="0.002952">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingDevice"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.000564">
+    <testcase classname="Push Notifications" name="Removing device for APNS2 without topic" time="0.000582">
       <skipped/>
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.002616">
+    <testcase classname="Push Notifications" name="Removing device for APNS2" time="0.002770">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"removingDevice"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.020987" name="Subscribe Loop auto-retry with access denied">
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.003364">
+  <testsuite failures="0" errors="0" skipped="7" tests="7" time="0.022305" name="Subscribe Loop auto-retry with access denied">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry without auth key" time="0.003584">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.002955">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv2 auth key" time="0.003016">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.002705">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid PAMv3 token" time="0.002962">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.002860">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with invalid secret key" time="0.003205">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeWithInvalidAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.002991">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv2 auth key permissions reset after subscribe" time="0.003523">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.003028">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with PAMv3 token revoked after subscribe" time="0.002982">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.003084">
+    <testcase classname="Subscribe Loop auto-retry with access denied" name="don't auto-retry with secret key invalidated after subscribe" time="0.003034">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"failedSubscribeInvalidatedAuthKey"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002828" name="Subscribe Loop">
-    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.002828">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002898" name="Subscribe Loop">
+    <testcase classname="Subscribe Loop" name="subscribe and recieve a published message" time="0.002898">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simpleSubscribe"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.021398" name="Event Engine">
-    <testcase classname="Event Engine" name="Successfully receive messages" time="0.003248">
+  <testsuite failures="0" errors="0" skipped="6" tests="6" time="0.023612" name="Event Engine">
+    <testcase classname="Event Engine" name="Successfully receive messages" time="0.003584">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"simpleSubscribe"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Event Engine" name="Successfully restore subscribe" time="0.003059">
+    <testcase classname="Event Engine" name="Successfully restore subscribe" time="0.003361">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"restoringSubscribe"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Event Engine" name="Successfully restore subscribe with failures" time="0.005321">
+    <testcase classname="Event Engine" name="Successfully restore subscribe with failures" time="0.003504">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"restoringSubscribeWithFailures"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Event Engine" name="Complete handshake failure" time="0.003042">
+    <testcase classname="Event Engine" name="Complete handshake failure" time="0.004420">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"subscribeHandshakeFailure"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Event Engine" name="Handshake failure recovery" time="0.003321">
+    <testcase classname="Event Engine" name="Handshake failure recovery" time="0.003523">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"subscribeHandshakeRecovery"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Event Engine" name="Receiving failure recovery" time="0.003407">
+    <testcase classname="Event Engine" name="Receiving failure recovery" time="0.005220">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"subscribeReceivingRecovery"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002945" name="Subscribe for VSP">
-    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with types" time="0.002945">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.003493" name="Subscribe for VSP">
+    <testcase classname="Subscribe for VSP" name="Client can subscribe and receive messages with types" time="0.003493">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"subscribeReceiveMessagesWithTypes"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002455" name="Time">
-    <testcase classname="Time" name="Getting PubNub time" time="0.002455">
+  <testsuite failures="0" errors="0" skipped="1" tests="1" time="0.002646" name="Time">
+    <testcase classname="Time" name="Getting PubNub time" time="0.002646">
       <skipped/>
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>[]}, "validations"=>[], "script"=>"successfulTime"}]]></system-out>
       <system-err/>
