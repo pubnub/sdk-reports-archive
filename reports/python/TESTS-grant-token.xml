@@ -1,4 +1,4 @@
-<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.033066" timestamp="2023-11-27T09:06:06.829119" hostname="fv-az1535-262"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.009866"><system-out>
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.032549" timestamp="2024-02-08T11:40:03.680282" hostname="fv-az1206-958"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.009662"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -74,7 +74,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.003935"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.003863"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -93,7 +93,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.003734"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.003865"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -113,7 +113,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003887"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003617"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -135,7 +135,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003801"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003793"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -157,7 +157,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.003891"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.003868"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -179,7 +179,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.003952"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.00388"><system-out>
 <![CDATA[
 @scenario.begin
 

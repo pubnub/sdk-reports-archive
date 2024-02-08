@@ -1,4 +1,4 @@
-<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.016841" timestamp="2023-11-27T09:06:06.751632" hostname="fv-az1535-262"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.005539"><system-out>
+<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.01709" timestamp="2024-02-08T11:40:03.603425" hostname="fv-az1206-958"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.005899"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -12,7 +12,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.004189"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.004091"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -29,7 +29,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.00361"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.00354"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.003502"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.00356"><system-out>
 <![CDATA[
 @scenario.begin
 
