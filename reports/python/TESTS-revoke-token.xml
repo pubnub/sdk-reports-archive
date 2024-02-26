@@ -1,4 +1,4 @@
-<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.013567" timestamp="2024-02-08T11:40:03.714453" hostname="fv-az1206-958"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.003226"><system-out>
+<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.014795" timestamp="2024-02-26T14:08:46.837282" hostname="fv-az1501-537"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.00402"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -6,13 +6,13 @@
   Scenario: Revoke existing valid token
     Given I have a keyset with access manager enabled ... passed in 0.000s
     Given a token ... passed in 0.000s
-    When I revoke a token ... passed in 0.003s
+    When I revoke a token ... passed in 0.004s
     Then I get confirmation that token has been revoked ... passed in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.003704"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.003762"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -33,7 +33,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.003656"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.003818"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -54,7 +54,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.002982"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.003195"><system-out>
 <![CDATA[
 @scenario.begin
 

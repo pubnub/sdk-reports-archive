@@ -1,14 +1,14 @@
-<testsuite name="presence-engine.Presence Event Engine" tests="7" errors="0" failures="0" skipped="0" time="18.037068" timestamp="2024-02-08T11:40:50.704873" hostname="fv-az1206-958"><testcase classname="presence-engine.Presence Event Engine" name="Successfully joined a few channels" status="passed" time="3.002547"><system-out>
+<testsuite name="presence-engine.Presence Event Engine" tests="7" errors="0" failures="0" skipped="0" time="18.042567" timestamp="2024-02-26T14:09:33.889951" hostname="fv-az1501-537"><testcase classname="presence-engine.Presence Event Engine" name="Successfully joined a few channels" status="passed" time="3.002674"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=presenceTestMultipleWait
   Scenario: Successfully joined a few channels
-    Given the demo keyset with Presence EE enabled ... passed in 0.001s
+    Given the demo keyset with Presence EE enabled ... passed in 0.000s
     Given heartbeatInterval set to '1', timeout set to '60' and suppressLeaveEvents set to 'false' ... passed in 0.000s
     When I join 'first', 'second', 'third' channels ... passed in 0.001s
     Then I wait '3' seconds ... passed in 3.001s
-    And I observe the following Events and Invocations of the Presence EE ... passed in 0.000s
+    And I observe the following Events and Invocations of the Presence EE ... passed in 0.001s
       | type       | name              |
       | event      | JOINED            |
       | invocation | HEARTBEAT         |
@@ -26,7 +26,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Successfully joined a few channels with presence" status="passed" time="1.002885"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Successfully joined a few channels with presence" status="passed" time="1.003255"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -35,7 +35,7 @@
     Given the demo keyset with Presence EE enabled ... passed in 0.000s
     Given heartbeatInterval set to '1', timeout set to '60' and suppressLeaveEvents set to 'false' ... passed in 0.000s
     When I join 'first', 'second', 'third' channels with presence ... passed in 0.001s
-    Then I wait for getting Presence joined events ... passed in 1.001s
+    Then I wait for getting Presence joined events ... passed in 1.002s
     And I observe the following Events and Invocations of the Presence EE ... passed in 0.000s
       | type       | name              |
       | event      | JOINED            |
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Recovery from one unexpected error along the way" status="passed" time="3.003432"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Recovery from one unexpected error along the way" status="passed" time="3.004034"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -70,7 +70,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Complete handshake failure" status="passed" time="6.014593"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Complete handshake failure" status="passed" time="6.020414"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -80,7 +80,7 @@
     Given heartbeatInterval set to '1', timeout set to '60' and suppressLeaveEvents set to 'false' ... passed in 0.000s
     Given a linear reconnection policy with 3 retries ... passed in 0.000s
     When I join 'first', 'second', 'third' channels ... passed in 0.001s
-    Then I receive an error in my heartbeat response ... passed in 6.012s
+    Then I receive an error in my heartbeat response ... passed in 6.018s
     And I observe the following Events and Invocations of the Presence EE ... passed in 0.001s
       | type       | name                     |
       | event      | JOINED                   |
@@ -102,19 +102,19 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Joining and leaving channels" status="passed" time="4.007014"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Joining and leaving channels" status="passed" time="4.00622"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=presenceLeave
   Scenario: Joining and leaving channels
-    Given the demo keyset with Presence EE enabled ... passed in 0.000s
+    Given the demo keyset with Presence EE enabled ... passed in 0.001s
     Given heartbeatInterval set to '20', timeout set to '60' and suppressLeaveEvents set to 'false' ... passed in 0.000s
-    When I join 'first', 'second', 'third' channels with presence ... passed in 0.002s
+    When I join 'first', 'second', 'third' channels with presence ... passed in 0.001s
     Then I wait for getting Presence joined events ... passed in 1.002s
     Then I leave 'first' and 'second' channels with presence ... passed in 0.001s
     Then I wait '3' seconds ... passed in 3.001s
-    And I observe the following Events and Invocations of the Presence EE ... passed in 0.001s
+    And I observe the following Events and Invocations of the Presence EE ... passed in 0.000s
       | type       | name              |
       | event      | JOINED            |
       | invocation | HEARTBEAT         |
@@ -130,13 +130,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Joining a few channels with heartbeat interval set to 0" status="passed" time="0.001612"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Joining a few channels with heartbeat interval set to 0" status="passed" time="0.001541"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=presenceJoinWithHeartbeatDisabled
   Scenario: Joining a few channels with heartbeat interval set to 0
-    Given the demo keyset with Presence EE enabled ... passed in 0.001s
+    Given the demo keyset with Presence EE enabled ... passed in 0.000s
     Given heartbeatInterval set to '0', timeout set to '60' and suppressLeaveEvents set to 'false' ... passed in 0.000s
     When I join 'first', 'second', 'third' channels ... passed in 0.001s
     Then I don't observe any Events and Invocations of the Presence EE ... passed in 0.000s
@@ -144,7 +144,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Leaving channels while sending out leave requests is disabled" status="passed" time="1.004986"><system-out>
+</system-out></testcase><testcase classname="presence-engine.Presence Event Engine" name="Leaving channels while sending out leave requests is disabled" status="passed" time="1.004429"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -153,7 +153,7 @@
     Given the demo keyset with Presence EE enabled ... passed in 0.000s
     Given heartbeatInterval set to '1', timeout set to '60' and suppressLeaveEvents set to 'true' ... passed in 0.000s
     When I join 'first', 'second', 'third' channels with presence ... passed in 0.001s
-    Then I wait for getting Presence joined events ... passed in 1.002s
+    Then I wait for getting Presence joined events ... passed in 1.001s
     And I leave 'first' and 'second' channels with presence ... passed in 0.001s
     And I observe the following Events and Invocations of the Presence EE ... passed in 0.001s
       | type       | name              |
