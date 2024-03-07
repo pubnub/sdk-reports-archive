@@ -1,4 +1,4 @@
-<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.020885" timestamp="2024-02-26T14:08:46.716167" hostname="fv-az1501-537"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.006389"><system-out>
+<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.017063" timestamp="2024-03-07T12:48:19.073245" hostname="fv-az1543-699"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.005307"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -6,13 +6,13 @@
   Scenario: Publish simple message with valid ttl and auth permissions
     Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
-    When I publish a message using that auth token with channel 'channel-1' ... passed in 0.006s
+    When I publish a message using that auth token with channel 'channel-1' ... passed in 0.005s
     Then the result is successful ... passed in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.005564"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.004401"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -20,7 +20,7 @@
   Scenario: Publish simple message with expired auth token
     Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given an expired token with permissions to publish with channel 'channel-1' ... passed in 0.000s
-    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.005s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.004s
     Then an auth error is returned ... passed in 0.000s
     * the error status code is 403 ... passed in 0.000s
     * the auth error message is 'Token is expired.' ... passed in 0.000s
@@ -29,13 +29,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.004358"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.003844"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=authFailurePermissions
   Scenario: Publish simple message with invalid auth permissions
-    Given I have a keyset with access manager enabled - without secret key ... passed in 0.001s
+    Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
     When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.003s
     Then an auth error is returned ... passed in 0.000s
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.004574"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.00351"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -54,7 +54,7 @@
   Scenario: Publish fails due to revoked token
     Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given a valid token with permissions to publish with channel 'channel-1' ... passed in 0.000s
-    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.004s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.003s
     Then an auth error is returned ... passed in 0.000s
     * the error status code is 403 ... passed in 0.000s
     * the auth error message is 'Token is revoked.' ... passed in 0.000s
