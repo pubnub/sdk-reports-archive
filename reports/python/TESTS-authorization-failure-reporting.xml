@@ -1,4 +1,4 @@
-<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.017063" timestamp="2024-03-07T12:48:19.073245" hostname="fv-az1543-699"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.005307"><system-out>
+<testsuite name="authorization-failure-reporting.Authorization Failure Reporting" tests="4" errors="0" failures="0" skipped="0" time="0.015927" timestamp="2024-03-28T14:51:32.957749" hostname="fv-az1251-224"><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with valid ttl and auth permissions" status="passed" time="0.005193"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -12,7 +12,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.004401"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with expired auth token" status="passed" time="0.003853"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -20,7 +20,7 @@
   Scenario: Publish simple message with expired auth token
     Given I have a keyset with access manager enabled - without secret key ... passed in 0.000s
     Given an expired token with permissions to publish with channel 'channel-1' ... passed in 0.000s
-    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.004s
+    When I attempt to publish a message using that auth token with channel 'channel-1' ... passed in 0.003s
     Then an auth error is returned ... passed in 0.000s
     * the error status code is 403 ... passed in 0.000s
     * the auth error message is 'Token is expired.' ... passed in 0.000s
@@ -29,7 +29,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.003844"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish simple message with invalid auth permissions" status="passed" time="0.003437"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.00351"><system-out>
+</system-out></testcase><testcase classname="authorization-failure-reporting.Authorization Failure Reporting" name="Publish fails due to revoked token" status="passed" time="0.003443"><system-out>
 <![CDATA[
 @scenario.begin
 

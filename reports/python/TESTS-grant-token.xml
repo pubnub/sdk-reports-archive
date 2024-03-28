@@ -1,4 +1,4 @@
-<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.030866" timestamp="2024-03-07T12:48:19.144017" hostname="fv-az1543-699"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.008945"><system-out>
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.033058" timestamp="2024-03-28T14:51:33.035172" hostname="fv-az1251-224"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.009939"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -37,7 +37,7 @@
     * grant pattern permission GET ... passed in 0.000s
     * grant pattern permission UPDATE ... passed in 0.000s
     * grant pattern permission DELETE ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.004s
+    When I grant a token specifying those permissions ... passed in 0.005s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -74,7 +74,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.003772"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.003992"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -93,7 +93,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.003693"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.003802"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -113,7 +113,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003463"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003893"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -123,7 +123,7 @@
     Given the TTL 60 ... passed in 0.000s
     Given the 'uuid-1' UUID resource access permissions ... passed in 0.000s
     * deny resource permission GET ... passed in 0.000s
-    When I attempt to grant a token specifying those permissions ... passed in 0.002s
+    When I attempt to grant a token specifying those permissions ... passed in 0.003s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Invalid permissions' ... passed in 0.000s
@@ -135,7 +135,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003788"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003845"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -157,7 +157,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.003779"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.003798"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -179,7 +179,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.003425"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.003789"><system-out>
 <![CDATA[
 @scenario.begin
 
