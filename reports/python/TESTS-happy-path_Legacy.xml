@@ -1,0 +1,174 @@
+<testsuite name="happy-path_Legacy.Event Engine" tests="6" errors="0" failures="0" skipped="0" time="27.044495" timestamp="2024-04-10T13:39:21.284136" hostname="fv-az1391-280"><testcase classname="happy-path_Legacy.Event Engine" name="Successfully receive messages" status="passed" time="1.006652"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=simpleSubscribe
+  Scenario: Successfully receive messages
+    Given the demo keyset with event engine enabled ... passed in 0.001s
+    When I subscribe ... passed in 0.003s
+    Then I receive the message in my subscribe response ... passed in 1.002s
+    And I observe the following ... passed in 0.001s
+      | type       | name                    |
+      | event      | SUBSCRIPTION_CHANGED    |
+      | invocation | HANDSHAKE               |
+      | event      | HANDSHAKE_SUCCESS       |
+      | invocation | CANCEL_HANDSHAKE        |
+      | invocation | EMIT_STATUS             |
+      | invocation | RECEIVE_MESSAGES        |
+      | event      | RECEIVE_SUCCESS         |
+      | invocation | CANCEL_RECEIVE_MESSAGES |
+      | invocation | EMIT_MESSAGES           |
+      | invocation | RECEIVE_MESSAGES        |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe" status="passed" time="1.004975"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=restoringSubscribe
+  Scenario: Successfully restore subscribe
+    Given the demo keyset with event engine enabled ... passed in 0.001s
+    When I subscribe with timetoken 12345678901234567 ... passed in 0.003s
+    Then I receive the message in my subscribe response ... passed in 1.001s
+    And I observe the following ... passed in 0.001s
+      | type       | name                    |
+      | event      | SUBSCRIPTION_RESTORED   |
+      | invocation | HANDSHAKE               |
+      | event      | HANDSHAKE_SUCCESS       |
+      | invocation | CANCEL_HANDSHAKE        |
+      | invocation | EMIT_STATUS             |
+      | invocation | RECEIVE_MESSAGES        |
+      | event      | RECEIVE_SUCCESS         |
+      | invocation | CANCEL_RECEIVE_MESSAGES |
+      | invocation | EMIT_MESSAGES           |
+      | invocation | RECEIVE_MESSAGES        |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe with failures" status="passed" time="4.006462"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=restoringSubscribeWithFailures
+  Scenario: Successfully restore subscribe with failures
+    Given the demo keyset with event engine enabled ... passed in 0.000s
+    Given a linear reconnection policy with 3 retries ... passed in 0.000s
+    When I subscribe with timetoken 12345678901234567 ... passed in 0.002s
+    Then I receive the message in my subscribe response ... passed in 4.003s
+    And I observe the following ... passed in 0.001s
+      | type       | name                        |
+      | event      | SUBSCRIPTION_RESTORED       |
+      | invocation | HANDSHAKE                   |
+      | event      | HANDSHAKE_FAILURE           |
+      | invocation | CANCEL_HANDSHAKE            |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_SUCCESS |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | EMIT_STATUS                 |
+      | invocation | RECEIVE_MESSAGES            |
+      | event      | RECEIVE_SUCCESS             |
+      | invocation | CANCEL_RECEIVE_MESSAGES     |
+      | invocation | EMIT_MESSAGES               |
+      | invocation | RECEIVE_MESSAGES            |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Complete handshake failure" status="passed" time="10.010142"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=subscribeHandshakeFailure
+  Scenario: Complete handshake failure
+    Given the demo keyset with event engine enabled ... passed in 0.000s
+    Given a linear reconnection policy with 3 retries ... passed in 0.000s
+    When I subscribe ... passed in 0.002s
+    Then I receive an error in my subscribe response ... passed in 10.007s
+    And I observe the following ... passed in 0.001s
+      | type       | name                        |
+      | event      | SUBSCRIPTION_CHANGED        |
+      | invocation | HANDSHAKE                   |
+      | event      | HANDSHAKE_FAILURE           |
+      | invocation | CANCEL_HANDSHAKE            |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_FAILURE |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_FAILURE |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_FAILURE |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_GIVEUP  |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | EMIT_STATUS                 |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Handshake failure recovery" status="passed" time="7.009653"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=subscribeHandshakeRecovery
+  Scenario: Handshake failure recovery
+    Given the demo keyset with event engine enabled ... passed in 0.000s
+    Given a linear reconnection policy with 3 retries ... passed in 0.000s
+    When I subscribe ... passed in 0.002s
+    Then I receive the message in my subscribe response ... passed in 7.006s
+    And I observe the following ... passed in 0.001s
+      | type       | name                        |
+      | event      | SUBSCRIPTION_CHANGED        |
+      | invocation | HANDSHAKE                   |
+      | event      | HANDSHAKE_FAILURE           |
+      | invocation | CANCEL_HANDSHAKE            |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_FAILURE |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | HANDSHAKE_RECONNECT         |
+      | event      | HANDSHAKE_RECONNECT_SUCCESS |
+      | invocation | CANCEL_HANDSHAKE_RECONNECT  |
+      | invocation | EMIT_STATUS                 |
+      | invocation | RECEIVE_MESSAGES            |
+      | event      | RECEIVE_SUCCESS             |
+      | invocation | CANCEL_RECEIVE_MESSAGES     |
+      | invocation | EMIT_MESSAGES               |
+      | invocation | RECEIVE_MESSAGES            |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Receiving failure recovery" status="passed" time="4.006611"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @contract=subscribeReceivingRecovery
+  Scenario: Receiving failure recovery
+    Given the demo keyset with event engine enabled ... passed in 0.000s
+    Given a linear reconnection policy with 3 retries ... passed in 0.000s
+    When I subscribe ... passed in 0.002s
+    Then I receive the message in my subscribe response ... passed in 4.003s
+    And I observe the following ... passed in 0.001s
+      | type       | name                      |
+      | event      | SUBSCRIPTION_CHANGED      |
+      | invocation | HANDSHAKE                 |
+      | event      | HANDSHAKE_SUCCESS         |
+      | invocation | CANCEL_HANDSHAKE          |
+      | invocation | EMIT_STATUS               |
+      | invocation | RECEIVE_MESSAGES          |
+      | event      | RECEIVE_FAILURE           |
+      | invocation | CANCEL_RECEIVE_MESSAGES   |
+      | invocation | RECEIVE_RECONNECT         |
+      | event      | RECEIVE_RECONNECT_SUCCESS |
+      | invocation | CANCEL_RECEIVE_RECONNECT  |
+      | invocation | EMIT_MESSAGES             |
+      | invocation | RECEIVE_MESSAGES          |
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>
