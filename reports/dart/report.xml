@@ -30,6 +30,7 @@
   <testsuite name="Objects V2 Memberships"/>
   <testsuite name="Objects V2 UUID metadata"/>
   <testsuite name="Presence Event Engine"/>
+  <testsuite name="Presence Event Engine"/>
   <testsuite name="Get presence state"/>
   <testsuite name="Signal user presence"/>
   <testsuite name="Get channels and groups presence"/>
@@ -50,6 +51,7 @@
   <testsuite name="De-duplicate messages"/>
   <testsuite name="Detect Missed Messages"/>
   <testsuite name="Can stop receiving messages"/>
+  <testsuite name="Event Engine"/>
   <testsuite name="Event Engine"/>
   <testsuite name="Receiving a file event"/>
   <testsuite name="Receiving a message action added event"/>
