@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="9" failures="0" errors="0" skipped="0" time="0.075384">
-  <testsuite failures="0" errors="0" skipped="0" tests="6" time="0.075384" name="Grant an access token">
-    <testcase classname="Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" time="0.029838">
+<testsuites tests="9" failures="0" errors="0" skipped="0" time="0.067863">
+  <testsuite failures="0" errors="0" skipped="0" tests="6" time="0.067863" name="Grant an access token">
+    <testcase classname="Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" time="0.033016">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with all permissions"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantAllPermissions"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Grant an access token" name="Grant an access token without an authorized uuid" time="0.005898">
+    <testcase classname="Grant an access token" name="Grant an access token without an authorized uuid" time="0.007321">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request without authorized uuid"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithoutAuthorizedUUID"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Grant an access token" name="Grant an access token successfully with an authorized uuid" time="0.005855">
+    <testcase classname="Grant an access token" name="Grant an access token successfully with an authorized uuid" time="0.006831">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with authorized uuid"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithAuthorizedUUID"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" time="0.012604">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" time="0.006365">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request without any permissions error"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithoutAnyPermissionsError"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" time="0.012785">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" time="0.006666">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with regexp syntax error"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithRegExpSyntaxError"}]]></system-out>
       <system-err/>
     </testcase>
-    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" time="0.008404">
+    <testcase classname="Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" time="0.007665">
       <system-out><![CDATA[{"expectations"=>{"pending"=>[], "failed"=>[], "succeeded"=>["Grant request with regexp non capturing error"]}, "validations"=>["The current document does not have any resource to match with."], "script"=>"grantWithRegExpNonCapturingError"}]]></system-out>
       <system-err/>
     </testcase>
   </testsuite>
-  <testsuite failures="0" errors="0" skipped="0" tests="3" time="0.004552" name="Parse Access Token">
-    <testcase classname="Parse Access Token" name="Validate that a token containing authorized uuid can be parsed correctly" time="0.001811">
+  <testsuite failures="0" errors="0" skipped="0" tests="3" time="0.003826" name="Parse Access Token">
+    <testcase classname="Parse Access Token" name="Validate that a token containing authorized uuid can be parsed correctly" time="0.001381">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Parse Access Token" name="Validate that a token containing uuid resource permissions can be parsed correctly" time="0.001169">
+    <testcase classname="Parse Access Token" name="Validate that a token containing uuid resource permissions can be parsed correctly" time="0.001240">
       <system-out/>
       <system-err/>
     </testcase>
-    <testcase classname="Parse Access Token" name="Validate that a token containing uuid pattern permissions can be parsed correctly" time="0.001572">
+    <testcase classname="Parse Access Token" name="Validate that a token containing uuid pattern permissions can be parsed correctly" time="0.001206">
       <system-out/>
       <system-err/>
     </testcase>
