@@ -1,0 +1,223 @@
+[
+  {
+    "uri" : "\/Features\/access\/grant-token.feature",
+    "tags" : [
+      {
+        "name" : "@featureSet=access",
+        "line" : 1
+      }
+    ],
+    "id" : "grant-an-access-token",
+    "name" : "Grant an access token",
+    "description" : "  As a PubNub customer I want to restrict and allow access to\n  specific PubNub resources (channels, channel groups, uuids)\n  by my user base (both people and devices) which are each\n  identified by a unique UUID.",
+    "keyword" : "Feature"
+  },
+  {
+    "name" : "Parse Access Token",
+    "elements" : [
+      {
+        "description" : "",
+        "test_env" : "16.2",
+        "id" : "parse-access-token;validate-that-a-token-containing-authorized-uuid-can-be-parsed-correctly",
+        "steps" : [
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x000000013499093c Given + 76\n\t2   [iOS] Contract Tests                0x000000013476c123 -[PNAccessContractTestSteps setup] + 147\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 2026.5579223632812
+            },
+            "line" : 11,
+            "name" : "I have a known token containing an authorized UUID",
+            "keyword" : "Given"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b2c When + 76\n\t2   [iOS] Contract Tests                0x000000013476c17f -[PNAccessContractTestSteps setup] + 239\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 32458901.405334473
+            },
+            "line" : 12,
+            "name" : "I parse the token",
+            "keyword" : "When"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b9c Then + 76\n\t2   [iOS] Contract Tests                0x000000013476c1e4 -[PNAccessContractTestSteps setup] + 340\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 5960.4644775390625
+            },
+            "line" : 13,
+            "name" : "the parsed token output contains the authorized UUID \"test-authorized-uuid\"",
+            "keyword" : "Then"
+          }
+        ],
+        "keyword" : "Scenario",
+        "type" : "scenario",
+        "line" : 10,
+        "tags" : [
+          {
+            "name" : "featureSet=access"
+          }
+        ],
+        "name" : "Validate that a token containing authorized uuid can be parsed correctly"
+      },
+      {
+        "description" : "",
+        "test_env" : "16.2",
+        "id" : "parse-access-token;validate-that-a-token-containing-uuid-resource-permissions-can-be-parsed-correctly",
+        "steps" : [
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x000000013499093c Given + 76\n\t2   [iOS] Contract Tests                0x000000013476c123 -[PNAccessContractTestSteps setup] + 147\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 3099.4415283203125
+            },
+            "line" : 16,
+            "name" : "I have a known token containing UUID resource permissions",
+            "keyword" : "Given"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b2c When + 76\n\t2   [iOS] Contract Tests                0x000000013476c17f -[PNAccessContractTestSteps setup] + 239\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 11780023.574829102
+            },
+            "line" : 17,
+            "name" : "I parse the token",
+            "keyword" : "When"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b9c Then + 76\n\t2   [iOS] Contract Tests                0x000000013476c258 -[PNAccessContractTestSteps setup] + 456\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 56028.366088867188
+            },
+            "line" : 18,
+            "name" : "the token has 'uuid-1' UUID resource access permissions",
+            "keyword" : "Then"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990eab Match + 395\n\t2   [iOS] Contract Tests                0x000000013476c2d3 -[PNAccessContractTestSteps setup] + 579\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 72002.410888671875
+            },
+            "line" : 19,
+            "name" : "token resource permission GET",
+            "keyword" : "*"
+          }
+        ],
+        "keyword" : "Scenario",
+        "type" : "scenario",
+        "line" : 15,
+        "tags" : [
+          {
+            "name" : "featureSet=access"
+          }
+        ],
+        "name" : "Validate that a token containing uuid resource permissions can be parsed correctly"
+      },
+      {
+        "description" : "",
+        "test_env" : "16.2",
+        "id" : "parse-access-token;validate-that-a-token-containing-uuid-pattern-permissions-can-be-parsed-correctly",
+        "steps" : [
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x000000013499093c Given + 76\n\t2   [iOS] Contract Tests                0x000000013476c123 -[PNAccessContractTestSteps setup] + 147\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 953.67431640625
+            },
+            "line" : 22,
+            "name" : "I have a known token containing UUID pattern Permissions",
+            "keyword" : "Given"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b2c When + 76\n\t2   [iOS] Contract Tests                0x000000013476c17f -[PNAccessContractTestSteps setup] + 239\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 11554002.76184082
+            },
+            "line" : 23,
+            "name" : "I parse the token",
+            "keyword" : "When"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990b9c Then + 76\n\t2   [iOS] Contract Tests                0x000000013476c347 -[PNAccessContractTestSteps setup] + 695\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 4887.5808715820312
+            },
+            "line" : 24,
+            "name" : "the token has '^uuid-\\S*$' UUID pattern access permissions",
+            "keyword" : "Then"
+          },
+          {
+            "match" : {
+              "location" : "(\n\t0   Cucumberish                         0x00000001349909c5 addDefinition + 101\n\t1   Cucumberish                         0x0000000134990eab Match + 395\n\t2   [iOS] Contract Tests                0x000000013476c3c2 -[PNAccessContractTestSteps setup] + 818\n\t3   [iOS] Contract Tests                0x000000013477b07a __27-[PNContractTestCase setup]_block_invoke + 746\n\t4   libdispatch.dylib                   0x000000010efafa3a _dispatch_client_callout + 8\n\t5   libdispatch.dylib                   0x000000010efb0db3 _dispatch_once_callout + 20\n\t6   [iOS] Contract Tests                0x000000013477ad64 -[PNContractTestCase setup] + 148\n\t7   [iOS] Contract Tests                0x0000000134789f0a CucumberishInit + 106\n\t8   dyld                                0x0000000109fd85c2 ___ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE_block_invoke + 178\n\t9   dyld                                0x000000010a002703 ___ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv_block_invoke.175 + 132\n\t10  dyld                                0x0000000109ff8840 ___ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE_block_invoke + 555\n\t11  dyld                                0x0000000109ff7679 _ZNK5dyld39MachOFile18forEachLoadCommandER11DiagnosticsU13block_pointerFvPK12load_commandRbE + 245\n\t12  dyld                                0x0000000109ff7961 _ZNK5dyld39MachOFile14forEachSectionEU13block_pointerFvRKNS0_11SectionInfoEbRbE + 175\n\t13  dyld                                0x0000000109ff9f5c _ZNK5dyld39MachOFile32forEachInitializerPointerSectionER11DiagnosticsU13block_pointerFvjjRbE + 116\n\t14  dyld                                0x000000010a00233c _ZNK5dyld313MachOAnalyzer18forEachInitializerER11DiagnosticsRKNS0_15VMAddrConverterEU13block_pointerFvjEPKv + 390\n\t15  dyld                                0x0000000109fd849a _ZNK5dyld46Loader25findAndRunAllInitializersERNS_12RuntimeStateE + 150\n\t16  dyld                                0x0000000109fd8706 _ZNK5dyld46Loader23runInitializersBottomUpERNS_12RuntimeStateERN5dyld35ArrayIPKS0_EE + 190\n\t17  dyld                                0x0000000109fd87dc _ZNK5dyld46Loader38runInitializersBottomUpPlusUpwardLinksERNS_12RuntimeStateE + 158\n\t18  dyld                                0x0000000109fedda2 _ZN5dyld44APIs11dlopen_fromEPKciPv + 996\n\t19  CoreFoundation                      0x000000010b14fa22 _CFBundleDlfcnLoadBundle + 149\n\t20  CoreFoundation                      0x000000010b11e1ab _CFBundleLoadExecutableAndReturnError + 256\n\t21  Foundation                          0x000000010d6bd2a0 -[NSBundle loadAndReturnError:] + 448\n\t22  XCTestCore                          0x000000012f525b05 -[XCTestDriver _loadTestBundleFromURL:error:] + 152\n\t23  XCTestCore                          0x000000012f524308 -[XCTestDriver _prepareTestConfigurationAndIDESession] + 1424\n\t24  XCTestCore                          0x000000012f523d48 -[XCTestDriver run] + 23\n\t25  XCTestCore                          0x000000012f4f7aa9 _XCTestMain + 125\n\t26  xctest                              0x0000000109d8fe58 main + 211\n\t27  dyld                                0x0000000109fc92bf start_sim + 10\n\t28  ???                                 0x0000000113c2152e 0x0 + 4626453806\n)"
+            },
+            "result" : {
+              "status" : "passed",
+              "duration" : 3933.9065551757812
+            },
+            "line" : 25,
+            "name" : "token pattern permission GET",
+            "keyword" : "*"
+          }
+        ],
+        "keyword" : "Scenario",
+        "type" : "scenario",
+        "line" : 21,
+        "tags" : [
+          {
+            "name" : "featureSet=access"
+          }
+        ],
+        "name" : "Validate that a token containing uuid pattern permissions can be parsed correctly"
+      }
+    ],
+    "id" : "parse-access-token",
+    "keyword" : "Feature",
+    "description" : "  Although clients do not need to know the internal details of how an access token\n  is constructed, it can be helpful to have the ability to parse this internal\n  structure to help with debugging and troubleshooting access issues.",
+    "uri" : "\/Features\/access\/parse-access-token.feature",
+    "tags" : [
+      {
+        "name" : "@featureSet=access",
+        "line" : 1
+      }
+    ]
+  },
+  {
+    "uri" : "\/Features\/subscribe\/contracts\/access-denied-subscribe.feature",
+    "tags" : [
+      {
+        "name" : "@featureSet=subscribe",
+        "line" : 1
+      }
+    ],
+    "id" : "subscribe-loop-auto-retry-with-access-denied",
+    "name" : "Subscribe Loop auto-retry with access denied",
+    "description" : "  Test to ensure that clients won't try automatic retry when\n  403 received.",
+    "keyword" : "Feature"
+  }
+]
