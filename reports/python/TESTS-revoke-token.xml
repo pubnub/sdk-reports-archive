@@ -1,4 +1,4 @@
-<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.013141" timestamp="2024-04-10T13:38:53.070181" hostname="fv-az1391-280"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.003243"><system-out>
+<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.014055" timestamp="2024-05-09T14:08:39.589863" hostname="fv-az883-278"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.003203"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -12,7 +12,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.003494"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.003908"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -33,7 +33,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.003517"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.003769"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -54,7 +54,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.002887"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.003176"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -62,7 +62,7 @@
   Scenario: Revoke a token with characters that require url encoding
     Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#' ... passed in 0.000s
-    When I revoke a token ... passed in 0.002s
+    When I revoke a token ... passed in 0.003s
     Then I get confirmation that token has been revoked ... passed in 0.000s
 
 @scenario.end

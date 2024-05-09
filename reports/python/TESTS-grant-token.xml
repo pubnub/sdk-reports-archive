@@ -1,4 +1,4 @@
-<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.033787" timestamp="2024-04-10T13:38:53.037962" hostname="fv-az1391-280"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.009882"><system-out>
+<testsuite name="grant-token.Grant an access token" tests="7" errors="0" failures="0" skipped="0" time="0.033112" timestamp="2024-05-09T14:08:39.551144" hostname="fv-az883-278"><testcase classname="grant-token.Grant an access token" name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.009307"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -37,7 +37,7 @@
     * grant pattern permission GET ... passed in 0.000s
     * grant pattern permission UPDATE ... passed in 0.000s
     * grant pattern permission DELETE ... passed in 0.000s
-    When I grant a token specifying those permissions ... passed in 0.005s
+    When I grant a token specifying those permissions ... passed in 0.004s
     Then the token contains the authorized UUID "test-authorized-uuid" ... passed in 0.000s
     Then the token contains the TTL 60 ... passed in 0.000s
     Then the token has 'channel-1' CHANNEL resource access permissions ... passed in 0.000s
@@ -74,7 +74,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.00408"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token without an authorized uuid" status="passed" time="0.004106"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -93,7 +93,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.004005"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Grant an access token successfully with an authorized uuid" status="passed" time="0.003879"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -113,7 +113,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.00384"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003907"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -135,7 +135,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003915"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003999"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -157,7 +157,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.004164"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.00377"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -179,7 +179,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.003902"><system-out>
+</system-out></testcase><testcase classname="grant-token.Grant an access token" name="Attempt to grant an access token when ttl provided exceeds the max ttl configured (use default max 43200 for the test)" status="passed" time="0.004144"><system-out>
 <![CDATA[
 @scenario.begin
 
