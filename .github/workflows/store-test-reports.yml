@@ -21,8 +21,7 @@ jobs:
   store-test-reports:
     name: Download and store test reports.
     runs-on:
-      group: Default Larger Runners
-      labels: windows-latest-m
+      group: Default
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
