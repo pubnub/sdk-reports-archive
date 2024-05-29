@@ -20,22 +20,23 @@ on:
 jobs:
   store-test-reports:
     name: Download and store test reports.
-    runs-on: ubuntu-latest
+    runs-on:
+      group: Default
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # This should be the same as the one specified for on.pull_request.branches
           ref: master
       - name: Checkout actions
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: pubnub/client-engineering-deployment-tools
           ref: v1
           token: ${{ secrets.GH_TOKEN }}
           path: .github/.release/actions
       - name: Checkout specifications
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: pubnub/sdk-specifications
           token: ${{ secrets.GH_TOKEN }}
