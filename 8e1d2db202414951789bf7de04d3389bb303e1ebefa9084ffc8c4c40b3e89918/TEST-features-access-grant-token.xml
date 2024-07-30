@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.008518" name="Grant an access token">
-<testcase classname="Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" time="0.008518">
+<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.008830" name="Grant an access token">
+<testcase classname="Grant an access token" name="Attempt to grant an access token with all permissions empty or false and expect a server error" time="0.008830">
   <skipped/>
   <system-out>
     <![CDATA[]]>
