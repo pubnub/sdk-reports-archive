@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.008706" name="Grant an access token">
-<testcase classname="Grant an access token" name="Grant an access token successfully with an authorized uuid" time="0.008706">
+<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.008566" name="Grant an access token">
+<testcase classname="Grant an access token" name="Grant an access token successfully with an authorized uuid" time="0.008566">
   <skipped/>
   <system-out>
     <![CDATA[]]>
