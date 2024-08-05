@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.008755" name="Revoke an access token">
-<testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.008755">
+<testsuite failures="0" errors="0" skipped="1" tests="1" time="0.009215" name="Revoke an access token">
+<testcase classname="Revoke an access token" name="Revoke existing valid token" time="0.009215">
   <skipped/>
   <system-out>
     <![CDATA[]]>
