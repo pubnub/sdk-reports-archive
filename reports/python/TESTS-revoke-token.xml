@@ -1,4 +1,4 @@
-<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.097726" timestamp="2026-03-26T16:04:19.988099" hostname="runnervm46oaq"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.024741"><system-out>
+<testsuite name="revoke-token.Revoke an access token" tests="4" errors="0" failures="0" skipped="0" time="0.098946" timestamp="2026-04-20T12:15:35.579169" hostname="runnervmeorf1"><testcase classname="revoke-token.Revoke an access token" name="Revoke existing valid token" status="passed" time="0.024262"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -12,7 +12,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.025028"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke invalid token" status="passed" time="0.025594"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -33,7 +33,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.024074"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token while it is disabled on a server" status="passed" time="0.024817"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -41,7 +41,7 @@
   Scenario: Revoke a token while it is disabled on a server
     Given I have a keyset with access manager enabled ... passed in 0.000s
     Given a token ... passed in 0.000s
-    When I revoke a token ... passed in 0.023s
+    When I revoke a token ... passed in 0.024s
     Then an error is returned ... passed in 0.000s
     * the error status code is 400 ... passed in 0.000s
     * the error message is 'Feature disabled' ... passed in 0.000s
@@ -54,7 +54,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.023883"><system-out>
+</system-out></testcase><testcase classname="revoke-token.Revoke an access token" name="Revoke a token with characters that require url encoding" status="passed" time="0.024273"><system-out>
 <![CDATA[
 @scenario.begin
 
@@ -62,7 +62,7 @@
   Scenario: Revoke a token with characters that require url encoding
     Given I have a keyset with access manager enabled ... passed in 0.000s
     Given the token string 'unescaped-_.ABCabc123 escaped;,/?:@&=+$#' ... passed in 0.000s
-    When I revoke a token ... passed in 0.023s
+    When I revoke a token ... passed in 0.024s
     Then I get confirmation that token has been revoked ... passed in 0.000s
 
 @scenario.end
