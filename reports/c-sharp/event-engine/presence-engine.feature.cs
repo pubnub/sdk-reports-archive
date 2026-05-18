@@ -118,47 +118,47 @@ namespace AcceptanceTests.Features.Event_Engine
 #line 12
     testRunner.Then("I wait \'3\' seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "name"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "event",
                             "JOINED"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "event",
                             "TIMES_UP"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "CANCEL_WAIT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "event",
                             "TIMES_UP"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "CANCEL_WAIT"});
-                table7.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
 #line 13
-    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table7, "And ");
+    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table1, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -196,23 +196,23 @@ namespace AcceptanceTests.Features.Event_Engine
 #line 32
     testRunner.Then("I wait for getting Presence joined events", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "name"});
-                table8.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "event",
                             "JOINED"});
-                table8.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table8.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table8.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
 #line 33
-    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table8, "And ");
+    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table2, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -253,32 +253,32 @@ namespace AcceptanceTests.Features.Event_Engine
 #line 45
     testRunner.Then("I wait for getting Presence joined events", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "name"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "event",
                             "JOINED"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_FAILURE"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "invocation",
                             "DELAYED_HEARTBEAT"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "invocation",
                             "CANCEL_DELAYED_HEARTBEAT"});
-                table9.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
 #line 46
-    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table9, "And ");
+    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table3, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -319,56 +319,56 @@ namespace AcceptanceTests.Features.Event_Engine
 #line 61
     testRunner.Then("I receive an error in my heartbeat response", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "name"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "JOINED"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_FAILURE"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_FAILURE"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "CANCEL_DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_FAILURE"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "CANCEL_DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_FAILURE"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "CANCEL_DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "DELAYED_HEARTBEAT"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_GIVEUP"});
-                table10.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "invocation",
                             "CANCEL_DELAYED_HEARTBEAT"});
 #line 62
-    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table10, "And ");
+    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table4, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -412,41 +412,41 @@ namespace AcceptanceTests.Features.Event_Engine
 #line 86
     testRunner.Then("I wait \'3\' seconds", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "type",
                             "name"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "event",
                             "JOINED"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "event",
                             "LEFT"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "CANCEL_WAIT"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "LEAVE"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "HEARTBEAT"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "event",
                             "HEARTBEAT_SUCCESS"});
-                table11.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "invocation",
                             "WAIT"});
 #line 87
-    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table11, "And ");
+    testRunner.And("I observe the following Events and Invocations of the Presence EE:", ((string)(null)), table5, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
