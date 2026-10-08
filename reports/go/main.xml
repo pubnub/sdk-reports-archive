@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="" tests="9" skipped="0" failures="0" errors="0" time="0.038119173">
-  <testsuite name="Grant an access token" tests="6" skipped="0" failures="0" errors="0" time="0.033365281">
-    <testcase name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.008307282"></testcase>
-    <testcase name="Grant an access token without an authorized uuid" status="passed" time="0.00344223"></testcase>
-    <testcase name="Grant an access token successfully with an authorized uuid" status="passed" time="0.004436621"></testcase>
-    <testcase name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.003912604"></testcase>
-    <testcase name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.003905272"></testcase>
-    <testcase name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.004318941"></testcase>
+<testsuites name="" tests="9" skipped="0" failures="0" errors="0" time="0.053276859">
+  <testsuite name="Grant an access token" tests="6" skipped="0" failures="0" errors="0" time="0.045667112">
+    <testcase name="Grant an access token with all permissions on all resource types with authorized uuid" status="passed" time="0.007561486"></testcase>
+    <testcase name="Grant an access token without an authorized uuid" status="passed" time="0.00329467"></testcase>
+    <testcase name="Grant an access token successfully with an authorized uuid" status="passed" time="0.004569038"></testcase>
+    <testcase name="Attempt to grant an access token with all permissions empty or false and expect a server error" status="passed" time="0.004229418"></testcase>
+    <testcase name="Attempt to grant an access token with a regular expression containing a syntax error and expect a server error" status="passed" time="0.008959284"></testcase>
+    <testcase name="Attempt to grant an access token with a regular expression containing capturing groups and expect a server error" status="passed" time="0.007110664"></testcase>
   </testsuite>
-  <testsuite name="Parse Access Token" tests="3" skipped="0" failures="0" errors="0" time="0.003347208">
-    <testcase name="Validate that a token containing authorized uuid can be parsed correctly" status="passed" time="0.000264139"></testcase>
-    <testcase name="Validate that a token containing uuid resource permissions can be parsed correctly" status="passed" time="0.000315313"></testcase>
-    <testcase name="Validate that a token containing uuid pattern permissions can be parsed correctly" status="passed" time="0.000271658"></testcase>
+  <testsuite name="Parse Access Token" tests="3" skipped="0" failures="0" errors="0" time="0.005071954">
+    <testcase name="Validate that a token containing authorized uuid can be parsed correctly" status="passed" time="0.000720305"></testcase>
+    <testcase name="Validate that a token containing uuid resource permissions can be parsed correctly" status="passed" time="0.00044314"></testcase>
+    <testcase name="Validate that a token containing uuid pattern permissions can be parsed correctly" status="passed" time="0.000465512"></testcase>
   </testsuite>
 </testsuites>
