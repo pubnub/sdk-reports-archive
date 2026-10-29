@@ -1,12 +1,12 @@
-<testsuite name="happy-path_Legacy.Event Engine" tests="6" errors="0" failures="0" skipped="0" time="21.21045" timestamp="2026-10-19T08:50:28.781668" hostname="runnervm8k3b6"><testcase classname="happy-path_Legacy.Event Engine" name="Successfully receive messages" status="passed" time="1.08051"><system-out>
+<testsuite name="happy-path_Legacy.Event Engine" tests="6" errors="0" failures="0" skipped="0" time="21.247762" timestamp="2026-10-26T16:26:22.715747" hostname="runnervmtai0g"><testcase classname="happy-path_Legacy.Event Engine" name="Successfully receive messages" status="passed" time="1.101976"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=simpleSubscribe
   Scenario: Successfully receive messages
-    Given the demo keyset with event engine enabled ... passed in 0.073s
+    Given the demo keyset with event engine enabled ... passed in 0.092s
     When I subscribe ... passed in 0.001s
-    Then I receive the message in my subscribe response ... passed in 1.006s
+    Then I receive the message in my subscribe response ... passed in 1.007s
     And I observe the following: ... passed in 0.001s
       | type       | name                    |
       | event      | SUBSCRIPTION_CHANGED    |
@@ -23,15 +23,15 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe" status="passed" time="1.020755"><system-out>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe" status="passed" time="1.024064"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=restoringSubscribe
   Scenario: Successfully restore subscribe
-    Given the demo keyset with event engine enabled ... passed in 0.016s
+    Given the demo keyset with event engine enabled ... passed in 0.018s
     When I subscribe with timetoken 12345678901234567 ... passed in 0.001s
-    Then I receive the message in my subscribe response ... passed in 1.003s
+    Then I receive the message in my subscribe response ... passed in 1.004s
     And I observe the following: ... passed in 0.001s
       | type       | name                    |
       | event      | SUBSCRIPTION_RESTORED   |
@@ -48,13 +48,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe with failures" status="passed" time="3.025851"><system-out>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Successfully restore subscribe with failures" status="passed" time="3.028757"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=restoringSubscribeWithFailures @na=rust
   Scenario: Successfully restore subscribe with failures
-    Given the demo keyset with event engine enabled ... passed in 0.016s
+    Given the demo keyset with event engine enabled ... passed in 0.018s
     Given a linear reconnection policy with 3 retries ... passed in 0.000s
     When I subscribe with timetoken 12345678901234567 ... passed in 0.001s
     Then I receive the message in my subscribe response ... passed in 3.008s
@@ -77,17 +77,17 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Complete handshake failure" status="passed" time="8.031014"><system-out>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Complete handshake failure" status="passed" time="8.034559"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=subscribeHandshakeFailure @na=rust
   Scenario: Complete handshake failure
-    Given the demo keyset with event engine enabled ... passed in 0.017s
+    Given the demo keyset with event engine enabled ... passed in 0.019s
     Given a linear reconnection policy with 3 retries ... passed in 0.000s
     When I subscribe ... passed in 0.001s
     Then I receive an error in my subscribe response ... passed in 8.013s
-    And I observe the following: ... passed in 0.000s
+    And I observe the following: ... passed in 0.001s
       | type       | name                        |
       | event      | SUBSCRIPTION_CHANGED        |
       | invocation | HANDSHAKE                   |
@@ -110,13 +110,13 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Handshake failure recovery" status="passed" time="5.027811"><system-out>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Handshake failure recovery" status="passed" time="5.030386"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=subscribeHandshakeRecovery @na=rust
   Scenario: Handshake failure recovery
-    Given the demo keyset with event engine enabled ... passed in 0.017s
+    Given the demo keyset with event engine enabled ... passed in 0.019s
     Given a linear reconnection policy with 3 retries ... passed in 0.000s
     When I subscribe ... passed in 0.001s
     Then I receive the message in my subscribe response ... passed in 5.009s
@@ -142,16 +142,16 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Receiving failure recovery" status="passed" time="3.02451"><system-out>
+</system-out></testcase><testcase classname="happy-path_Legacy.Event Engine" name="Receiving failure recovery" status="passed" time="3.02802"><system-out>
 <![CDATA[
 @scenario.begin
 
   @contract=subscribeReceivingRecovery @na=rust
   Scenario: Receiving failure recovery
-    Given the demo keyset with event engine enabled ... passed in 0.017s
+    Given the demo keyset with event engine enabled ... passed in 0.019s
     Given a linear reconnection policy with 3 retries ... passed in 0.000s
     When I subscribe ... passed in 0.001s
-    Then I receive the message in my subscribe response ... passed in 3.006s
+    Then I receive the message in my subscribe response ... passed in 3.007s
     And I observe the following: ... passed in 0.001s
       | type       | name                      |
       | event      | SUBSCRIPTION_CHANGED      |
