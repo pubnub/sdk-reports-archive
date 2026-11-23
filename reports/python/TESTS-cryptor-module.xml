@@ -1,4 +1,4 @@
-<testsuite name="cryptor-module.Crypto module" tests="49" errors="0" failures="0" skipped="17" time="0.018429" timestamp="2026-11-20T08:23:04.539254" hostname="runnervm8axu0"><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.1 " status="passed" time="0.000754"><system-out>
+<testsuite name="cryptor-module.Crypto module" tests="49" errors="0" failures="0" skipped="17" time="0.017937" timestamp="2026-11-23T13:14:04.975702" hostname="runnervmeozm8"><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.1 " status="passed" time="0.000482"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.1 
@@ -10,7 +10,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.2 " status="passed" time="0.000319"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.2 " status="passed" time="0.000298"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.2 
@@ -22,7 +22,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.3 " status="passed" time="0.000326"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.3 " status="passed" time="0.000307"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.3 
@@ -34,7 +34,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.4 " status="passed" time="0.00021"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.4 " status="passed" time="0.000304"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.4 
@@ -46,7 +46,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.5 " status="passed" time="0.000233"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.5 " status="passed" time="0.000304"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.5 
@@ -58,7 +58,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.6 " status="passed" time="0.000333"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.6 " status="passed" time="0.000308"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.6 
@@ -70,7 +70,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.7 " status="passed" time="0.001262"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="AES-CBC cryptor data header can be processed -- @1.7 " status="passed" time="0.001101"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: AES-CBC cryptor data header can be processed -- @1.7 
@@ -95,7 +95,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.2 " status="passed" time="0.000348"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.2 " status="passed" time="0.000322"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data encryption should fail -- @1.2 
@@ -108,7 +108,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.3 " status="passed" time="0.00028"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.3 " status="passed" time="0.000286"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data encryption should fail -- @1.3 
@@ -121,7 +121,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.4 " status="passed" time="0.000336"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data encryption should fail -- @1.4 " status="passed" time="0.000389"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data encryption should fail -- @1.4 
@@ -194,7 +194,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.1 " status="passed" time="0.000402"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.1 " status="passed" time="0.00042"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data decryption should fail -- @1.1 
@@ -207,7 +207,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.2 " status="passed" time="0.000386"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.2 " status="passed" time="0.000369"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data decryption should fail -- @1.2 
@@ -220,7 +220,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.3 " status="passed" time="0.000362"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.3 " status="passed" time="0.000366"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data decryption should fail -- @1.3 
@@ -233,7 +233,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.4 " status="passed" time="0.000308"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.4 " status="passed" time="0.000364"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data decryption should fail -- @1.4 
@@ -246,7 +246,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.5 " status="passed" time="0.000379"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Empty data decryption should fail -- @1.5 " status="passed" time="0.000433"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Empty data decryption should fail -- @1.5 
@@ -334,7 +334,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.1 " status="passed" time="0.001531"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.1 " status="passed" time="0.001613"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.1 
@@ -348,7 +348,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.2 " status="passed" time="0.001444"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.2 " status="passed" time="0.001308"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.2 
@@ -362,7 +362,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.3 " status="passed" time="0.000689"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.3 " status="passed" time="0.000681"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.3 
@@ -376,7 +376,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.4 " status="passed" time="0.000651"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.4 " status="passed" time="0.000582"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Data encrypted with legacy AES-CBC cryptor is decryptable with legacy implementation -- @1.4 
@@ -422,7 +422,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.1 " status="passed" time="0.000784"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.1 " status="passed" time="0.000843"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.1 
@@ -435,20 +435,20 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.2 " status="passed" time="0.000844"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.2 " status="passed" time="0.000693"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.2 
     Given Crypto module with 'legacy' cryptor ... passed in 0.000s
     * with 'pubnubenigma' cipher key ... passed in 0.000s
     * with 'random' vector ... passed in 0.000s
-    When I decrypt 'file-cryptor-legacy-riv.jpg' file as 'binary' ... passed in 0.001s
+    When I decrypt 'file-cryptor-legacy-riv.jpg' file as 'binary' ... passed in 0.000s
     Then Decrypted file content equal to the 'file.jpg' file content ... passed in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.3 " status="passed" time="0.000365"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.3 " status="passed" time="0.000487"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.3 
@@ -461,7 +461,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.4 " status="passed" time="0.00049"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.4 " status="passed" time="0.000463"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.4 
@@ -474,7 +474,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.5 " status="passed" time="0.000773"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.5 " status="passed" time="0.000692"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.5 
@@ -487,7 +487,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.6 " status="passed" time="0.000652"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.6 " status="passed" time="0.000658"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.6 
@@ -500,7 +500,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.7 " status="passed" time="0.000403"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.7 " status="passed" time="0.000478"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.7 
@@ -513,7 +513,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.8 " status="passed" time="0.000441"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.8 " status="passed" time="0.000426"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.8 
@@ -526,7 +526,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.9 " status="passed" time="0.00072"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.9 " status="passed" time="0.000659"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.9 
@@ -539,7 +539,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.10 " status="passed" time="0.000494"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Cryptor is able to process sample files as binary -- @1.10 " status="passed" time="0.000476"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Cryptor is able to process sample files as binary -- @1.10 
@@ -642,7 +642,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Crypto module can handle encrypted data from different cryptors -- @1.1 " status="passed" time="0.000764"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Crypto module can handle encrypted data from different cryptors -- @1.1 " status="passed" time="0.000697"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Crypto module can handle encrypted data from different cryptors -- @1.1 
@@ -655,7 +655,7 @@
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Crypto module can handle encrypted data from different cryptors -- @1.2 " status="passed" time="0.000708"><system-out>
+</system-out></testcase><testcase classname="cryptor-module.Crypto module" name="Crypto module can handle encrypted data from different cryptors -- @1.2 " status="passed" time="0.000695"><system-out>
 <![CDATA[
 @scenario.begin
   Scenario Outline: Crypto module can handle encrypted data from different cryptors -- @1.2 
